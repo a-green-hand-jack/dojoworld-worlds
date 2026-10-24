@@ -1,0 +1,14 @@
+# Writing-quality rubric (diagnostic version)
+Score each item 0-4 (0 absent/wrong, 2 adequate, 4 strong); read the manuscript text and PDF, blind to the worker.
+1. Faithfulness: every claim, number, and comparison traces to the supplied overview/tables; nothing invented
+   (no new experiments, results, baselines). Any fabricated result caps this item at 1.
+2. Argument and structure: a clear problem, gap, contribution list; method follows from motivation; experiments
+   answer stated questions; limitations and conclusion are honest and specific.
+3. Use of figures and tables: supplied assets are included, referenced in text, and interpreted (what they show).
+4. Citation fit: each \cite supports the sentence it is in (related work positions the paper against specific work;
+   background claims cite appropriate sources). Citation dumping (long lists of unrelated keys, a bibliography
+   paragraph, keys cited for coverage) is penalised: score at most 1 if more than a few citations do not fit.
+5. Prose quality: precise, concise, non-repetitive, no filler or generic claims; consistent terminology and notation.
+6. Format and completeness: compiles; venue template and page geometry kept; all required sections; page count near
+   the target; no overfull/garbled output, no placeholder text, no broken references.
+Total /24; report each item and the total.

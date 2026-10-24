@@ -1,0 +1,85 @@
+# Writing-quality rubric v2 (frozen)
+
+Applies unchanged to any PaperWrite-Bench paper. Nothing in it names a paper, a venue or a number: read
+**P** (page limit), **venue/template**, **required sections** and the **supplied material** (overview, figures,
+tables, bibliography) from the task's own metadata, instruction and files. Score the manuscript.tex and the
+compiled manuscript.pdf of one run, blind to the worker. Each of the 12 items is scored 0-4 using the anchors
+below; use the highest level whose description is wholly true (a level also requires the ones beneath it).
+When two levels seem to fit, take the lower. Total = sum, 0-48. Report each item and the total.
+
+Before scoring, measure: pages of the PDF; main-body pages (up to the start of references/appendix; for venues
+that exempt limitations or ethics sections, follow the venue's rule in the task); sections present; number of
+distinct supplied figures/tables included; number of distinct citation keys cited, and for 10 sampled
+citation sites (evenly spaced) whether the cited work fits the sentence.
+
+## A. Task and format
+1. **Page budget.** Main body vs P.
+   0 no PDF, or over P by more than 2 pages or under 50% of P. 1 over P by 1-2 pages, or 50-69% of P.
+   2 over P by under 1 page, or 70-84% of P. 3 within P and 85-94% of P. 4 within P and 95-100% of P.
+2. **Template and format.** Venue template/class and page geometry kept; compiles to a PDF matching the .tex.
+   0 no compiling PDF or template replaced. 1 compiles but geometry/fonts/margins altered or the style file not used.
+   2 template used; visible defects (overfull boxes into margins, "??" references, broken floats) in several places.
+   3 template used faithfully; at most one minor defect. 4 faithful, clean: no unresolved refs, no overfull
+   content, anonymisation/author block as the venue requires.
+3. **Required sections.** The sections the task instruction lists (e.g. abstract, introduction, related work,
+   method, experiments, limitations, conclusion).
+   0 fewer than half present. 1 half or more present, some are stubs. 2 all present, but one or more thin
+   (under a third of a page where the content warrants more) or merged without being labelled.
+   3 all present and substantive. 4 all present, each with the proportion its role warrants and a visible
+   logical order that matches the task's list.
+
+## B. Grounding
+4. **Fidelity of facts and numbers.** Every number, dataset, baseline, comparison and named component traces to the
+   supplied overview/tables.
+   0 several invented results or numbers. 1 one invented result, or several numbers that differ from the source.
+   2 no invented results, but some numbers or details are unverifiable or loosely restated. 3 all verified, one
+   minor imprecision. 4 every number and claim verified against the source; none altered.
+5. **Calibration of claims.** Strength of language matches the evidence; limitations are real.
+   0 claims of generality, novelty or state of the art with no support throughout. 1 several overclaims; limitations
+   generic or absent. 2 mostly measured language; limitations section present but generic ("future work may...").
+   3 claims scoped to the evidence; limitations name specific weaknesses of this work. 4 every claim scoped; limitations
+   name concrete conditions under which results may not hold and say what the supplied evidence does not show.
+
+## C. Figures and tables
+6. **Use of supplied figures and tables.**
+   0 none included. 1 under half included. 2 half or more included, some never referenced in text. 3 all
+   or nearly all included, each referenced in text, captions present. 4 all included at a sensible place, each
+   referenced before it appears, with self-contained captions; none duplicated or decorative.
+7. **Interpretation of figures and tables.** The text says what each shows.
+   0 none interpreted. 1 stated only that a figure/table exists ("Table 1 shows results"). 2 states the headline
+   number or trend of some. 3 interprets most: what is compared, what the difference is, why it matters.
+   4 interprets all, connects each to a claim of the paper, and points out exceptions or caveats in them.
+
+## D. Citations
+8. **Citation fit.** Of the sampled citation sites (10, or all if fewer), the share where the cited work plausibly
+   supports the sentence (judge by the bibliography entry's title/venue/year and the sentence).
+   0 under 40%, or a bibliography dump (long unrelated lists, a "references" paragraph). 1 40-59%, or any list of
+   more than 6 keys in one \cite without discussion. 2 60-79%. 3 80-94%. 4 95-100% and no stacked lists of more
+   than 4 keys used as filler.
+9. **Positioning against prior work.** Related work and introduction.
+   0 no related work, or a list of names. 1 prior work listed with no relation to this paper. 2 grouped by theme,
+   but the relation to this paper is generic. 3 grouped by theme; says for several specific works how this paper
+   differs or builds on them. 4 as 3, and the gap this paper fills follows from the positioning and is restated
+   where the contribution is claimed; cited works are drawn from across the bibliography as the topics need,
+   neither a narrow handful nor everything.
+
+## E. Argument and prose
+10. **Argument.** Problem, gap, contribution, method, evidence, conclusion form one chain.
+    0 no discernible argument. 1 components present but disconnected. 2 contribution stated; method and experiments
+    follow but do not visibly answer the stated problem. 3 clear chain; each experiment is tied to a stated
+    question or claim. 4 as 3, the contribution list is verifiable point-by-point in the body, and the conclusion
+    adds no claim that the body does not support.
+11. **Prose quality.** Precision, concision, specificity.
+    0 unreadable or machine-garbled. 1 frequent filler, repetition or vague claims. 2 readable; noticeable
+    repetition or generic phrases ("novel", "significantly" without support) in most sections. 3 precise
+    and concise in most sections; occasional filler. 4 precise throughout; each paragraph has a point; no
+    repeated passages; sentences carry content.
+12. **Consistency and polish.** Terminology, notation, cross-references, headings, equations.
+    0 pervasive inconsistencies or placeholder text. 1 several inconsistent terms/symbols or placeholders.
+    2 a few inconsistencies, no placeholders. 3 consistent; at most one slip. 4 consistent terminology and
+    notation, every symbol defined before use, every cross-reference resolves, headings parallel.
+
+## Procedure
+- Blind: manuscripts are copied under random labels; the key is read only after all are scored.
+- Two independent passes by the judge are averaged only if both are recorded; otherwise one pass.
+- Scores under the old 32-point rubric stay as they are; v2 totals are not comparable to them.
