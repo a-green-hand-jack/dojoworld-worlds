@@ -1,0 +1,26 @@
+{
+ "R312": {
+  "worker": "inc",
+  "world": "rw_407adb0e5e83"
+ },
+ "R386": {
+  "worker": "inc",
+  "world": "rw_d77d8a486acd"
+ },
+ "R457": {
+  "worker": "cand",
+  "world": "rw_b1f7daa003ef"
+ },
+ "R678": {
+  "worker": "cand",
+  "world": "rw_edb84938599f"
+ },
+ "R790": {
+  "worker": "inc",
+  "world": "rw_859c048404ad"
+ },
+ "R845": {
+  "worker": "cand",
+  "world": "rw_8688d8d854f6"
+ }
+}

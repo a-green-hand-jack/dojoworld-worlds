@@ -1,0 +1,1 @@
+{"results":[{"label":"A","worker":"incumbent-low","world":"rw_2108e3103d97","drive":"cmd-a2324aa24a","release_status":"unverified","stopped_because":"max-executions","capture":"rw_2108e3103d97"},{"label":"B","worker":"candidate-medium","world":"rw_b88f7b236ef4","drive":"cmd-8f21fa6e61","release_status":"unverified","stopped_because":"max-executions","capture":"rw_b88f7b236ef4"}]}

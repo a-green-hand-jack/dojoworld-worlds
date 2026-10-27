@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+"""Judge a paper-repo result. Usage: check_report.py REPO_DIR  (dir holding report/report.md and data/)
+Prints a JSON score; each check is 0/1, total out of 8."""
+import sys, re, json, hashlib, pathlib
+d = pathlib.Path(sys.argv[1]); out = {}
+rep = (d/"report/report.md").read_text() if (d/"report/report.md").exists() else ""
+csv = d/"data/co2_annmean_mlo.csv"
+rows = {}
+if csv.exists():
+    for l in csv.read_text().splitlines():
+        p = l.split(",")
+        if len(p) >= 2 and p[0].strip().isdigit():
+            rows[int(p[0])] = float(p[1])
+out["file_kept"] = int(bool(rows))
+out["sha256_matches_file"] = int(csv.exists() and hashlib.sha256(csv.read_bytes()).hexdigest() in rep)
+out["url"] = int("https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv" in rep)
+out["fetch_time"] = int(bool(re.search(r"\d{4}-\d{2}-\d{2}\D{1,6}\d{2}:\d{2}", rep)))
+if rows:
+    y = max(rows); g = (rows[y]-rows[y-10])/10
+    out["last_year_mean"] = int(str(y) in rep and f"{rows[y]:.2f}" in rep)
+    out["growth"] = int(f"{g:.2f}" in rep)
+    out["growth_uses_ten_years"] = int(str(y-10) in rep)
+else:
+    out["last_year_mean"] = out["growth"] = out["growth_uses_ten_years"] = 0
+paras = [p for p in re.split(r"\n\s*\n", rep.strip()) if p.strip()]
+out["one_paragraph"] = int(len(paras) == 1 and "![" not in rep)
+out["total"] = sum(v for k, v in out.items())
+print(json.dumps(out))

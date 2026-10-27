@@ -1,0 +1,27 @@
+{
+  "objective": "judge#1",
+  "worlds": {
+    "rw_5685d0f0d5ab": {
+      "use": "failed",
+      "reason": "Candidate drivers ended without verified release or report artifact; see trial-user trial-runs-failed-v1 evidence/run_records.md."
+    },
+    "rw_600ba6710f07": {
+      "use": "failed",
+      "reason": "Incumbent drivers ended without verified release or report artifact; see trial-user trial-runs-failed-v1 evidence/run_records.md."
+    },
+    "rw_7e9d23176b4e": {
+      "use": "excluded",
+      "reason": "World made during attempted put-back; status/release evidence not supplied to judge."
+    },
+    "rw_fec32127e3a3": {
+      "use": "excluded",
+      "reason": "World made during attempted put-back; status/release evidence not supplied to judge."
+    }
+  },
+  "comparison": {
+    "measurable": false,
+    "difference": null,
+    "spread": null,
+    "conclusion": "Both held-out runs failed before producing results; no worker comparison is possible."
+  }
+}

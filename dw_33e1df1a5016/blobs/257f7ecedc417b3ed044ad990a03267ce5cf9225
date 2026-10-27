@@ -1,0 +1,48 @@
+# Diagnosis: `paper-repo` incumbent
+
+## Scope and evidence
+
+This diagnosis uses the frozen target `rw_e584f68c0d9c` monitor stream and its final release/review events. The incumbent is Codex `gpt-6.1-sol` at low reasoning effort. The relevant baseline execution is `paper-repo` turn `db15a418` (18:48:31–18:54:14 UTC, 342 seconds, 11 model requests, 4 execute calls), followed by review/merge turns `c44f3caa`, `5a6e7d32`, and `82abf45a`.
+
+## Worker-level finding
+
+**The worker did not maintain a single verified provenance record for the exact committed download.** In `db15a418`, the first download command at 18:49:13 fetched the NOAA CSV and captured a timestamp; it then wrote `report/report.md` at 18:50:11. After review activity, at 18:52:13 it downloaded the CSV again and pushed commit `ffcbe4c` (“Correct NOAA fetch timestamp provenance”). The next recorded edit at 18:53:11 ran `sed -i 's/2026-10-25T18:52:23Z/2026-10-25T18:52:14Z/' ...` and pushed `28f3e7f` (“Use completed NOAA fetch time”). The stream therefore shows a report timestamp that had to be corrected twice, including a value (`18:52:23Z`) that postdated the completed fetch (`18:52:14Z`). This is an execution/verification failure attributable to the worker's process, not to a missing world resource: the network worked and the worker had shell access to `date`, `sha256sum`, and the downloaded file.
+
+The same turn opened a separate “Analysis and report commitment” issue after inspecting the data and made several review/status checks before the final PR. Those actions are valid collaboration, but they consumed 4 paper-worker turns and 109 model seconds for a small one-paragraph report. The record supports a priority to make the fetch/hash/report check atomic and to verify once before review; it does not by itself prove that higher effort improves the final text.
+
+## What the worker did well
+
+The worker downloaded the required NOAA URL, preserved `data/co2_annmean_mlo.csv`, computed the last-year and ten-year values with Python, produced `report/report.md`, supplied the source file for internal review, and completed release approval. The final internal and external review events state that the one-paragraph report contained the URL, completed fetch timestamp, SHA-256, endpoint value, comparator, and ten-year rate. The run is therefore a successful baseline observation with avoidable corrective work, not a failed deliverable.
+
+## Layer separation
+
+The absence of a judging contract is a world/position gap recorded in the objective: no judging was supplied. It is not evidence that the worker is wrong. The target world also had a review workflow that prompted a second fetch and timestamp correction; that workflow belongs to the world/position layer. The worker-level finding above is limited to the worker's failure to bind the timestamp to the exact file it ultimately committed and to verify the edited report before review.
+
+## Candidate implication and what remains
+
+The tuner has proposed one candidate, `medium-v1`, changing only `codex.model_reasoning_effort` from low to medium. No evidence yet shows a quality difference. The candidate must be run against the same diagnostic/held-out starts and judged with the proposed field-level checks. If both workers produce the required report, compare correction count, provenance consistency, arithmetic, paragraph/no-figure constraints, and model seconds; retain the incumbent if medium effort does not improve the judged result within the 8-turn/900-second run limits.
+
+## Published diagnostic tasks
+
+Task-setter release `tasks-v1` (commit `7a1e854bfd4f`, asset `tasks-v1.json`) defines four reproducible tasks for this position:
+
+- `paper-objective-report`: objective issue #1 from receipt `db15a418`; contract audit of the report, exact CSV hash, 2025/2015 values, 2.634 ppm/year, and committed tree.
+- `paper-source-verification`: request issue #2 from receipt `db15a418`; independent byte/hash and parser reproduction at the same revision.
+- `paper-correction-and-review`: request issue #6 from receipt `c44f3caa`; detect and correct provenance defects while preserving all invariants and handling PR #5.
+- `paper-reviewed-release`: reviewed obligation after PR #4 approval from receipt `5a6e7d32`; approval-gated merge/final publication with no post-approval mutation.
+
+The release freezes the common source hash `bdd956e8d7e05ebc3c61ac1f8f8c8cea4a505df56724fba5200b4eb1e0089b2b`, last row 2025=427.35 ppm, ten-year anchor 2015=401.01 ppm, and rate 2.634 ppm/year. The complete asset is copied to `runs/tasks-v1.json` for audit.
+
+## Matched diagnostic result
+
+The resumed incumbent (`rw_06c32490a8b3`, low effort) and candidate (`rw_87bae9dc4605`, medium effort) started from the same `final-0e3e7fb9` checkpoint with the same task and contract. Both preserved the report and CSV and recorded the exact source/hash/value parser check (incumbent monitor event 21:54:49 in `f14e7c79`; candidate monitor event 22:01:50 in `62a52949`). The incumbent ended at commit `57172b7`, merged the approved release PR and opened final PR #10; the candidate ended at `551b16a`, with release PR #9 approved only after its paper worker had ended. The two worlds consumed 246.8 and 247.7 model seconds respectively and both exhausted all 8 executions.
+
+This is not a quality difference. Both worlds report `runtime_reason=budget-exhausted`, `release_status=unverified`, and the same explicit gap, “Driver termination alone does not establish scientific or delivery completion.” The difference in whether the approval arrived before the last paper turn is scheduler timing: the candidate's internal approval appears at 22:06:53 after its 22:06:06 worker completion, while the incumbent's approval at 22:06:51 woke a final paper turn that completed at 22:07:16. Provider overload retries (four incumbent requests, three candidate requests) are also shared runtime conditions. These are world/position problems and are excluded from worker diagnosis.
+
+The only worker-level defect established by the completed target baseline remains the two timestamp corrections described above: the low-effort worker fetched again and wrote `18:52:23Z`, then corrected it to the completed fetch time `18:52:14Z`. The matched diagnostic task began from the already corrected final checkpoint, so it did not re-expose that defect. Medium effort has no demonstrated quality gain or regression on the matched task; retain the incumbent unless a held-out judged task supplies a real difference. Any claim that either worker completed the objective must be rejected because neither world produced an approved release.
+
+## Final put-back diagnosis
+
+The kept incumbent was put back in fresh continuation `rw_f0c559601c44` from `rw_e584f68c0d9c` checkpoint `final-0e3e7fb9`. After a first eight-execution drive stopped with two workflow handoffs open, a second bounded drive completed the same world: the terminal monitor reports an accepted, verified final release (`result:final` commit `69235c735d9fee7b32567d01711e565ea110a831`), complete delivery and review gates, no failures, and the required report and preserved CSV artifacts. This confirms that the kept worker can complete the target contract when the workflow receives the extra bounded drive needed for the approval/final-publication handoffs.
+
+The extra drive is a world/position-layer scheduling requirement, not a newly observed worker defect: the first drive ended at its eight-execution boundary immediately after review approval created the final delivery obligation, and the second drive discharged it. The raw status lifecycle retains the earlier unverified value while the current monitor summary and artifact manifest are verified; this is instrumentation state and is excluded from worker diagnosis. The worker-level conclusion is unchanged: the baseline provenance timestamp corrections remain the only observed defect, and medium effort has no measured quality difference against low effort. The incumbent therefore remains the evidence-supported worker to release.

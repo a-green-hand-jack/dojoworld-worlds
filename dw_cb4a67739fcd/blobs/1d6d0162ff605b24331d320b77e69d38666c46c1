@@ -1,0 +1,14 @@
+# Brief
+**Objective (quoted):** "Improve the worker of the position paper-repo of the research world rw_679cdc7d5fa3 ... a one-paragraph report on how fast the CO2 at Mauna Loa rose over the last ten years, from NOAA's annual means downloaded during the work. Incumbent: Claude Code with claude-sonnet-5-5 at low effort. Candidates may use only Claude Code + claude-sonnet-5-5; what may change is native settings (effort, environment). Take the tasks from the target world; propose the judging. One candidate; every world at most 8 turns and 900 model seconds. Put the kept worker back by continuing rw_679cdc7d5fa3 from its newest checkpoint and running that round."
+
+**Target:** roles story-repo -> paper-repo -> internal-review-repo (external-review-repo idle). Config: CLAUDE_CODE_EFFORT_LEVEL=low, no assets. Task of paper-repo: story-repo BRIEF.md (fetch co2_annmean_mlo.csv, keep unmodified, record UTC time + SHA-256, check the year ten earlier exists, compute (last-first)/10, one paragraph, no figure) -> report/report.md.
+
+**Observed in the final release (3330e36):** report is correct (2025=427.35, 2015=401.01, 2.63 ppm/yr), hash matches, review approved. The incumbent already meets the brief; headroom is thin.
+
+**Proposed judging (for task-setter/judge):** correctness of numbers recomputed from the kept file; hash/timestamp of unmodified bytes; single paragraph, no figure; gap check stated; no invented values; model seconds/turns used.
+
+**Focus:** one candidate, a native-settings change only (effort low -> medium). Compare with incumbent on the same start (same checkpoint), same judging.
+
+**Not established:** per-turn behaviour of the incumbent (I read artifacts only, not monitor records); whether other positions read tuner PRs.
+
+**Split (PR to tuner):** worker/ and evidence/ -> tuner (collects tasks, runs, evaluation material), diagnosis/ -> diagnostician.

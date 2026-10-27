@@ -1,0 +1,6 @@
+#!/bin/bash
+# rec.sh WORLD LABEL : save records of a run under runs/LABEL
+w=$1; d=runs/$2; mkdir -p $d
+researchworld status $w > $d/status.json 2>&1
+researchworld monitor $w --all --json > $d/monitor.json 2>&1
+researchworld artifacts $w --output $d/artifacts > $d/artifacts.log 2>&1

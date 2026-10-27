@@ -1,0 +1,90 @@
+{
+  "objective": "judge#1",
+  "task": "trial-user:heldout/task-001.md@e4e1198",
+  "judgements": [
+    {
+      "label": "A",
+      "worker": "incumbent-low",
+      "score": 0,
+      "scores": {
+        "factual_correctness": 0,
+        "arithmetic_rate_units": 0,
+        "source_reproducibility": 0,
+        "one_paragraph": 0
+      },
+      "quotation": "Status: failed measurement. The paired world reached max-executions without an approved release; no report artifact is available for scoring.",
+      "source": "blind/results/label-A.txt",
+      "provenance": {
+        "repo": "trial-user",
+        "path": "blind/results/label-A.txt",
+        "sha256": "75d4c48fa6e294df9ee12350196ceaec6d7b15f81a3a0c5ea7d8a6b42ff51650"
+      },
+      "result": {
+        "repo": "trial-user",
+        "path": "blind/results/label-A.txt",
+        "provenance": {
+          "repo": "trial-user",
+          "path": "blind/results/label-A.txt",
+          "sha256": "75d4c48fa6e294df9ee12350196ceaec6d7b15f81a3a0c5ea7d8a6b42ff51650"
+        }
+      },
+      "items": [
+        {
+          "quote": "Status: failed measurement. The paired world reached max-executions without an approved release; no report artifact is available for scoring.",
+          "source": "blind/results/label-A.txt"
+        }
+      ]
+    },
+    {
+      "label": "B",
+      "worker": "candidate-medium",
+      "score": 0,
+      "scores": {
+        "factual_correctness": 0,
+        "arithmetic_rate_units": 0,
+        "source_reproducibility": 0,
+        "one_paragraph": 0
+      },
+      "quotation": "Status: failed measurement. The paired world reached max-executions without an approved release; no report artifact is available for scoring.",
+      "source": "blind/results/label-B.txt",
+      "provenance": {
+        "repo": "trial-user",
+        "path": "blind/results/label-B.txt",
+        "sha256": "ed1eb91bfd371cd06f4e948e047c97601433d9677470c411711fd611a0b05517"
+      },
+      "result": {
+        "repo": "trial-user",
+        "path": "blind/results/label-B.txt",
+        "provenance": {
+          "repo": "trial-user",
+          "path": "blind/results/label-B.txt",
+          "sha256": "ed1eb91bfd371cd06f4e948e047c97601433d9677470c411711fd611a0b05517"
+        }
+      },
+      "items": [
+        {
+          "quote": "Status: failed measurement. The paired world reached max-executions without an approved release; no report artifact is available for scoring.",
+          "source": "blind/results/label-B.txt"
+        }
+      ]
+    }
+  ],
+  "labels_index": {
+    "repo": "trial-user",
+    "path": "blind/labels-index.json"
+  },
+  "label_table": {
+    "repo": "trial-user",
+    "path": "blind/labels-table.json",
+    "sha256": "30d26891e1b5",
+    "published": {
+      "repo": "trial-user",
+      "path": "blind/labels-table.json"
+    }
+  },
+  "comparison": {
+    "difference": 0,
+    "spread": 0,
+    "conclusion": "Both runs failed without verified releases; no candidate improvement is demonstrated, so incumbent stays."
+  }
+}

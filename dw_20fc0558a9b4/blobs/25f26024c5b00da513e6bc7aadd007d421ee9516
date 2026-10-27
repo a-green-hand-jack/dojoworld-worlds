@@ -1,0 +1,8 @@
+How fast the CO2 at Mauna Loa has risen over the last ten years, from NOAA's own annual means.
+
+Download NOAA GML's annual mean CO2 for Mauna Loa (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv) during the work; do not type the numbers in. Keep the file as downloaded.
+
+Report: `report/report.md`, one paragraph: the URL, the time the file was fetched and its SHA-256, the last year in the file and its annual mean, the year ten years before it and its annual mean, and the average growth in ppm per year over the last ten years in the file (the difference between the last year and the year ten years before it, divided by ten). No figure.
+
+
+Judging: five checks of tasks-v1. The world's start of this continuation was 2026-10-24 16:57 UTC; a fetch time before that was not made during this work.

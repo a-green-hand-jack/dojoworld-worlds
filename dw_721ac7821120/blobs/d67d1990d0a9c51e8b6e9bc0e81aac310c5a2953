@@ -1,0 +1,9 @@
+# Baseline evidence
+
+The completed target world `rw_e584f68c0d9c` used Codex `gpt-6.1-sol` at low effort for all positions. The monitor record shows the paper worker's delivered report was verified in story-repo turn `dd1f883a`: its comment states `report/report.md` is one paragraph and includes NOAA URL, fetch timestamp, SHA-256, 2025 value 427.35 ppm, 2015 comparator 401.01 ppm, and the ten-year calculation (`/tmp/mon.txt:17`). External review turn `794ec572` independently checked the final release and states all required fields are present (`/tmp/mon.txt:103`). Internal review turn `fa703942` inspected the exact final head and approved it (`/tmp/mon.txt:110-118`). The target therefore provides no evidence of an observed baseline failure; worker weaknesses, if any, require held-out matched runs.
+
+The monitor also records a provider 429 retry during internal review (`/tmp/mon.txt:125`), which is an infrastructure/world event and must not be attributed to worker quality.
+
+## Candidate run blocker
+
+On activation `7758c6255bb9a33b6b0b4b6ac658bca5`, continuation from `final-0e3e7fb9` was attempted twice (with `--without-frozen-jobs`, once with a diagnostic topic and once with `--exporter current`). Both failed before a world was created with: `this configuration names resources its position does not hold in the parent world: local-compute; a world made in a world offers only those, unchanged (local-compute, research-network, worlds)`. This is a world/resource-layer blocker, not a worker result; issue #4 reports it to tuner.

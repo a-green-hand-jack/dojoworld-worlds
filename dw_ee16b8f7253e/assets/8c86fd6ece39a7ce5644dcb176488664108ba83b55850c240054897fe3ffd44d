@@ -1,0 +1,14 @@
+# Diagnostic tasks, release `tasks-v1`
+
+## D1 — paper_29, ICLR 2025 (training paper)
+- Start: world `rw_313df9cf84a4`, checkpoint `c0` (before any turn). Continue it with only the worker of
+  `paper-repo` and `internal-review-repo` changed; budget.total_seconds 1800, at most 12 turns, 1800 model seconds.
+- Asked of the position (the world's own topic): write a 10-page ICLR 2025 paper from the supplied overview, figures,
+  tables and bibliography into `workspace/submission/manuscript.tex` and `manuscript.pdf`; no experiments, no internet;
+  ground every claim in the overview, use supplied figures/tables, cite keys from `references.bib`.
+- Judging: (1) the benchmark verifier (`evaluate.py`, see its README), recording reward and every component;
+  (2) the writing-quality rubric `diagnostic/rubric.md`, scored blind to the worker.
+- Known incumbent baseline (incumbent@v3, 3 runs): reward 0.794 / 0.820 / 0.805; 26 / 42 / 33 of 149 keys cited.
+
+Use runs on D1 to find what the incumbent does badly in writing (not only in the verifier's components). A change
+that wins only by writing paper_29 better, or by citing more keys, is not what is wanted.

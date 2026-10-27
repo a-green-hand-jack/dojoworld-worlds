@@ -1,0 +1,17 @@
+# Diagnosis of paper-repo (rw_679cdc7d5fa3, checkpoint final-7adfe819)
+
+Observed (from `researchworld artifacts` of the release 3330e36 and `monitor --role paper-repo`):
+- Incumbent (claude-sonnet-5-5, `output_config.effort low`) delivered report/report.md: one paragraph, URL, fetch UTC 2026-10-25 08:00:35, SHA-256, 2025 = 427.35, 2015 = 401.01, 2.63 ppm/yr. Arithmetic checked against data/co2_annmean_mlo.csv: (427.35-401.01)/10 = 2.634. Correct; the internal review (reviews/v1.md) confirms the hash.
+- Its turns were short (10-17 s, 2 model requests each); finalisation turn merged PR #4 itself.
+
+No defect of the worker found on this task. Weak points only:
+- Report does not name the period ("2015-2025") as a period nor the file's stated uncertainty column (0.12).
+- Rounded 2.634 to 2.63 without saying it is a mean of annual differences' endpoint approximation.
+These are thin; the task leaves little headroom for effort.
+
+Not a worker problem: the target world gave no judging; this world proposes one (see wiki Brief).
+Changeable lever: effort (low -> medium) in the agent's settings. Expect no score difference on the judging items; expect a cost difference (turns/model seconds). A difference counts only from same-start runs.
+
+## Incumbent rerun (sparring-partner runs/incumbent-1, world rw_555c0aa60a08, f2fbf1b)
+Observed: continued from final-7adfe819, 8 executions; paper-repo only re-described the existing report and opened PRs #6/#7 (monitor.txt 08:13:19-08:13:58); no new download or computation, report not rewritten. Both reviewers log "research-network could not be told".
+Layer: world/direction, not worker. The final checkpoint holds a finished task, so any continued round exercises only release paperwork; it cannot separate effort low from medium on the data work. Consequence: a candidate-vs-incumbent difference on this start will measure paperwork cost only. Left for the direction owner (me) and the judge: report that limit; judge on turns/model seconds and unchanged report, not on a new analysis.

@@ -1,0 +1,114 @@
+{
+  "worlds": {
+    "rw_23d33e9f471c": {
+      "use": "measured",
+      "paper": "paper_45",
+      "worker": "W1",
+      "turns": 3,
+      "model_seconds": 134.7,
+      "end": "finished with verified release"
+    },
+    "rw_49ceb1533496": {
+      "use": "measured",
+      "paper": "paper_45",
+      "worker": "W2",
+      "turns": 5,
+      "model_seconds": 387.4,
+      "end": "finished with verified release"
+    },
+    "rw_0972ff2f0212": {
+      "use": "measured",
+      "paper": "paper_32",
+      "worker": "W1",
+      "turns": 3,
+      "model_seconds": 188.8,
+      "end": "finished with verified release"
+    },
+    "rw_899a5bf00a39": {
+      "use": "measured",
+      "paper": "paper_32",
+      "worker": "W2",
+      "turns": 5,
+      "model_seconds": 374.7,
+      "end": "finished with verified release"
+    },
+    "rw_563dd286e9f6": {
+      "use": "measured",
+      "paper": "paper_17",
+      "worker": "W1",
+      "turns": 6,
+      "model_seconds": 200.9,
+      "end": "finished with verified release"
+    },
+    "rw_ea4754973e26": {
+      "use": "failed",
+      "paper": "paper_17",
+      "worker": "W2",
+      "turns": 10,
+      "model_seconds": 458.8,
+      "end": "terminal: stalled, no manuscript.pdf (failed run)",
+      "reason": "Failed run is never judged from a draft; its paper_17 pair is lost/void."
+    },
+    "rw_fb3d20864daf": {
+      "use": "excluded",
+      "reason": "Never driven: configuration unavailable at claim (image i396); excluded before adopting a run slot."
+    },
+    "rw_772d7feaeb68": {
+      "use": "excluded",
+      "reason": "Never driven: configuration unavailable at claim (image i396); excluded before adopting a run slot."
+    },
+    "rw_10eadef98f39": {
+      "use": "excluded",
+      "reason": "Never driven: configuration unavailable at claim (image i396); excluded before adopting a run slot."
+    },
+    "rw_f239e042a15a": {
+      "use": "excluded",
+      "reason": "Never driven: configuration unavailable at claim (image i396); excluded before adopting a run slot."
+    },
+    "rw_7d4010cab903": {
+      "use": "excluded",
+      "reason": "Never driven: configuration unavailable at claim (image i396); excluded before adopting a run slot."
+    },
+    "rw_dc11d36b53d7": {
+      "use": "excluded",
+      "reason": "Never driven: configuration unavailable at claim (image i396); excluded before adopting a run slot."
+    },
+    "rw_f0ae57386de5": {
+      "use": "excluded",
+      "reason": "Diagnostic probe, i396; not a held-out run slot."
+    },
+    "rw_5aa2e53f1d55": {
+      "use": "excluded",
+      "reason": "Diagnostic probe with default image and one internal-review execution; not a held-out run slot."
+    }
+  },
+  "comparison": {
+    "measured_pairs": [
+      "paper_45",
+      "paper_32"
+    ],
+    "void_pair": "paper_17",
+    "wins": {
+      "W1": 0,
+      "W2": 2
+    },
+    "ties": 0,
+    "disagreement_rate": 0.0,
+    "failed_run_policy": "rw_ea4754973e26 is failed and never judged; its pair is lost/void and excluded from the denominator. Dropping it gives W2 2/2 wins and W1 0/2; counting it as a tie only for sensitivity gives W2 2/3 and W1 0/3.",
+    "difference": {
+      "metric": "paired win rate W2 minus W1",
+      "value": 1.0,
+      "spread": {
+        "pair_level": [
+          1,
+          1
+        ],
+        "sample_sd": 0.0
+      }
+    }
+  },
+  "published_sources": {
+    "task_setter_labels_index_commit": "9fb70ce0eed1e379d8200c3a94e454f3df5d85ed",
+    "task_setter_release": "measure-check-n5-table"
+  }
+}

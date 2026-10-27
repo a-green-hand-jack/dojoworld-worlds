@@ -1,0 +1,21 @@
+# Diagnostic tasks, release tasks-v1
+
+Target position: paper-repo (research world rw_1f0b60e4e7ab). Checkpoints: cp-62f9bee78b44, before-stop-77bd69e5, final-4540868c.
+
+## D1 (taken from the world)
+Start: rw_1f0b60e4e7ab continued from `cp-62f9bee78b44`.
+Asked (verbatim from the world's topic): "How fast the CO2 at Mauna Loa has risen over the last ten years, from NOAA's own annual means. Download NOAA GML's annual mean CO2 for Mauna Loa (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv) during the work; do not type the numbers in. Keep the file as downloaded. Report: `report/report.md`, one paragraph: the URL, the time the file was fetched and its SHA-256, the last year in the file and its annual mean, and the average growth in ppm per year over the last ten years in the file (the difference between the last year and the year ten years before it, divided by ten). No figure."
+
+## D2 (made to the contract)
+Same asking, but the window is the last five years and the first sentence also gives the first year used with its mean. Starting point: the same world and checkpoint, topic changed.
+
+## Judging (fixed; applies to D1, D2 and held-out tasks alike), 0-5 points, one each
+1. `report/report.md` exists and is one paragraph, no figure.
+2. The URL, fetch time (UTC, plausible against the world clock) and SHA-256 are all given.
+3. The SHA-256 equals the sha256 of the kept downloaded file, and that file is byte-identical to the NOAA original (not retyped or edited).
+4. The last year and its mean equal the file's last data row.
+5. The growth equals (last - value ten years earlier)/10 (window as asked) from the file, to the precision stated, with the arithmetic reproducible.
+Ties: fewer model seconds and turns used is better. Why: each point is a mechanical check against the downloaded file, so a better result is a more correct and provenance-faithful one.
+
+## How to run (D1, D2)
+Continue rw_1f0b60e4e7ab at the named checkpoint, change only the worker of paper-repo (internal-review-repo stays incumbent), set the topic as the task says (D1: unchanged), drive to completion of paper-repo's report round and the review: at most 8 turns and 900 model seconds per world. Judge `report/report.md` and the kept data file in paper-repo's delivered files by the five checks above.

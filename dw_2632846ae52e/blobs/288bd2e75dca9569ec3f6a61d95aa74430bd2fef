@@ -1,0 +1,9 @@
+# Result R10793
+
+Task asked: Write a one-paragraph report comparing how fast CO2 at Mauna Loa rose in the last 5 complete years against the 5 years before, using NOAA GML annual means you download during the work. Give both ppm/yr averages and the ratio, with years, units and source URL.
+
+Good result: Rates computed correctly from downloaded annual means; years/units right; source cited; one paragraph; nothing fabricated.
+
+## Result
+
+Using the NOAA GML Mauna Loa annual means (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv, fetched 2026-10-25 08:00:35 UTC and re-fetched 15:26 UTC with identical SHA-256 bdd956e8d7e05ebc3c61ac1f8f8c8cea4a505df56724fba5200b4eb1e0089b2b; kept unmodified as `data/co2_annmean_mlo.csv`), CO2 rose by an average of 2.63 ppm per year over the last 5 complete years, 2021–2025 ((427.35 − 414.21) / 5 ppm/yr, annual means of 2025 and 2020), against 2.64 ppm per year over the 5 years before, 2016–2020 ((414.21 − 401.01) / 5 ppm/yr, annual means of 2020 and 2015). The ratio of the recent to the earlier average rate is 0.995 (2.628 / 2.640), i.e. no meaningful change in the average growth rate between the two periods; the file's stated annual-mean uncertainty is 0.12 ppm for each year, so the difference (0.01 ppm/yr) is well within it.

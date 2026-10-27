@@ -1,0 +1,183 @@
+{
+ "labels_index": {
+  "repo": "task-setter",
+  "path": "blind/labels.json"
+ },
+ "judgements": [
+  {
+   "label": "R246996",
+   "score": 5,
+   "fetched_during_work": true,
+   "items": [
+    {
+     "check": "one paragraph, no figure",
+     "pass": true,
+     "item": 1,
+     "quote": "The annual mean CO2 record for Mauna Loa was downloaded from https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv"
+    },
+    {
+     "check": "URL, fetch time, SHA-256 given",
+     "pass": true,
+     "item": 2,
+     "quote": "on 2026-10-24 at 16:58:44 UTC (re-fetched in this run; byte-identical to the earlier download)"
+    },
+    {
+     "check": "SHA-256 equals sha256 of kept file (bdd956e8...; file hashes to it and ends at 2025 row)",
+     "pass": true,
+     "item": 3,
+     "quote": "(file kept as downloaded in `data/co2_annmean_mlo.csv`; SHA-256 bdd956e8d7e05ebc3c61ac1f8f8c8cea4a505df56724fba5200b4eb1e0089b2b)"
+    },
+    {
+     "check": "last year and mean equal last row (2025,427.35)",
+     "pass": true,
+     "item": 4,
+     "quote": "The last year in the file is 2025, with an annual mean of 427.35 ppm"
+    },
+    {
+     "check": "growth (427.35-401.01)/10=2.634",
+     "pass": true,
+     "item": 5,
+     "quote": "(427.35 \u2212 401.01) / 10 = 2.634 ppm per year"
+    }
+   ],
+   "rests_on": "Fetch time 16:58:44 UTC is after the continuation, so the file was re-fetched in this run (stated: 're-fetched in this run; byte-identical to the earlier download').",
+   "result": {
+    "repo": "task-setter",
+    "path": "blind/R246996/report.md",
+    "provenance": {
+     "repo": "task-setter",
+     "path": "blind/R246996/report.md",
+     "sha256": "45bd9a28798aa0f97b5956b6ffca70fa411f2c6422c6720047b2a2ade872174f"
+    }
+   },
+   "worker": "incumbent"
+  },
+  {
+   "label": "R564081",
+   "score": 5,
+   "fetched_during_work": false,
+   "items": [
+    {
+     "check": "one paragraph, no figure",
+     "pass": true,
+     "item": 1,
+     "quote": "The annual mean CO2 record for Mauna Loa was downloaded from https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv"
+    },
+    {
+     "check": "URL, fetch time, SHA-256 given",
+     "pass": true,
+     "item": 2,
+     "quote": "downloaded from https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv on 2026-10-24 at 16:30:29 UTC"
+    },
+    {
+     "check": "SHA-256 equals sha256 of kept file (bdd956e8...; file hashes to it and ends at 2025 row)",
+     "pass": true,
+     "item": 3,
+     "quote": "(file kept as downloaded in `data/co2_annmean_mlo.csv`; SHA-256 bdd956e8d7e05ebc3c61ac1f8f8c8cea4a505df56724fba5200b4eb1e0089b2b)"
+    },
+    {
+     "check": "last year and mean equal last row (2025,427.35)",
+     "pass": true,
+     "item": 4,
+     "quote": "The last year in the file is 2025, with an annual mean of 427.35 ppm"
+    },
+    {
+     "check": "growth (427.35-401.01)/10=2.634",
+     "pass": true,
+     "item": 5,
+     "quote": "(427.35 \u2212 401.01) / 10 = 2.634 ppm per year"
+    }
+   ],
+   "rests_on": "Fetch time 16:30:29 UTC is the original world's earlier download, not a fetch during this continuation; the five mechanical checks all pass but the 'fetched during this work' check fails.",
+   "result": {
+    "repo": "task-setter",
+    "path": "blind/R564081/report.md",
+    "provenance": {
+     "repo": "task-setter",
+     "path": "blind/R564081/report.md",
+     "sha256": "f65e5703ce29fc172783ddeccd392422299936659b047963d4919e1176cfe429"
+    }
+   },
+   "worker": "incumbent"
+  },
+  {
+   "label": "R896054",
+   "score": 5,
+   "fetched_during_work": false,
+   "items": [
+    {
+     "check": "one paragraph, no figure",
+     "pass": true,
+     "item": 1,
+     "quote": "The annual mean CO2 record for Mauna Loa was downloaded from https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv"
+    },
+    {
+     "check": "URL, fetch time, SHA-256 given",
+     "pass": true,
+     "item": 2,
+     "quote": "downloaded from https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv on 2026-10-24 at 16:30:29 UTC"
+    },
+    {
+     "check": "SHA-256 equals sha256 of kept file (bdd956e8...; file hashes to it and ends at 2025 row)",
+     "pass": true,
+     "item": 3,
+     "quote": "(file kept as downloaded in `data/co2_annmean_mlo.csv`; SHA-256 bdd956e8d7e05ebc3c61ac1f8f8c8cea4a505df56724fba5200b4eb1e0089b2b)"
+    },
+    {
+     "check": "last year and mean equal last row (2025,427.35)",
+     "pass": true,
+     "item": 4,
+     "quote": "The last year in the file is 2025, with an annual mean of 427.35 ppm"
+    },
+    {
+     "check": "growth (427.35-401.01)/10=2.634",
+     "pass": true,
+     "item": 5,
+     "quote": "(427.35 \u2212 401.01) / 10 = 2.634 ppm per year"
+    }
+   ],
+   "rests_on": "Same as above: fetch time 16:30:29 UTC predates the continuation; five checks pass, 'fetched during this work' fails.",
+   "result": {
+    "repo": "task-setter",
+    "path": "blind/R896054/report.md",
+    "provenance": {
+     "repo": "task-setter",
+     "path": "blind/R896054/report.md",
+     "sha256": "f65e5703ce29fc172783ddeccd392422299936659b047963d4919e1176cfe429"
+    }
+   },
+   "worker": "cand-1"
+  }
+ ],
+ "label_table": {
+  "repo": "task-setter",
+  "path": "blind/table.json",
+  "published": {
+   "repo": "task-setter",
+   "path": "blind/table.sha256"
+  }
+ },
+ "comparison": {
+  "scores_0_to_5": {
+   "incumbent": [
+    5,
+    5
+   ],
+   "cand-1": [
+    5
+   ]
+  },
+  "fetched_during_work": {
+   "incumbent": [
+    true,
+    false
+   ],
+   "cand-1": [
+    false
+   ]
+  },
+  "difference": "0.0 on the 0-5 judging (cand-1 5 vs incumbent mean 5, spread 0); on the extra 'fetched during this work' flag cand-1 0/1 vs incumbent 1/2: no usable difference at n=1 vs n=2",
+  "conclusion": "No candidate does better than the incumbent; incumbent workers kept. Only 3 runs exist (2 incumbent, 1 cand-1), so this is an observation, not a measured difference. The cand-1 report is byte-identical to incumbent R564081 and carries the same pre-continuation fetch time.",
+  "note": "judgements.json was reformatted (item key names, result/provenance nesting) after the label table was committed because the first version failed the checker's form; scores, rests_on text and quoted passages' meaning were unchanged."
+ }
+}

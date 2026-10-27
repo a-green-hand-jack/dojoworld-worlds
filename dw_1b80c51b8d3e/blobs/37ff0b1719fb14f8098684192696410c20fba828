@@ -1,0 +1,9 @@
+# Brief
+
+The objective asks us to improve the worker of position **paper-repo** in finished research world `rw_07ce7d5d6f6a`. Its task is a one-paragraph report on how fast CO2 at Mauna Loa rose over the last ten years, using NOAA annual means downloaded during the work. The report must preserve the downloaded CSV and include its URL, fetch time, SHA-256, last year and annual mean, and the ten-year average growth; no figure.
+
+The target world ran Codex with `gpt-6.1-sol` at low reasoning effort for every position. Its final checkpoint is `final-ef3a129f`; the recorded final release is verified. The target configuration gives paper-repo six turns in the completed run and the world used 1457.1 model seconds overall. No judging was supplied, so this round must define held-out tasks and judging and compare the incumbent with one candidate using the same starts.
+
+This round prioritizes evidence that the paper worker downloads and preserves the NOAA source, computes the requested ten-year difference correctly, and writes exactly one paragraph with all required metadata. Candidate changes are limited to native worker settings or environment while retaining Codex and `gpt-6.1-sol`; the likely first candidate is higher reasoning effort. Diagnosis will cite run turns, steps, outputs, and judging records, and will separate target-world or position-contract defects from worker defects.
+
+Not established yet: the exact held-out task set and judging rubric, candidate configuration, run records, and whether the incumbent has a reproducible defect. Those must be supplied by task-setter, tuner, trial-user, and judge through their repositories/issues.

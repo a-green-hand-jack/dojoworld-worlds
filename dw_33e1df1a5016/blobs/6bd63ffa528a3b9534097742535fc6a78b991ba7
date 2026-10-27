@@ -1,0 +1,135 @@
+{
+  "judgements": [
+    {
+      "label": "R-A9F9B744438EF424",
+      "result": {
+        "repo": "trial-user",
+        "path": "evaluation/blinded/R-A9F9B744438EF424.json",
+        "source": "evaluation/blinded/R-A9F9B744438EF424.md",
+        "provenance": {
+          "repo": "trial-user",
+          "path": "evaluation/blinded/R-A9F9B744438EF424.json",
+          "sha256": "5cd15e848a914cb21c479db26f4709bdf112a827616048f966e3573136bec709"
+        }
+      },
+      "score": 0,
+      "verdict": "fail",
+      "items": [
+        {
+          "item": "delivery",
+          "points": 0,
+          "quote": "Captured world record reports incomplete-idle, no approved release, no artifact export, and no delivery completion."
+        },
+        {
+          "item": "format",
+          "points": 0,
+          "quote": "\"report_artifact_present\": false, \"retained_source_verifiable\": false, \"completion_verdict\": \"fail\""
+        },
+        {
+          "item": "provenance",
+          "points": 0,
+          "quote": "\"report_artifact_present\": false, \"retained_source_verifiable\": false, \"completion_verdict\": \"fail\""
+        },
+        {
+          "item": "content",
+          "points": 0,
+          "quote": "\"report_artifact_present\": false, \"retained_source_verifiable\": false, \"completion_verdict\": \"fail\""
+        },
+        {
+          "item": "exclusion",
+          "points": 0,
+          "quote": "\"approved_release\": false, \"delivery_complete\": false, \"artifact_exported\": false"
+        },
+        {
+          "item": "limits_and_artifact",
+          "points": 0,
+          "quote": "Captured world record reports incomplete-idle, no approved release, no artifact export, and no delivery completion."
+        }
+      ],
+      "worker": "incumbent"
+    },
+    {
+      "label": "R-B5F676EA70B42DD3",
+      "result": {
+        "repo": "trial-user",
+        "path": "evaluation/blinded/R-B5F676EA70B42DD3.json",
+        "source": "evaluation/blinded/R-B5F676EA70B42DD3.md",
+        "provenance": {
+          "repo": "trial-user",
+          "path": "evaluation/blinded/R-B5F676EA70B42DD3.json",
+          "sha256": "905f3f1409b5de963a1eb2505082f85152ce2e635f4e78ea57b26a4f78700896"
+        }
+      },
+      "score": 0,
+      "verdict": "fail",
+      "items": [
+        {
+          "item": "delivery",
+          "points": 0,
+          "quote": "Captured world record reports incomplete-idle, no approved release, no artifact export, and no delivery completion."
+        },
+        {
+          "item": "format",
+          "points": 0,
+          "quote": "\"report_artifact_present\": false, \"retained_source_verifiable\": false, \"completion_verdict\": \"fail\""
+        },
+        {
+          "item": "provenance",
+          "points": 0,
+          "quote": "\"report_artifact_present\": false, \"retained_source_verifiable\": false, \"completion_verdict\": \"fail\""
+        },
+        {
+          "item": "content",
+          "points": 0,
+          "quote": "\"report_artifact_present\": false, \"retained_source_verifiable\": false, \"completion_verdict\": \"fail\""
+        },
+        {
+          "item": "exclusion",
+          "points": 0,
+          "quote": "\"approved_release\": false, \"delivery_complete\": false, \"artifact_exported\": false"
+        },
+        {
+          "item": "limits_and_artifact",
+          "points": 0,
+          "quote": "Captured world record reports incomplete-idle, no approved release, no artifact export, and no delivery completion."
+        }
+      ],
+      "worker": "medium-v1"
+    }
+  ],
+  "labels_index": {
+    "repo": "trial-user",
+    "path": "evaluation/labels-index.json"
+  },
+  "label_table": {
+    "repo": "trial-user",
+    "path": "evaluation/labels-table.json",
+    "published": {
+      "repo": "trial-user",
+      "path": "evaluation/blinded/labels-table.sha256"
+    }
+  },
+  "comparison": {
+    "task": "heldout-001",
+    "judging": "fixed 0-10 blind rubric; pass requires every required item and completed delivery",
+    "runs_per_worker": 1,
+    "scores": {
+      "incumbent": [
+        0
+      ],
+      "medium-v1": [
+        0
+      ]
+    },
+    "difference": {
+      "metric": "mean score (medium-v1 minus incumbent)",
+      "value": 0
+    },
+    "spread": {
+      "metric": "standard deviation of paired score differences",
+      "value": 0
+    },
+    "conclusion": "No candidate does better than the incumbent on the held-out run; keep the incumbent.",
+    "kept": "incumbent"
+  }
+}

@@ -1,0 +1,98 @@
+{
+ "R10249": {
+  "batch": 1,
+  "bytes_sha": "3bb1375cb6d17c9ddd2a6939f88c0715a5ffb942ac39ce29eda58f296b2cf9e4",
+  "run": "b",
+  "task": "T2",
+  "worker": "incumbent",
+  "world": "rw_940d1a6fe375"
+ },
+ "R10793": {
+  "batch": 2,
+  "bytes_sha": "d942b82a3c256add6a60401ea0a3b18943ad27315bb7697931a30c900c9eb9d6",
+  "run": "b",
+  "task": "T2",
+  "worker": "incumbent",
+  "world": "rw_5522e1ebe794"
+ },
+ "R22418": {
+  "batch": 2,
+  "bytes_sha": "f7d2950d1b7a127e32303ab7054ace54780bc11eef3ceed4b7d0483f5edcf6d3",
+  "run": "a",
+  "task": "T2",
+  "worker": "cand",
+  "world": "rw_03d2ea59f5f0"
+ },
+ "R33015": {
+  "batch": 2,
+  "bytes_sha": "38265558b26c8623a6e9cb65c8848d424cb1b14b101c6c7dd35a2e451a849ab9",
+  "run": "b",
+  "task": "T1",
+  "worker": "cand",
+  "world": "rw_dfa74381f47f"
+ },
+ "R36966": {
+  "batch": 2,
+  "bytes_sha": "c2db933283363549761397d7f67c9f9f46e56846e771861ca9411d32a1c76d0c",
+  "run": "a",
+  "task": "T1",
+  "worker": "incumbent",
+  "world": "rw_69cc2fd71e02"
+ },
+ "R46471": {
+  "batch": 2,
+  "bytes_sha": "b9866e4ab43a59658147cf7eb5856d9507b3796d2cbc11f3c46a56abb99b9146",
+  "run": "a",
+  "task": "T2",
+  "worker": "incumbent",
+  "world": "rw_a971d704ab27"
+ },
+ "R49157": {
+  "batch": 1,
+  "bytes_sha": "43dc33372ac843cc37989795a10f9493d0638fde52ef6c7b98989042aa7da7fc",
+  "run": "b",
+  "task": "T1",
+  "worker": "incumbent",
+  "world": "rw_46c54a56bed5"
+ },
+ "R51201": {
+  "batch": 1,
+  "bytes_sha": "182cec39ebe50bd98f4d647c9db7889c41bea32c8a24a94f85ae1429d1915649",
+  "run": "a",
+  "task": "T1",
+  "worker": "incumbent",
+  "world": "rw_e4d307d7c798"
+ },
+ "R65205": {
+  "batch": 2,
+  "bytes_sha": "162c3de842323548463671ef24d960776478ba596235598512ff92e36078c393",
+  "run": "b",
+  "task": "T1",
+  "worker": "incumbent",
+  "world": "rw_a7e6584e0120"
+ },
+ "R70222": {
+  "batch": 2,
+  "bytes_sha": "598921e864b44310e685389c8a59a9118d2172a5136d254b9eb5fd31356784e0",
+  "run": "a",
+  "task": "T1",
+  "worker": "cand",
+  "world": "rw_99e89e80f857"
+ },
+ "R71919": {
+  "batch": 1,
+  "bytes_sha": "44a41f0fa8e2605aa98a831fa658b90dd902c5233866211373fe908ac5a89807",
+  "run": "a",
+  "task": "T2",
+  "worker": "incumbent",
+  "world": "rw_b35fc798f418"
+ },
+ "R99518": {
+  "batch": 2,
+  "bytes_sha": "bbd44c7f5efd7d5e7d3850bab6c00580df0e9404172c475e0628fa77c8a9b4a3",
+  "run": "b",
+  "task": "T2",
+  "worker": "cand",
+  "world": "rw_53de1dec5b2c"
+ }
+}

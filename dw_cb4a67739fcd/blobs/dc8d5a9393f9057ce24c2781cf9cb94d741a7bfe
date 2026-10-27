@@ -1,0 +1,43 @@
+{
+ "worlds": {
+  "rw_f9642a4be6a7": {
+   "use": "failed",
+   "reason": "ended without a verified release (trial-user#2 mapping); counted as score 0; dropping it or scoring it best/worst leaves the workers tied"
+  },
+  "rw_79dcc94b870a": {
+   "use": "failed",
+   "reason": "ended without a verified release (trial-user#2 mapping); counted as score 0; dropping it or scoring it best/worst leaves the workers tied"
+  },
+  "rw_f5800b3604da": {
+   "use": "measured",
+   "reason": "verified release after trial-user ran finish (trial-user#4): world complete, release_status system-release-verified; report text scored 4"
+  },
+  "rw_5223bbd9f1a9": {
+   "use": "failed",
+   "reason": "ended without a verified release (trial-user#2 mapping); counted as score 0; dropping it or scoring it best/worst leaves the workers tied"
+  },
+  "rw_830127ce2d7a": {
+   "use": "measured",
+   "reason": "verified release after trial-user ran finish (trial-user#4): world complete, release_status system-release-verified; report text scored 4"
+  },
+  "rw_c223a9c2d416": {
+   "use": "failed",
+   "reason": "ended without a verified release (trial-user#2 mapping); counted as score 0; dropping it or scoring it best/worst leaves the workers tied"
+  },
+  "rw_9af09c7307c7": {
+   "use": "excluded",
+   "reason": "put-back run of the candidate cand-medium made before the kept worker was decided; the incumbent is kept, so it is not part of the comparison"
+  },
+  "rw_4202e44fb3b7": {
+   "use": "put-back",
+   "reason": "continue of rw_679cdc7d5fa3 with the kept incumbent worker; finished (sparring-partner#6), final checkpoint final-65f41b4e"
+  },
+  "rw_b0bdda5b2c77": {
+   "use": "excluded",
+   "reason": "stray world from an earlier continue call (sparring-partner#4), never driven; not a run"
+  }
+ },
+ "comparison": {
+  "note": "per worker 1 measured (score 4) and 2 failed (no verified release, score 0): equal means 1.33. Dropping failed runs: 4 vs 4; failed given best or worst score: equal for both. Tie under every treatment; incumbent kept"
+ }
+}

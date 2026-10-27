@@ -1,0 +1,11 @@
+# Brief
+
+**Objective (quoted):** "Improve the worker of the position paper-repo of the research world rw_679cdc7d5fa3 ... one-paragraph report on how fast the CO2 at Mauna Loa rose over the last ten years, from NOAA's annual means downloaded during the work. The incumbent worker of every position there is Claude Code with claude-sonnet-5-5 at low effort. Candidates may use only Claude Code with claude-sonnet-5-5 ... what may change is its native settings, such as its effort or its environment. Take the tasks from the target world; no judging is given, so propose it. Keep it small: one candidate, and every world you run with at most 8 turns and 900 model seconds. Put the kept worker back by continuing rw_679cdc7d5fa3 from its newest checkpoint with it and running that round. Nothing is published outside this world."
+
+**Target:** rw_679cdc7d5fa3 (finished, final checkpoint final-7adfe819, release 3330e363). Positions: story-repo -> paper-repo -> internal-review-repo (+ external-review-repo). Incumbent: claude-code, claude-sonnet-5-5, CLAUDE_CODE_EFFORT_LEVEL=low, no assets. Original run: 14 turns, 126 model s.
+
+**Task / judging proposal (for task-setter):** task = the world's topic (download NOAA co2_annmean_mlo.csv during work, keep file as downloaded; report/report.md one paragraph: URL, fetch time, SHA-256, last year + mean, 10-year average growth = (last - last-10)/10, no figure). Judge: each value checked against the saved CSV and recomputed SHA-256; file unmodified; one paragraph; no figure; fetch time recorded; numbers not typed from memory.
+
+**Focus this round:** paper-repo only. Single candidate varying native settings (first lever: effort low -> higher; second: environment). Runs capped at 8 turns / 900 model s per world.
+
+**Not established:** the incumbent's concrete failures (diagnosis from records pending; sparring-partner to supply records of re-runs); whether the original report was correct.

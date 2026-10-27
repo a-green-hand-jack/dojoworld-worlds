@@ -1,0 +1,6 @@
+Run: incumbent (claude-code, claude-sonnet-5-5, effort low), 1 repetition.
+World rw_555c0aa60a08 = continue rw_679cdc7d5fa3 --checkpoint final-7adfe819, config: resources=[research-network] only, budget.total_seconds=900.
+Driven: execute --loop --max-executions 8 --deadline-sec 900; ended "max-executions" (8 executions, 60 requests).
+Files: status.json, monitor.txt (time stream), receipts/, artifacts.txt (no approved release, so none exported; `researchworld capture` taken on host).
+Observed in monitor: paper-repo opened final PR #7 "Final: report and unmodified NOAA file", approved by internal-review-repo; external-review-repo and internal-review-repo each logged "research-network could not be told" (resource not worked from sandbox). 
+Note: continue needs explicit resources list; local-compute dropped.

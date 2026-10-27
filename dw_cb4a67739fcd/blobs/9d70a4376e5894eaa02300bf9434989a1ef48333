@@ -1,0 +1,224 @@
+{
+ "judgements": [
+  {
+   "label": "R13ae6252",
+   "repo": "trial-user",
+   "path": "results/R13ae6252.md",
+   "source": "results/R13ae6252.md",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R13ae6252.md",
+    "source": "results/R13ae6252.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R13ae6252.md",
+     "sha256": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd"
+    }
+   },
+   "score": 0,
+   "failed": true,
+   "rationale": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed.",
+   "quotations": [
+    "FAILED: the run ended without a verified release; no report."
+   ],
+   "items": [
+    {
+     "item": "judgement",
+     "quote": "FAILED: the run ended without a verified release; no report.",
+     "note": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed."
+    }
+   ],
+   "worker": "incumbent"
+  },
+  {
+   "label": "R3a8dbc88",
+   "repo": "trial-user",
+   "path": "results/R3a8dbc88.md",
+   "source": "results/R3a8dbc88.md",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R3a8dbc88.md",
+    "source": "results/R3a8dbc88.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R3a8dbc88.md",
+     "sha256": "470e25eff8269e2d7cc3ddc7a2554b8d56584f2bd9b90fe06761f17e90317ddc"
+    }
+   },
+   "score": 4,
+   "failed": false,
+   "rationale": "Reached a verified release. Report is one paragraph with URL, fetch time, SHA-256, last year 2025 = 427.35 ppm and growth (427.35 − 390.10) / 15 = 2.48 ppm per year; arithmetic checks (37.25/15=2.483) and the 2010 and 2025 values appear in the quoted file tail. Grounded in the downloaded file. Slightly cluttered by the DNS re-fetch aside but still one paragraph.",
+   "quotations": [
+    "(427.35 − 390.10) / 15 = 2.48 ppm per year",
+    "2010,390.10,0.12",
+    "2025,427.35,0.12"
+   ],
+   "items": [
+    {
+     "item": "judgement",
+     "quote": "(427.35 − 390.10) / 15 = 2.48 ppm per year",
+     "note": "Reached a verified release. Report is one paragraph with URL, fetch time, SHA-256, last year 2025 = 427.35 ppm and growth (427.35 − 390.10) / 15 = 2.48 ppm per year; arithmetic checks (37.25/15=2.483) and the 2010 and 2025 values appear in the quoted file tail. Grounded in the downloaded file. Slightly cluttered by the DNS re-fetch aside but still one paragraph."
+    }
+   ],
+   "worker": "incumbent"
+  },
+  {
+   "label": "R686a1f6b",
+   "repo": "trial-user",
+   "path": "results/R686a1f6b.md",
+   "source": "results/R686a1f6b.md",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R686a1f6b.md",
+    "source": "results/R686a1f6b.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R686a1f6b.md",
+     "sha256": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd"
+    }
+   },
+   "score": 0,
+   "failed": true,
+   "rationale": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed.",
+   "quotations": [
+    "FAILED: the run ended without a verified release; no report."
+   ],
+   "items": [
+    {
+     "item": "judgement",
+     "quote": "FAILED: the run ended without a verified release; no report.",
+     "note": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed."
+    }
+   ],
+   "worker": "candidate"
+  },
+  {
+   "label": "Rbc6c67ec",
+   "repo": "trial-user",
+   "path": "results/Rbc6c67ec.md",
+   "source": "results/Rbc6c67ec.md",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/Rbc6c67ec.md",
+    "source": "results/Rbc6c67ec.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/Rbc6c67ec.md",
+     "sha256": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd"
+    }
+   },
+   "score": 0,
+   "failed": true,
+   "rationale": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed.",
+   "quotations": [
+    "FAILED: the run ended without a verified release; no report."
+   ],
+   "items": [
+    {
+     "item": "judgement",
+     "quote": "FAILED: the run ended without a verified release; no report.",
+     "note": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed."
+    }
+   ],
+   "worker": "incumbent"
+  },
+  {
+   "label": "Re1ce3904",
+   "repo": "trial-user",
+   "path": "results/Re1ce3904.md",
+   "source": "results/Re1ce3904.md",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/Re1ce3904.md",
+    "source": "results/Re1ce3904.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/Re1ce3904.md",
+     "sha256": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd"
+    }
+   },
+   "score": 0,
+   "failed": true,
+   "rationale": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed.",
+   "quotations": [
+    "FAILED: the run ended without a verified release; no report."
+   ],
+   "items": [
+    {
+     "item": "judgement",
+     "quote": "FAILED: the run ended without a verified release; no report.",
+     "note": "The result states it ended without a verified release and holds no report; nothing to grade, scored 0 and counted as failed."
+    }
+   ],
+   "worker": "candidate"
+  },
+  {
+   "label": "Rf7808a98",
+   "repo": "trial-user",
+   "path": "results/Rf7808a98.md",
+   "source": "results/Rf7808a98.md",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/Rf7808a98.md",
+    "source": "results/Rf7808a98.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/Rf7808a98.md",
+     "sha256": "5aefe620236341bd00215bc2915cde528398985bf238aac42583caca3055750f"
+    }
+   },
+   "score": 4,
+   "failed": false,
+   "rationale": "Reached a verified release. One paragraph with URL, fetch time, hash, last year 2025 = 427.35 ppm and growth 2.48 ppm/yr; the arithmetic is correct (37.25/15) and both endpoint values match the quoted file tail. Grounded, with units.",
+   "quotations": [
+    "(427.35 − 390.10) / 15 = 2.48 ppm per year",
+    "2010,390.10,0.12",
+    "2025,427.35,0.12"
+   ],
+   "items": [
+    {
+     "item": "judgement",
+     "quote": "(427.35 − 390.10) / 15 = 2.48 ppm per year",
+     "note": "Reached a verified release. One paragraph with URL, fetch time, hash, last year 2025 = 427.35 ppm and growth 2.48 ppm/yr; the arithmetic is correct (37.25/15) and both endpoint values match the quoted file tail. Grounded, with units."
+    }
+   ],
+   "worker": "candidate"
+  }
+ ],
+ "labels_index": {
+  "repo": "trial-user",
+  "path": "results/labels.json"
+ },
+ "label_table": {
+  "repo": "trial-user",
+  "path": "results/table.json",
+  "published": {
+   "repo": "trial-user",
+   "path": "results/TABLE.sha256"
+  }
+ },
+ "comparison": {
+  "scores": {
+   "incumbent": [
+    4,
+    0,
+    0
+   ],
+   "candidate": [
+    4,
+    0,
+    0
+   ]
+  },
+  "mean": {
+   "incumbent": 1.33,
+   "candidate": 1.33
+  },
+  "difference_candidate_minus_incumbent": 0.0,
+  "spread": "per-worker scores {0,0,4}; sd 2.31 each; n=3 per worker, one task, so the spread covers any difference",
+  "verified_release": "1/3 each",
+  "failed_handling": "4 failed runs scored 0; dropping them leaves one 4 per worker (tie); giving them best or worst score gives equal totals for both workers, so the tie holds",
+  "conclusion": "no candidate does better than the incumbent; incumbent kept",
+  "kept": "incumbent"
+ }
+}

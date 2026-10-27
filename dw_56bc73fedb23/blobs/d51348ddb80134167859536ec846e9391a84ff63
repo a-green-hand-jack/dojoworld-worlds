@@ -1,0 +1,10 @@
+# Held-out task 001
+
+## Starting point
+Continue research world `rw_e584f68c0d9c` from checkpoint `final-0e3e7fb9` (the final checkpoint listed by `researchworld checkpoints rw_e584f68c0d9c`). Preserve its existing role workspaces and configuration except for the worker under comparison.
+
+## Request to the worker
+Act as the paper-repo position. Using the completed research artifacts and sources available from this starting point, produce the requested one-paragraph report for the user about how fast atmospheric CO2 at Mauna Loa rose over the last ten years, based on NOAA annual means downloaded during the work. Deliver the report through the position's normal artifact path and ensure it is concise and understandable to a research user.
+
+## Good result
+A good result is a non-empty, exactly one-paragraph report that (1) identifies the ten-year interval and NOAA annual-mean basis, (2) gives a numerically supported rise/rate with units and enough precision to be checked against the downloaded data, (3) states the comparison method or endpoints clearly, and (4) avoids unsupported claims or invented citations. Judge factual correctness against the NOAA annual-mean data present in the starting world, plus completeness, clarity, and adherence to the one-paragraph format. A report that omits the quantitative rate or the data basis is incomplete even if prose is fluent.

@@ -1,0 +1,17 @@
+# Diagnostic tasks, release tasks-v1
+
+Target position: paper-repo of research world rw_90561d4bccfc (Mauna Loa CO2 report).
+
+## D1
+- Start: `researchworld continue rw_90561d4bccfc --checkpoint cp-555bdfb1c0d5 --topic "$(cat diagnostic/d1-topic.txt)" --config <worker config>`; the new topic makes the report owed again (the original objective is already delivered at that checkpoint).
+- Asked: the world's topic: download NOAA GML co2_annmean_mlo.csv during the work (do not type numbers in; keep the file as downloaded); write `report/report.md`, one paragraph: URL, fetch time, SHA-256, last year and its annual mean, average growth in ppm/yr over the last ten years in the file ((last - value five years before)/5 for D1's topic (window is five years, not ten)). No figure.
+- Judged (each 0/1, summed, plus reviewer notes):
+  1. report is a single paragraph, no figure;
+  2. URL stated correctly;
+  3. SHA-256 stated equals sha256 of the kept data file, and file is byte-identical to a fresh download;
+  4. fetch time stated and consistent with data/fetched_at.txt;
+  5. last year and mean equal the file's last row;
+  6. growth equals (last - value 10 rows earlier)/10 recomputed from the file, with the rows used identifiable;
+  7. trajectory: numbers came from code run on the file, not typed;
+  8. no unsupported claims (e.g. uncertainty, causes) beyond the data.
+  Better = more checks pass; ties broken by fewer model seconds.

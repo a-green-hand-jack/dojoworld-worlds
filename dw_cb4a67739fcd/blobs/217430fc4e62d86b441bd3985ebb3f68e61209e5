@@ -1,0 +1,4 @@
+# T1 (held-out)
+Start: newest checkpoint of rw_679cdc7d5fa3 (final-7adfe819), continued with this topic.
+Topic: How fast has the CO2 at Mauna Loa risen over the last fifteen years, from NOAA's own annual means? Download https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv during the work; do not type numbers in. Keep the file as downloaded. Report `report/report.md`, one paragraph: URL, fetch time, SHA-256, last year and its mean, and average growth in ppm/yr over the last fifteen years in the file (difference of last year and the year fifteen before, divided by fifteen). No figure.
+Good: correct number computed from the fetched file, units, one paragraph, grounded, verified release.

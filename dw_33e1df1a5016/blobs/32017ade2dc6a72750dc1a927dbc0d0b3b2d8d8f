@@ -1,0 +1,13 @@
+# Held-out task 001
+
+## Starting point
+
+Continue research world `rw_e584f68c0d9c` from checkpoint `final-0e3e7fb9` (the target world's newest/final checkpoint), changing only the compared `paper-repo` worker. The checkpoint is the frozen target-world state supplied by the improvement objective.
+
+## Request to the target position
+
+Act as the `paper-repo` position's worker. Produce the requested final paper artifact for the target-world topic: download NOAA GML's Mauna Loa annual-mean CO2 CSV during the work from the URL in the target topic; retain the downloaded file; write `report/report.md` as exactly one paragraph containing the URL, fetch time, downloaded file SHA-256, the last year and annual mean in the file, and average growth in ppm/year over the last ten years in the file (last-year mean minus the mean ten years earlier, divided by ten). Do not include a figure and do not type the data values into the report before fetching the file.
+
+## Good result
+
+A result is good when the target world records a completed paper-repo delivery and its report artifact satisfies every requested field and format requirement, with values traceable to the retained downloaded NOAA file and the stated fetch metadata. The report must be one paragraph, include no figure, and the world must complete within its configured limits. Record both the delivered artifact and the world execution evidence so the judge can inspect them.

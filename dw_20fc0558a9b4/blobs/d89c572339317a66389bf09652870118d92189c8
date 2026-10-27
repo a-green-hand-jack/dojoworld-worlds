@@ -1,0 +1,69 @@
+{
+ "worlds": {
+  "rw_207046cd5d2d": {
+   "use": "failed",
+   "reason": "incumbent, label R246996; drive ended idle with release_status unverified; its report is judged 5/5 anyway"
+  },
+  "rw_498043a4e144": {
+   "use": "failed",
+   "reason": "incumbent, label R564081; no verified release recorded by me (status file not examined in full); judged 5/5"
+  },
+  "rw_0c4cf3ac24e6": {
+   "use": "failed",
+   "reason": "cand-1 (paper-repo effort high), label R896054; drive ended idle with release_status unverified; judged 5/5"
+  },
+  "rw_0a7d0ea63bd6": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_34238ae9b7ca": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_553bc8fdd897": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_597df4e0e28c": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_5c73678680e4": {
+   "use": "excluded",
+   "reason": "task-setter's fourth held world (task-setter#2 comment 17:12); not one of the three held-out runs handed over, never judged or counted"
+  },
+  "rw_60bf2faa0320": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_8e5a324929db": {
+   "use": "excluded",
+   "reason": "stray world never driven (runs/INDEX.md)"
+  },
+  "rw_98336b029691": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_ef66c242e1d3": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_f687b166fb66": {
+   "use": "diagnostic",
+   "reason": "sparring-partner run listed in runs/INDEX.md (D1 diagnostics or final-checkpoint trial); not a held-out run, not in the comparison; status unverified"
+  },
+  "rw_e02e2262f336": {
+   "use": "put-back",
+   "reason": "incumbent (kept) continued from final-4540868c, runs/INDEX.md"
+  }
+ },
+ "comparison": {
+  "tasks": "one held-out task from the final checkpoint, one starting point",
+  "runs": {
+   "incumbent": 2,
+   "cand-1": 1
+  },
+  "counting": "Runs without a verified release are counted failed, not measured. Result if they are counted by their judged scores: all 5/5, difference 0. Dropped: nothing measured. Worst-case scoring (0) for all: difference 0. Best-case: difference 0. The comparison does not change with the treatment; it cannot show cand-1 better.",
+  "conclusion": "No candidate does better than the incumbent; the incumbent's workers are kept."
+ }
+}

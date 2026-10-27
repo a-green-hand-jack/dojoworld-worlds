@@ -1,0 +1,5 @@
+# Candidate validation
+
+`researchworld worker check candidate/v1/worker.json` reports the worker as publishable with keys `agent`, `model`, and `provider`. The candidate preserves the target's Codex / gpt-6.1-sol / openai binding and changes only native effort to medium.
+
+The objective-specific judge evaluation, blinded trial receipts, and target-world putback continuation records are not present in the material supplied to tuner. Their absence is recorded by diagnostician in commit 64cc446; this file does not substitute for those records.

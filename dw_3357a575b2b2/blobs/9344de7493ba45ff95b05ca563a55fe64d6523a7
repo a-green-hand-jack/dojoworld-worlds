@@ -1,0 +1,18 @@
+{
+  "objective": "judge#1",
+  "kept": "world-config.json",
+  "worker": {
+    "agent": {
+      "name": "codex",
+      "settings": {
+        "effort": "low"
+      }
+    },
+    "model": "gpt-6.1-sol",
+    "provider": "openai"
+  },
+  "status": "failed",
+  "reason": "Incumbent retained; target continuation rw_620bbabf8347 stalled without release, so required put-back remains unresolved.",
+  "target_world": "rw_c7307a00205b",
+  "putback_world": "rw_620bbabf8347"
+}

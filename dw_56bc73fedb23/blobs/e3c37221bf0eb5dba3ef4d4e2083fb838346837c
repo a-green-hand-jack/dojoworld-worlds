@@ -1,0 +1,7 @@
+# Brief
+
+The objective asks us to improve the worker of position `paper-repo` in research world `rw_e584f68c0d9c`. Its task is a one-paragraph report on how fast CO2 at Mauna Loa rose over the last ten years, using NOAA annual means downloaded during the work. The incumbent at every position is Codex with gpt-6.1-sol at low reasoning effort. We may use only that model/agent; one candidate is allowed, and each run world may use at most 8 turns and 900 model seconds. The kept worker must be put back by continuing from the newest checkpoint and running a round.
+
+My diagnostic focus is evidence-based comparison of incumbent and candidate runs from identical starting points, citing outputs and judging task requirements. I will separate worker faults from missing world supplies, unclear task/position contracts, or contradictory position text, and report actionable causes to tuner.
+
+The target world's full status, checkpoints, task text, judging rule, and incumbent outputs have not yet been supplied in this repository; diagnosis remains pending those run records and task materials.

@@ -1,0 +1,3 @@
+# Run accounting note
+
+Diagnostician recorded a separate world/runs accounting gap (commit bbeca26): put-back worlds `rw_7e9d23176b4e` and `rw_fec32127e3a3` are unaccounted. This does not justify changing candidate `bde2e34`; resolution belongs to runs/referee.

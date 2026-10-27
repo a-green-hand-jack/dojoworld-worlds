@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+"""Judge a Mauna Loa report. usage: check_report.py REPORT.md DATA.csv [YEARS=10]
+DATA.csv is the file the run kept (data/co2_annmean_mlo.csv). Prints one line per check and SCORE n/7."""
+import sys, re, hashlib
+rep = open(sys.argv[1]).read(); raw = open(sys.argv[2],'rb').read()
+rows = [l.split(',') for l in raw.decode().splitlines() if l and l[0].isdigit()]
+d = {int(r[0]): float(r[1]) for r in rows}
+N = int(sys.argv[3]) if len(sys.argv)>3 else 10
+last = max(d); base = last-N
+g = (d[last]-d[base])/N if base in d else None
+paras = [p for p in re.split(r'\n\s*\n', rep.strip()) if p.strip() and not p.startswith('#')]
+c = {
+ 'one paragraph, no figure': len(paras)==1 and '![' not in rep,
+ 'NOAA URL': 'gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv' in rep,
+ 'UTC fetch time': bool(re.search(r'\d{4}-\d\d-\d\d.{0,12}\d\d:\d\d(:\d\d)?\s*(UTC|Z)', rep)),
+ 'sha256 of kept bytes': hashlib.sha256(raw).hexdigest() in rep,
+ 'last year and mean': str(last) in rep and f'{d[last]:.2f}' in rep,
+ 'base year is last-10 and its value': str(base) in rep and base in d and f'{d[base]:.2f}' in rep,
+ 'growth correct (2 dp)': g is not None and f'{g:.2f}' in rep,
+}
+for k,v in c.items(): print(('PASS ' if v else 'FAIL ')+k)
+print(f'SCORE {sum(c.values())}/7  (expected growth {g})')

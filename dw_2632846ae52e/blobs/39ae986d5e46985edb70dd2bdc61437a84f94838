@@ -1,0 +1,7 @@
+# Batch 1 judgements (made blind: labels only; score 0-4; FAILED = no verified release)
+
+- R10249: score 4. Rests on: "(427.35 − 414.21)/5 = 2.628 ppm/yr" and "(414.21 − 401.01)/5 = 2.640 ppm/yr", ratio 0.995. I recomputed: 13.14/5=2.628, 13.2/5=2.64, ratio .9955. I fetched the NOAA csv: rows 2015,401.01 / 2020,414.21 / 2025,427.35 match the quoted base values. Years, units, source URL, SHA and fetch time given; one paragraph. Minor: no defect found.
+- R49157: FAILED, no report text; judged failed (score 0 if counted worst; excluded if dropped).
+- R51201: FAILED, same basis.
+- R71919: FAILED, same basis.
+Material read before judging that could reveal the worker: none beyond the result files and labels_index.md.

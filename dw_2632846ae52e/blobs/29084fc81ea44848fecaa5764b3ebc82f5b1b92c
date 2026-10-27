@@ -1,0 +1,9 @@
+T1 a rw_99e89e80f857 cand
+T1 b rw_dfa74381f47f cand
+T2 a rw_03d2ea59f5f0 cand
+T2 b rw_53de1dec5b2c cand
+T1 a rw_69cc2fd71e02 incumbent
+T1 b rw_a7e6584e0120 incumbent
+T2 a rw_a971d704ab27 incumbent
+T2 b rw_5522e1ebe794 incumbent
+--- batch1 (all incumbent; T1a rw_e4d307d7c798, T1b rw_46c54a56bed5, T2a rw_b35fc798f418, T2b rw_940d1a6fe375; each continued rw_679cdc7d5fa3@final-7adfe819 with a new topic, config = research-network only, execute --loop --max-executions 8 --deadline-sec 900). batch2 configs: candidate effort high, incumbent low.

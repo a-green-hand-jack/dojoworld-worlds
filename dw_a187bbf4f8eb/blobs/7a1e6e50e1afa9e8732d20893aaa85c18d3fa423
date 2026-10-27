@@ -1,0 +1,7 @@
+# Run accounting (identity-free, until every judgement is pushed)
+
+- 6 runs were made and driven at once (3 papers x 2 workers), 1 run each, all created and recorded before driving; each continued world's `config show` was checked (1800 s, required paper files, no resources, 12 turns, 1800 model seconds).
+- 5 runs ended with a verified release (`finish` recorded it). 1 run (a paper_17 run) ended `terminal: stalled` with no `manuscript.pdf`: a failed run, never judged from a draft; its pair (paper_17) is void and has no judging item.
+- 2 pairs (paper_45, paper_32) are judging items: each pair is given as two items, in opposite orders, under different labels, with item ids and labels drawn at random: 4 items in `labels-index.json` (order drawn). Each manuscript is `manuscript.tex` and `manuscript.pdf`; the item's writing material is under `material/<item>/` (the benchmark's inputs; `paper_id` removed from `metadata.json`).
+- `label-table.sha256` is the sha256 of the label table (`label-table.json`), kept private until every judgement is pushed.
+- World ids, per-run turns and model seconds, and the label table are published after judging.

@@ -1,0 +1,79 @@
+# Diagnostic brief
+
+Target: `rw_c7307a00205b`, final checkpoint `final-69cb64af`, verified release `b92331033259090ebc594c3e486dabf5e21a1e2b`. Incumbent: Codex with gpt-6.1-sol at low reasoning effort.
+
+The paper-repo task is a one-paragraph `report/report.md` based on a downloaded, unchanged NOAA GML annual-mean Mauna Loa CSV. It must include the URL, fetch time, SHA-256, last year and annual mean, and `(last-year value − value ten years earlier) / 10`; no figure. The completed target used 15 turns and 537 model seconds. Improvement candidates must use the same agent/model, one candidate, and runs of no more than 8 turns/900 model seconds.
+
+No held-out task release or incumbent/candidate run records have been supplied yet. Consequently no worker-specific failure is asserted; target-world facts above are contract evidence, not diagnosis.
+
+## Run-record status
+
+As of the final quiet-world handoff, tuner has supplied candidate-v1 and corrected CODEOWNERS, but no held-out task release, incumbent run records, candidate run records, or blind judging. No worker-specific diagnosis can therefore be supported without inventing evidence.
+
+No subsequent records or judging were delivered after commit `64cc446`; the open tuner request remains unanswered for lack of its required inputs.
+
+Tuner commit `fefe6ab58b6a` validates candidate-v1's worker binding and medium effort, while explicitly confirming objective-specific judging, blinded trial receipts, and putback records are absent. This corroborates the evidence boundary.
+
+Tuner commit `a1ccd484f0a0` reiterates that no task release, blind receipts, per-result judging, label table, or putback record exists; these are other positions' artifacts and cannot be inferred from candidate validation.
+
+Tuner commit `34f18eaa91ce` records referee review 71 reconfirming the same missing prerequisites; no objective evidence has arrived since `fff2074`.
+
+Put-back attempt `rw_620bbabf8347` ran only external-review-repo (1 turn, 42.8 model seconds), then stalled waiting for execution with story, paper, and internal-review roles never run. It produced no release or verification; this is a continuation infrastructure failure, not worker evidence.
+
+No further execution or release became available after the incomplete putback; judge and tuner were notified of the stalled continuation and missing evidence.
+
+Tuner commit `b09d7d9ce49e` independently records the incomplete putback `rw_620bbabf8347` and confirms no target-world release or comparison resulted.
+
+Tuner commit `28550d390b14` confirms the putback release remains absent; no new diagnostic evidence is available.
+
+Tuner f0bd83dfed37 again corroborates the incomplete putback status; the evidence set is unchanged.
+
+Tuner db82bbab24c0 is the latest confirmation that no putback release exists; no new evidence arrived.
+
+Tuner 57354563fbbb corroborates the same putback evidence boundary; there is still no release or comparison.
+
+Tuner bf484a092020 reports no change: diagnostician evidence still lacks a putback release or comparison.
+
+Tuner bb889786c654 corroborates the unchanged putback boundary; no release or comparison is available.
+
+Tuner 05e4d876a326 reports the same latest evidence status; no putback release or comparison has appeared.
+
+Tuner 1abb83c63fba records unchanged evidence availability; no putback release or comparison exists.
+
+Tuner 72b8e69948b4 records the latest unchanged evidence status from diagnostician.
+
+Tuner a2484a85eb8f records unchanged diagnostic evidence; no new run or putback artifacts exist.
+
+Tuner 6143ae0ac52d records unchanged objective evidence; no diagnostic or putback artifacts arrived.
+
+Tuner cc450ee18126 records unchanged diagnostic evidence status; no new artifacts are available.
+
+Tuner 7922230e2a03 reports unchanged objective evidence status; no new artifacts are available.
+
+Tuner aeea887cc13f reports unchanged diagnostic status; no new artifacts are available.
+
+Tuner 917b7cd08d6f records continued absence of objective evidence; no new artifacts arrived.
+
+Tuner 75f5490fa429 records continued evidence absence; the diagnostic and putback requests remain blocked on missing artifacts.
+
+Tuner f46ff2ad6b4f records continued objective evidence absence; no new artifacts arrived.
+
+Tuner 8f1f094a5a90 records continued evidence absence; no new artifacts arrived.
+
+Tuner f83aa1a352c6 records continued objective evidence absence; no new artifacts arrived.
+
+Tuner 304458c82d75 records latest evidence absence; no new artifacts arrived.
+
+Tuner 0a7bd9ce3fca records continued objective evidence absence; no new artifacts arrived.
+
+Tuner c37f581e2d31 records latest evidence absence; no new artifacts arrived.
+
+Tuner 28920d7f5cd0 records continued evidence absence; no new artifacts arrived.
+
+Tuner 70b03a0d8516 records latest evidence absence; no new artifacts arrived.
+
+Tuner d54b8bbf5ea9 records continued evidence absence; no new artifacts arrived.
+
+Tuner 90fe5541fb5f records latest evidence absence; no new artifacts arrived.
+
+Tuner cb207fbc1253 records continued evidence absence; no new artifacts arrived.

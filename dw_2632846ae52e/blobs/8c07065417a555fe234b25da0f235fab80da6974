@@ -1,0 +1,8 @@
+PASS one paragraph, no figure
+PASS NOAA URL
+PASS UTC fetch time
+PASS sha256 of kept bytes
+PASS last year and mean
+PASS base year is last-10 and its value
+PASS growth correct (2 dp)
+SCORE 7/7  (expected growth 2.3685)

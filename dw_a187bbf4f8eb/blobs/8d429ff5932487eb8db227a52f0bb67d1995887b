@@ -1,0 +1,173 @@
+
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+
+\usepackage{draftwatermark}
+\SetWatermarkText{AI-Generated}
+\SetWatermarkScale{0.5}
+\SetWatermarkColor[gray]{0.6}
+\usepackage{cvpr}      
+
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\todo}[1]{{\color{red}#1}}
+\newcommand{\TODO}[1]{\textbf{\color{red}[TODO: #1]}}
+
+
+ 
+\usepackage{colortbl}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+\usepackage{multirow}
+\usepackage{pdflscape} \usepackage{changepage} \usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx} 
+\definecolor{lightblue}{RGB}{189, 224, 254}
+\def\paperID{***} \def\confName{ICCV}
+\def\confYear{2025}
+
+\makeatletter
+\AtBeginDocument{
+\renewcommand{\sectionautorefname}{\S\@gobble}
+\renewcommand{\tableautorefname}{Table}
+\renewcommand{\equationautorefname}{Equation}
+\renewcommand{\subsectionautorefname}{\S\@gobble} 
+\renewcommand{\subsubsectionautorefname}{\S\@gobble}
+\renewcommand{\appendixautorefname}{\S\@gobble}
+\providecommand{\algorithmautorefname}{Algorithm}
+}
+\makeatother
+
+\title{MIEB: Massive Image Embedding Benchmark}
+
+\author{Anonymous Author}
+
+
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Image and image--text embeddings underpin search, recommendation, retrieval and classification, yet their evaluation is fragmented across narrow, task-specific protocols. We introduce MIEB, the Massive Image Embedding Benchmark, which evaluates embeddings directly (zero-shot wherever possible) on 130 tasks in 8 categories and 38 languages, covering image-only, text-only and interleaved inputs. Beyond retrieval, classification, clustering, compositionality and vision-centric QA, MIEB introduces Visual STS, which renders textual similarity tasks as images to probe visual text understanding, and document-understanding retrieval. We evaluate 50 models spanning self-supervised vision encoders, CLIP-style encoders and MLLM-based embedding models. No single model dominates: CLIP-style encoders lead on linear probing, zero-shot classification and clustering, while MLLM-based embeddings lead on document understanding, Visual STS and multilingual retrieval. Visual STS performance of encoders correlates strongly with MLLM performance on OCR-heavy benchmarks. Finally, we derive MIEB-lite, a 51-task subset that agrees with the full benchmark (Spearman 0.992) at 70--80\% lower compute.
+\end{abstract}
+
+\section{Introduction}
+Image and image--text embeddings are a basic building block of search, recommendation, retrieval and classification systems. Their evaluation, however, is fragmented: common protocols focus on narrow slices of capability, such as zero-shot classification on ImageNet~\cite{deng2009imagenet}, image--text retrieval in specific domains, or linear probing, so it is hard to tell whether a model that excels at one setting (e.g., clustering) also performs well in others (e.g., multilingual retrieval or document understanding). There is consequently little consensus on what a ``universal'' image or image--text embedding model is. Multimodal LLMs (MLLMs) complicate matters further by shifting attention to downstream generative performance as a proxy for representation quality; such evaluation is computationally intensive and entangles the LLM choice, instruction tuning and data size.
+
+We address this with MIEB, a unified, reproducible benchmark that tests embeddings directly across complementary capabilities, in the spirit of text-embedding benchmarks~\cite{muennighoff2023mteb,enevoldsen2025mmtebmassivemultilingualtext}. MIEB (\autoref{fig:mieb_tasks}, \autoref{tab:MIEB big tasks}) contains 130 tasks in 8 categories and 38 languages, and supports interleaved inputs. Our contributions are:
+\begin{itemize}
+\item A unified benchmark of 130 tasks (8 categories, 38 languages), with modality combinations i-i, i-t, t-i, it-i, it-t, i-it, t-it and it-it, plus multilingual and instruction-aware retrieval under one standardized protocol.
+\item Visual STS, a novel evaluation of visual text understanding obtained by rendering STS tasks into images, and a set of document-understanding retrieval tasks.
+\item A comprehensive evaluation of 50 models, including vision-only, CLIP-style and MLLM-based embedders, with category-wise diagnostics.
+\item MIEB-lite, a 51-task subset built from inter-task correlations that preserves model ranking (Spearman 0.992) and cuts compute by up to 82.4\%.
+\end{itemize}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/MIEB_backup.png}
+\caption{\textbf{Overview of MIEB task categories with examples.}}
+\label{fig:mieb_tasks}
+\end{figure*}
+
+\section{The MIEB Benchmark}
+\paragraph{Overview.} MIEB comprises 130 tasks in 8 categories (\autoref{tab:MIEB big tasks}): Retrieval (45 tasks), Document Understanding (10), Linear Probing (22), Clustering (5), Zero-shot Classification (23), Compositionality (7), Vision-centric QA (6) and Visual STS (9). Retrieval and Visual STS cover multiple languages (38 in total; Visual STS covers 12 languages in its English and multilingual subsets); document understanding covers 2 languages, and the remaining categories are English.
+
+\paragraph{Data curation.} Tasks are curated from established datasets: retrieval suites in the style of M-BEIR~\cite{wei2023uniir}, multilingual retrieval (xFlickr\&CO, XM3600, WIT), compositionality (ARO, Winoground~\cite{Thrush_2022_CVPR}), ImageNet-1k and fine-grained classification sets, clustering, document-understanding retrieval in the style of ViDoRe~\cite{faysse2024colpali}, and STS~\cite{cer-etal-2017-semeval,agirre-etal-2013-sem}. MIEB reuses the human annotations of the source datasets; Visual STS inherits human similarity labels from STS. No new human annotation is collected. MIEB enforces standardized formats, versioning and evaluation scripts for reproducibility. Adding a model requires a simple wrapper producing image and text embeddings, and a new dataset is specified by a single metadata file.
+
+\paragraph{Visual STS.} Existing STS tasks (STS12--17, STS-b and cross-lingual/multilingual variants) are rendered as images, and the similarity of the embeddings of a rendered sentence pair is correlated with human scores. This measures whether a vision encoder can read and semantically understand text in images.
+
+\paragraph{Protocols.} \emph{Retrieval}: documents are ranked by similarity to queries (inputs and corpora may be images, text or interleaved); the metric is nDCG@10 (sometimes recall@1 or MAP@5), and document understanding uses nDCG@5. \emph{Linear probing}: logistic regression (at most 100 iterations) on frozen embeddings with $k=16$ examples per class by default; accuracy. \emph{Zero-shot classification}: labels are turned into prompts (``a photo of \{label\}'') and the top-1 class by similarity is predicted; accuracy. \emph{Clustering}: $k$-means with $k$ equal to the number of ground-truth classes; normalized mutual information (NMI). \emph{Compositionality}: distinguishing positives from hard negatives built by perturbing attributes, relations or order; accuracy. \emph{Visual STS}: Spearman correlation $\rho$ with human scores per dataset. Linear probing keeps the encoder frozen and is thus still considered zero-shot with respect to the encoder.
+
+\paragraph{Interleaved inputs and multilinguality.} Interleaved inputs are native for MLLM-based models; for the other models, interleaved embeddings are formed by summing image and text embeddings. Multilingual analyses report the mean and the variance across languages.
+
+\input{tables/table_qj.tex}
+
+\paragraph{MIEB-lite.} To reduce cost we remove redundant tasks using inter-task performance correlations. Tasks are pruned iteratively when their average correlation exceeds 0.5 (11 tasks) and 0.45 (32 tasks); in addition, UMAP~\cite{mcinnes2018umap} with HDBSCAN~\cite{mcinnes2017hdbscan} yields 17 interpretable task clusters, from which representative tasks are chosen to preserve category and difficulty coverage. The resulting 51-task MIEB-lite agrees strongly with the full benchmark over 38 models (Spearman 0.992, Pearson 0.986).
+
+\section{Models}
+We evaluate 50 models in three families. \emph{Vision-only self-supervised} models: MoCo-v3~\cite{chen2021empirical} and DINOv2~\cite{oquab2024dinov2}. \emph{CLIP-style language-supervised} encoders: CLIP~\cite{radford2021learning}, OpenCLIP~\cite{cherti2023reproducible}, SigLIP~\cite{zhai2023sigmoid} (including a multilingual variant), ALIGN~\cite{jia2021scaling}, DataComp-CLIP~\cite{gadre2024datacomp}, EVA-CLIP~\cite{sun2023eva} and VISTA~\cite{zhou2024vista}. \emph{MLLM-based embedding} models: E5-V~\cite{jiang2024e5}, VLM2Vec (Full and LoRA)~\cite{jiang2024vlm2vec} and the commercial Voyage-multimodal-3~\cite{voyagemultimodal2024voyage}.
+
+\section{Implementation Details}
+All models are run through the same wrapper interface and evaluation scripts, with every model and dataset versioned in the codebase and leaderboard. Runtimes are measured in NVIDIA H100 GPU hours. Unless stated otherwise, linear probing uses $k=16$ shots per class. Non-native interleaved inputs use summed image and text embeddings.
+
+\section{Experimental Results}
+\begin{table}[t]
+\centering
+\caption{\textbf{Best result per category} among evaluated models (from \autoref{tab: overall results top 20.}).}
+\label{tab:leaders}
+\small
+\begin{tabular}{lll}
+\toprule
+Category & Best model & Score \\
+\midrule
+Retrieval & CLIP-ViT-bigG-14 & 41.5 \\
+Clustering & EVA02-CLIP-bigE-14+ & 92.4 \\
+Zero-shot & SigLIP-so400m / EVA02+ & 70.8 \\
+Linear probing & EVA02-CLIP-bigE-14+ & 86.0 \\
+Compositionality & E5-V & 46.3 \\
+Vision-centric QA & VLM2Vec-Full & 62.1 \\
+Document (nDCG@5) & Voyage-multimodal-3 & 71.1 \\
+Visual STS (en) & Voyage-multimodal-3 & 81.8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Overall.} \autoref{tab: overall results top 20.} reports results by category for the top 20 models. By the overall mean over 130 tasks, Voyage-multimodal-3 is best (62.5), followed by E5-V (58.2) and siglip-so400m-patch14-384 (57.1). Yet no model is best everywhere (\autoref{tab:leaders}). CLIP-style encoders lead on retrieval (best single score 41.5 for CLIP-ViT-bigG-14-laion2B; SigLIP-so400m 40.8), clustering (NMI 92.4, EVA02-CLIP-bigE-14-plus), zero-shot classification (70.8, SigLIP-so400m-patch14-384 and EVA02-CLIP-bigE-14-plus) and 16-shot linear probing (86.0, EVA02-CLIP-bigE-14-plus). MLLM-based models lead elsewhere: compositionality (E5-V, 46.3), vision-centric QA (VLM2Vec-Full 62.1, VLM2Vec-LoRA 62.0), document understanding (Voyage 71.1; E5-V 62.7 is the best open-source model) and English Visual STS (Voyage 81.8, E5-V 79.3). MLLM-based models underperform on fine-grained classification and clustering, suggesting less precise low-level visual granularity.
+
+\input{tables/table_ej.tex}
+
+\paragraph{Multilingual retrieval.} \autoref{tab: multilingual retrieval} reports the average and variance over languages. E5-V is best (average 74.3, variance 1.4; xFlickr\&CO 90.8, XM3600 74.8, WIT 57.3), followed by SigLIP (66.8, variance 2.6). OpenCLIP and EVA02-CLIP reach only about 31 on average with high variance (about 7--9), i.e., language-supervised English-centric encoders lag unless specialized, as with multilingual SigLIP.
+
+\input{tables/table_oj.tex}
+
+\paragraph{Visual STS as a proxy for text-in-image ability.} \autoref{tab:E5-V STS analysis} compares E5-V on regular STS (average 86.0, numbers from \citet{jiang2024e5}) with Visual STS (79.3): E5-V approaches OCR-level reading but a gap remains. CLIP-family models achieve high Visual STS, whereas vision-only self-supervised models are near random. Furthermore, encoder Visual STS correlates strongly (above 99\% on OCR/TextVQA-like tasks) with the MLLM results on Cambrian~\cite{tong2024cambrian} benchmarks that rely on visual text understanding (\autoref{fig:corr}), which makes it possible to select vision encoders for an MLLM without a full MLLM evaluation.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/correlation_small.png}
+\caption{\textbf{Correlations between performance on generative MLLM benchmarks from \citet{tong2024cambrian} (y-axis) and our Visual STS (x-axis).}}
+\label{fig:corr}
+\end{figure}
+
+\input{tables/table_wk.tex}
+
+\paragraph{Linear-probing stability.} Model rankings are robust across $k\in\{8,16,32,64,128,256\}$ shots (\autoref{fig:kshot}), which validates the 16-shot default.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/k-shot.png}
+\caption{\textbf{Linear probing performance across different shots $k$.}}
+\label{fig:kshot}
+\end{figure}
+
+\paragraph{Clustering.} \autoref{fig:umap} visualizes a UMAP projection of the ImageNet Dog15 subset used in clustering.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/clustering_plot.png}
+\caption{\textbf{UMAP Visualization of ImageNet Dog15.}}
+\label{fig:umap}
+\end{figure}
+
+\paragraph{MIEB-lite.} \autoref{tab: run time} shows the compute savings: E5-V drops from 264.0 to 46.4 H100 GPU-hours (82.4\%), and CLIP base-patch32 from 16.6 to 4.5 (72.9\%), while ranking agreement stays at Spearman 0.992.
+
+\input{tables/table_ui.tex}
+
+\section{Discussions}
+CLIP-style encoders excel at linear probing, zero-shot classification, clustering and many retrieval tasks, especially with scale and high-quality data (DataComp, OpenCLIP, EVA-CLIP), but lag on interleaved retrieval, OCR-heavy visual text understanding and multilingual tasks. MLLM-based embeddings excel where visual--text fusion and OCR are needed (document understanding, Visual STS, instruction-aware and multilingual retrieval). Compositionality remains hard: Winoground is particularly challenging due to image/text confounders, and reasoning or test-time scaling may be needed.
+
+\paragraph{Limitations.} MIEB covers images and image--text only; video and audio are out of scope. Visual STS depends on rendering choices and font/layout variability; harder settings (noisy scans, handwriting) are future work. Document understanding is evaluated as retrieval, and generative or structured extraction tasks would capture complementary skills. Non-native interleaving via embedding summation may under-represent the potential of encoder-only models. Some domains, e.g., 3D/spatial reasoning, are lightly represented in vision-centric QA and compositionality.
+
+\section{Related Work}
+Text-embedding benchmarks such as BEIR~\cite{thakur2021beir}, MTEB~\cite{muennighoff2023mteb} and MMTEB~\cite{enevoldsen2025mmtebmassivemultilingualtext} established unified evaluation of embeddings; MIEB extends this idea to images. Image--text retrieval and universal multimodal retrieval were studied in UniIR~\cite{wei2023uniir}, and document retrieval in ColPali/ViDoRe~\cite{faysse2024colpali}. Vision-language pretraining with contrastive objectives~\cite{radford2021learning,jia2021scaling,zhai2023sigmoid} and MLLM-based embedders~\cite{jiang2024e5,jiang2024vlm2vec} motivate evaluating the representations themselves, rather than generative proxies such as Cambrian~\cite{tong2024cambrian}. Compositionality has been probed by Winoground~\cite{Thrush_2022_CVPR} and SugarCrepe~\cite{hsieh2023sugarcrepe}.
+
+\section{Conclusion}
+MIEB is a comprehensive, practical benchmark for image and image--text embeddings: 130 tasks, 8 categories, 38 languages, with 50 models evaluated. It reveals clear trade-offs: CLIP-style encoders excel at fine-grained vision tasks, while MLLM-based embeddings lead on multilingual, interleaved and OCR-heavy tasks. Visual STS offers an efficient route to selecting vision encoders for MLLMs, and MIEB-lite makes large-scale evaluation affordable.
+
+\bibliographystyle{ieeenat_fullname}
+
+\bibliography{references}
+
+\end{document}

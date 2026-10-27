@@ -1,0 +1,106 @@
+{
+  "source_repo": "paper-repo",
+  "review_repo": "internal-review-repo",
+  "commit": "f5af53165151e096753fd8cc2d3ea989f53ebf9e",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "baa4e2a319bf288486f1dfd389841dacbcfde8387d2207a8b336171b62c1606c",
+      "bytes": 44,
+      "git_blob": "3e557531e8ccd27e5f4a3856ffdb57d0cea07900",
+      "repo": "paper-repo"
+    },
+    {
+      "path": "assignment.json",
+      "sha256": "abdb52ad94d3155fbdedae6066b6f95a36a6c0614a40fdd13675ebb04ade7d66",
+      "bytes": 94,
+      "git_blob": "8ddede12cdfc49329169548f764da1bcd9dd9f82",
+      "repo": "paper-repo"
+    },
+    {
+      "path": "brief.md",
+      "sha256": "97424600b82c748a16822b1d5d66642326374188ab5c75c0e29eae3b831c35b9",
+      "bytes": 218,
+      "git_blob": "96d953e3a490ec07f23fe81fd32f502504eec520",
+      "repo": "paper-repo"
+    },
+    {
+      "path": "venue-artifacts.json",
+      "sha256": "53ca19094777eb10c95d7b85f3b1c655ac8760a1395fea1accbd06d48eee2114",
+      "bytes": 66,
+      "git_blob": "7df7e68595791cad7cb40cb8e8d85213882d7496",
+      "repo": "paper-repo"
+    },
+    {
+      "path": "report/report.md",
+      "sha256": "f65e5703ce29fc172783ddeccd392422299936659b047963d4919e1176cfe429",
+      "bytes": 534,
+      "git_blob": "6c1fddb999b4e9cc8acfee1f3d4375a3eb9e8f14",
+      "repo": "paper-repo"
+    },
+    {
+      "path": "data/co2_annmean_mlo.csv",
+      "sha256": "bdd956e8d7e05ebc3c61ac1f8f8c8cea4a505df56724fba5200b4eb1e0089b2b",
+      "bytes": 3134,
+      "git_blob": "56303f7e3a9bb3392c2962000892356b61cd74af",
+      "repo": "paper-repo"
+    },
+    {
+      "path": "internal-review-repo/README.md",
+      "sha256": "47e55cfdd8fff7f98591bdfa00b89bec64cd3eecee1a82a25f88707674dcbcef",
+      "bytes": 64,
+      "git_blob": "1f1ef116441137266e2bcb0eb4428987ce25a2a9",
+      "repo": "internal-review-repo"
+    },
+    {
+      "path": "internal-review-repo/review.md",
+      "sha256": "1eac8675a685662c6127f73d06200ba80d272ca91293a172daeb917321809d02",
+      "bytes": 135,
+      "git_blob": "743a8a82ae6427bd6c62cc9ba8fa22ac63993c73",
+      "repo": "internal-review-repo"
+    }
+  ],
+  "delivery_layout": {
+    "report/report.md": "paper-repo",
+    "data/": "paper-repo"
+  },
+  "sources": {
+    "paper-repo": {
+      "commit": "f5af53165151e096753fd8cc2d3ea989f53ebf9e",
+      "files": 6,
+      "paths": [
+        "README.md",
+        "assignment.json",
+        "brief.md",
+        "data/co2_annmean_mlo.csv",
+        "report/report.md",
+        "venue-artifacts.json"
+      ],
+      "prefix": ""
+    },
+    "internal-review-repo": {
+      "commit": "6d2dd10e77709a7e550b53855d6a0df37918c7b6",
+      "files": 2,
+      "paths": [
+        "README.md",
+        "review.md"
+      ],
+      "prefix": "internal-review-repo/"
+    }
+  },
+  "evidence_repos": [
+    "internal-review-repo"
+  ],
+  "reviewed_repo_commits": {
+    "internal-review-repo": "6d2dd10e77709a7e550b53855d6a0df37918c7b6",
+    "paper-repo": "f5af53165151e096753fd8cc2d3ea989f53ebf9e"
+  },
+  "release_source": "system-ledger",
+  "status": "verified-release",
+  "independently_validated": false,
+  "approval": {
+    "id": 1,
+    "approver": "internal-review-repo",
+    "created_at": 1792861730.7163906
+  }
+}

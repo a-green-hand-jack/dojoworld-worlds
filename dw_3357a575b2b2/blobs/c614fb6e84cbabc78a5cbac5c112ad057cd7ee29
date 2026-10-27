@@ -1,0 +1,7 @@
+# Candidate record
+
+- Candidate: v1
+- Base: incumbent worker (Codex, gpt-6.1-sol, low effort)
+- Change: native agent effort to medium; model/provider unchanged.
+- Rationale: report requires downloading/reading annual means, selecting a ten-year interval, and checking arithmetic; additional reasoning budget targets calculation and source-verification errors.
+- Evidence: awaiting diagnostician task/run records and judge evaluation.

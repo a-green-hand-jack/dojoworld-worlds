@@ -1,0 +1,110 @@
+{
+ "worlds": {
+  "rw_940d1a6fe375": {
+   "use": "failed",
+   "reason": "incumbent T2b label R10249; failed = no verified release, counted 0 in comparison; produced a report scored 4 but the world has no verified release, so it counts as failed: scored 0 in the worst-case comparison and 4 in the best-case; either way cand-1 (0 reports) is not better, conclusion unchanged"
+  },
+  "rw_5522e1ebe794": {
+   "use": "failed",
+   "reason": "incumbent T2b label R10793; failed = no verified release, counted 0 in comparison; produced a report scored 4 but the world has no verified release, so it counts as failed: scored 0 in the worst-case comparison and 4 in the best-case; either way cand-1 (0 reports) is not better, conclusion unchanged"
+  },
+  "rw_03d2ea59f5f0": {
+   "use": "failed",
+   "reason": "cand T2a label R22418; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_dfa74381f47f": {
+   "use": "failed",
+   "reason": "cand T1b label R33015; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_69cc2fd71e02": {
+   "use": "failed",
+   "reason": "incumbent T1a label R36966; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_a971d704ab27": {
+   "use": "failed",
+   "reason": "incumbent T2a label R46471; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_46c54a56bed5": {
+   "use": "failed",
+   "reason": "incumbent T1b label R49157; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_e4d307d7c798": {
+   "use": "failed",
+   "reason": "incumbent T1a label R51201; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_a7e6584e0120": {
+   "use": "failed",
+   "reason": "incumbent T1b label R65205; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_99e89e80f857": {
+   "use": "failed",
+   "reason": "cand T1a label R70222; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_b35fc798f418": {
+   "use": "failed",
+   "reason": "incumbent T2a label R71919; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_53de1dec5b2c": {
+   "use": "failed",
+   "reason": "cand T2b label R99518; failed = no verified release, counted 0 in comparison"
+  },
+  "rw_2bf0f6183c7e": {
+   "use": "diagnostic",
+   "reason": "sparring-partner diagnostic/continued run on the diagnostic tasks; not in the held-out comparison"
+  },
+  "rw_6a3b6f69fce2": {
+   "use": "diagnostic",
+   "reason": "sparring-partner diagnostic/continued run on the diagnostic tasks; not in the held-out comparison"
+  },
+  "rw_7470411bc5d4": {
+   "use": "diagnostic",
+   "reason": "sparring-partner diagnostic/continued run on the diagnostic tasks; not in the held-out comparison"
+  },
+  "rw_7e0f982612a8": {
+   "use": "diagnostic",
+   "reason": "sparring-partner diagnostic/continued run on the diagnostic tasks; not in the held-out comparison"
+  },
+  "rw_a101445dbefc": {
+   "use": "diagnostic",
+   "reason": "sparring-partner diagnostic/continued run on the diagnostic tasks; not in the held-out comparison"
+  },
+  "rw_580e3fa0c1ef": {
+   "use": "diagnostic",
+   "reason": "sparring-partner diagnostic/continued run on the diagnostic tasks; not in the held-out comparison"
+  },
+  "rw_b45e274f5370": {
+   "use": "diagnostic",
+   "reason": "sparring-partner diagnostic/continued run on the diagnostic tasks; not in the held-out comparison"
+  },
+  "rw_a77f7538e402": {
+   "use": "excluded",
+   "reason": "world made by this world that I could not identify (maybe a put-back attempt); not part of the held-out comparison"
+  },
+  "rw_b1b0ca2854f9": {
+   "use": "excluded",
+   "reason": "world made by this world that I could not identify (maybe a put-back attempt); not part of the held-out comparison"
+  }
+ },
+ "comparison": {
+  "scoring": "0-4 per result; FAILED counted 0 (worst), also reported dropped",
+  "incumbent": {
+   "runs": 8,
+   "reports": 2,
+   "failed": 6,
+   "mean_failed_as_0": 1.0,
+   "mean_failed_dropped": 4.0,
+   "reports_with_verified_release": 0
+  },
+  "candidate_cand-1_effort_high": {
+   "runs": 4,
+   "reports": 0,
+   "failed": 4,
+   "mean_failed_as_0": 0.0,
+   "mean_failed_dropped": null
+  },
+  "difference_cand_minus_incumbent": -1.0,
+  "spread": "n=8 vs 4, binary success 2/8 vs 0/4; Fisher exact p~0.5, difference not significant; sensitivity: dropping failures leaves the candidate with no data; best-case scoring of failures gives no difference",
+  "conclusion": "No candidate does better than the incumbent; incumbent worker is kept and delivered. Most runs hit the 900 s deadline (failed).",
+  "sensitivity": "Only 2 of 12 runs produced a report and none has a verified release. Worst case: all 12 score 0, difference 0. Best case (reports score 4): incumbent 1.0 vs cand 0.0. No case favours cand-1."
+ }
+}

@@ -1,0 +1,11 @@
+# Held-out task 001 (paper-repo)
+
+Target world: `rw_c7307a00205b` (finished research world; use its final checkpoint as the starting point).
+
+Position: `paper-repo`.
+
+Task: Produce a one-paragraph report explaining how fast atmospheric CO2 at Mauna Loa rose over the last ten years, using NOAA GML annual mean CO2 data downloaded during the work. The report should state the interval and annual means used, calculate the change and rate (with units), and briefly describe the method/source.
+
+Good result: one self-contained, accurate paragraph grounded in the downloaded NOAA annual means, with arithmetic and units clear; no unsupported claims or fabricated data. Judge should score factual correctness, reproducibility of source/data, arithmetic, and adherence to one-paragraph format using the same rubric for every worker.
+
+The comparison begins only after the final checkpoint and exact starting-point receipt are recorded. Once started, this task text and rubric are immutable.

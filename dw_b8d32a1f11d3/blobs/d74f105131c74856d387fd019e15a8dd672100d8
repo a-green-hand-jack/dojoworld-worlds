@@ -1,0 +1,20 @@
+# Trial: continue rw_313df9cf84a4 at c0
+
+World: **rw_6b2be0a08982** (continues rw_313df9cf84a4@c0). No command refused anything I ran with a valid form; the refusals met were mistakes in my invocation, quoted below.
+
+## Commands
+1. `dojoworld --help` (cwd /tmp) -> refusal: `command refused (HTTP 422): run world commands from your files (/hutian): /tmp is not seen on the host`. Changed: ran from /hutian/repo. (The `--state-root` flag I tried on `researchworld config show` was rejected locally: `unrecognized arguments: --state-root issue-312-target`; dropped it, the world is found without it.)
+2. `researchworld config show rw_313df9cf84a4` (read the config; roles carried `from` references, auth claude-oauth).
+3. Wrote /hutian/work/cfg.json: budget.total_seconds 900, resources [], worker.image sha256:1c386c95…2abd, worker.environment_image sha256:7706b105…b08c, max_executions 2, max_model_seconds 300, worker.roles.{paper-repo,internal-review-repo} = the cand-g2 worker.json files inline.
+4. `researchworld config validate /hutian/work/cfg.json` -> `{"error": "invalid world id"}` (validate takes a world id; not used further).
+5. `researchworld continue rw_313df9cf84a4 --checkpoint c0 --config /hutian/work/cfg.json` -> accepted, created rw_6b2be0a08982. `config show` confirmed budget 900, resources [], both images, max_executions 2, max_model_seconds 300, role providers auth api-key.
+6. `ht-resource run worlds -- ...` -> `unknown resource: worlds`; changed to `ht-resource run worlds-heldout -- researchworld execute rw_6b2be0a08982 --loop` (ended exit 0).
+7. `researchworld stop rw_6b2be0a08982 --release` -> ended, final checkpoint final-71978ec1.
+
+## Turns (monitor)
+- internal-review-repo [aa9ac74d]: complete, 28s, recorded commitment, objective discharged.
+- paper-repo [3ccb02ef]: complete, 185s; recorded commitment, pushed brief and then "Complete ALBAR manuscript with all figures, tables and citations" (3bd0049); delivered to internal-review-repo (issue #2).
+- Driver ended `budget-exhausted` ({"limit": "executions"}, max_executions 2) before internal-review-repo reviewed the delivery.
+
+## Input
+paper-repo's turn found /workspace/input: monitor reports "input confirmed" for both turns, and it went on to write the manuscript. (Taken from the monitor's summary; I did not open the workspace.)

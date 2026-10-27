@@ -1,0 +1,18 @@
+{
+  "label": "R-A9F9B744438EF424",
+  "world_id": "rw_98eba57a0d65",
+  "checkpoint": "final-0e3e7fb9",
+  "status": "incomplete-idle",
+  "driver": {"max_executions": 8, "exit": 0},
+  "roles_executed": 4,
+  "model_seconds": 158,
+  "approved_release": false,
+  "delivery_complete": false,
+  "artifact_exported": false,
+  "result": {
+    "report_artifact_present": false,
+    "retained_source_verifiable": false,
+    "completion_verdict": "fail"
+  },
+  "evidence": "Captured world record reports incomplete-idle, no approved release, no artifact export, and no delivery completion."
+}

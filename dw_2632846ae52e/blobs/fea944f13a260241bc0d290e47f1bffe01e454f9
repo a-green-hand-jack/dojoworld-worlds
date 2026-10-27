@@ -1,0 +1,296 @@
+{
+ "judgements": [
+  {
+   "label": "R10249",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R10249.md",
+    "source": "results/R10249.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R10249.md",
+     "sha256": "3bb1375cb6d17c9ddd2a6939f88c0715a5ffb942ac39ce29eda58f296b2cf9e4"
+    }
+   },
+   "items": [
+    {
+     "item": "rates correct vs NOAA csv (recomputed 13.14/5=2.628; fetched csv rows 2015 401.01, 2020 414.21, 2025 427.35)",
+     "quote": "(427.35 − 414.21)/5 = 2.628 ppm/yr"
+    },
+    {
+     "item": "earlier period and ratio",
+     "quote": "(414.21 − 401.01)/5 = 2.640 ppm/yr), a ratio of 0.995"
+    }
+   ],
+   "verdict": "score 4: correct, cited, dated, hashed, one paragraph",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R10793",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R10793.md",
+    "source": "results/R10793.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R10793.md",
+     "sha256": "d942b82a3c256add6a60401ea0a3b18943ad27315bb7697931a30c900c9eb9d6"
+    }
+   },
+   "items": [
+    {
+     "item": "rates, years, units, source URL",
+     "quote": "(427.35 − 414.21) / 5 ppm/yr, annual means of 2025 and 2020"
+    },
+    {
+     "item": "ratio and uncertainty claim (file states 0.12 ppm per year; 0.01 within it)",
+     "quote": "The ratio of the recent to the earlier average rate is 0.995 (2.628 / 2.640)"
+    }
+   ],
+   "verdict": "score 4: correct figures, same as R10249 plus an uncertainty remark that checks out",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R49157",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R49157.md",
+    "source": "results/R49157.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R49157.md",
+     "sha256": "43dc33372ac843cc37989795a10f9493d0638fde52ef6c7b98989042aa7da7fc"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R51201",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R51201.md",
+    "source": "results/R51201.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R51201.md",
+     "sha256": "182cec39ebe50bd98f4d647c9db7889c41bea32c8a24a94f85ae1429d1915649"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R71919",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R71919.md",
+    "source": "results/R71919.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R71919.md",
+     "sha256": "44a41f0fa8e2605aa98a831fa658b90dd902c5233866211373fe908ac5a89807"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R22418",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R22418.md",
+    "source": "results/R22418.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R22418.md",
+     "sha256": "f7d2950d1b7a127e32303ab7054ace54780bc11eef3ceed4b7d0483f5edcf6d3"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "cand"
+  },
+  {
+   "label": "R33015",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R33015.md",
+    "source": "results/R33015.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R33015.md",
+     "sha256": "38265558b26c8623a6e9cb65c8848d424cb1b14b101c6c7dd35a2e451a849ab9"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "cand"
+  },
+  {
+   "label": "R36966",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R36966.md",
+    "source": "results/R36966.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R36966.md",
+     "sha256": "c2db933283363549761397d7f67c9f9f46e56846e771861ca9411d32a1c76d0c"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R46471",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R46471.md",
+    "source": "results/R46471.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R46471.md",
+     "sha256": "b9866e4ab43a59658147cf7eb5856d9507b3796d2cbc11f3c46a56abb99b9146"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R65205",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R65205.md",
+    "source": "results/R65205.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R65205.md",
+     "sha256": "162c3de842323548463671ef24d960776478ba596235598512ff92e36078c393"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "incumbent"
+  },
+  {
+   "label": "R70222",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R70222.md",
+    "source": "results/R70222.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R70222.md",
+     "sha256": "598921e864b44310e685389c8a59a9118d2172a5136d254b9eb5fd31356784e0"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "cand"
+  },
+  {
+   "label": "R99518",
+   "result": {
+    "repo": "trial-user",
+    "path": "results/R99518.md",
+    "source": "results/R99518.md",
+    "provenance": {
+     "repo": "trial-user",
+     "path": "results/R99518.md",
+     "sha256": "bbd44c7f5efd7d5e7d3850bab6c00580df0e9404172c475e0628fa77c8a9b4a3"
+    }
+   },
+   "items": [
+    {
+     "item": "run failed; no report to judge",
+     "quote": "FAILED: no verified release (run ended without an approved delivery)."
+    }
+   ],
+   "verdict": "FAILED: no verified release; score 0 if counted as worst, excluded if dropped",
+   "worker": "cand"
+  }
+ ],
+ "labels_index": {
+  "repo": "trial-user",
+  "path": "publish/labels_index.json"
+ },
+ "label_table": {
+  "repo": "trial-user",
+  "path": "publish/label_table.json",
+  "published": {
+   "repo": "trial-user",
+   "path": "labels_all.sha256"
+  }
+ },
+ "comparison": {
+  "scoring": "0-4 per result; FAILED counted 0 (worst), also reported dropped",
+  "incumbent": {
+   "runs": 8,
+   "reports": 2,
+   "failed": 6,
+   "mean_failed_as_0": 1.0,
+   "mean_failed_dropped": 4.0
+  },
+  "candidate_cand-1_effort_high": {
+   "runs": 4,
+   "reports": 0,
+   "failed": 4,
+   "mean_failed_as_0": 0.0,
+   "mean_failed_dropped": null
+  },
+  "difference_cand_minus_incumbent": -1.0,
+  "spread": "n=8 vs 4, binary success 2/8 vs 0/4; Fisher exact p~0.5, difference not significant; sensitivity: dropping failures leaves the candidate with no data; best-case scoring of failures gives no difference",
+  "conclusion": "No candidate does better than the incumbent; incumbent worker is kept and delivered. Most runs hit the 900 s deadline (failed)."
+ }
+}

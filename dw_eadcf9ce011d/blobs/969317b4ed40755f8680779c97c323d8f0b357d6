@@ -1,0 +1,10 @@
+# Runs (tasks-v1 diagnostic, start cp-9dcd7964a461 of rw_6da85025e0fe; each driven with --max-executions 8 --deadline-sec 900)
+| task | worker | world |
+|---|---|---|
+| D1 | incumbent (effort low) | rw_7a2613158527 |
+| D1 | candidate-1 (effort high) | rw_199de6c339c5 |
+| D2 | incumbent | rw_3da12c5e60cf |
+| D2 | candidate-1 | rw_a59797152600 |
+Config: only CLAUDE_CODE_EFFORT_LEVEL differs. D2 topic = D1 topic plus the ten-years-ending-2015 variant sentence. Make logs: make-*.txt. Note: tuner's #3 named final-c3fd9f5b; tasks-v1 names cp-9dcd7964a461, which I used.
+
+Update: first drives failed ("configure an agent and model for every active role"): the continue config set only paper-repo's role. Fixed by `config apply` of runs' full-inc/full-cand JSON (top-level agent/model/provider as the parent had, max_executions 8, max_model_seconds 900; paper-repo effort low vs high; reviewer unchanged at low). D1 pair redriven; D2 pair waits for tracked slots.

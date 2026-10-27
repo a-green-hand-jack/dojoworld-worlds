@@ -1,0 +1,8 @@
+# Candidates
+
+## candidate-1 (paper-repo)
+- From: incumbent (Claude Code, claude-sonnet-5-5, CLAUDE_CODE_EFFORT_LEVEL=low).
+- Change: CLAUDE_CODE_EFFORT_LEVEL low -> high. Nothing else; reviewer worker unchanged.
+- Why: diagnostician brief (74d7e66) shows the incumbent report is numerically correct but terse: no explicit window, no caveat on endpoint sensitivity/variability. More effort should add these while keeping figures verified.
+- Results: pending (runs by sparring-partner / task-setter).
+- Check: researchworld continue rw_6da85025e0fe --checkpoint final-c3fd9f5b --config worker.json created rw_6a89adb68cf3 with the config accepted (provider must be given as in the parent).

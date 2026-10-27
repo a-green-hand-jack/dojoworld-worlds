@@ -1,0 +1,6 @@
+# Evaluation plan (working note; records follow after blind judging)
+- Judging: the five checks in task-setter release tasks-v1 (tasks-v1.md), applied unchanged to held-out results.
+- Runs: incumbent and candidate cand-1, 3 runs each, same starting points, results handed over under labels.
+- Each result is judged alone, with quoted evidence, and pushed before the label table is published.
+- Comparison: mean score difference and spread; failed runs counted as failed, with sensitivity to dropping or worst/best scoring.
+- Incumbent stays unless the candidate is clearly better.

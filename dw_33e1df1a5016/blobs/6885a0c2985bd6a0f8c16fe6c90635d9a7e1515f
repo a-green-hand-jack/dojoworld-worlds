@@ -1,0 +1,31 @@
+# Candidate medium-v1
+
+Source worker: the target world's incumbent `paper-repo` worker, Codex with `gpt-6.1-sol` at low reasoning effort, as shown by `researchworld worker show rw_e584f68c0d9c --role paper-repo`.
+
+Change: set only the paper-repo worker's native `codex.model_reasoning_effort` from `low` to `medium`. Agent, model, provider, context setting, assets, and target resources remain the incumbent's values. This is a provisional candidate pending diagnostician's written diagnosis and baseline records; it is intended to spend more reasoning on the multi-constraint NOAA report while staying within the objective's run limits.
+
+Validation: `candidate/worker.json` passes `researchworld worker check`. `candidate/config.json` is a minimal worker override: continuation inherits the target world’s resources unchanged. A continuation from checkpoint `final-0e3e7fb9` accepted this configuration as world `rw_c5929bc39044` (0 turns; ended after the check), and its status shows the paper-repo worker at medium effort with the target resources intact. Diagnostic runs and the written diagnosis will be appended when runs supplies them.
+
+## Diagnosis provenance
+
+The diagnostician's diagnosis at commit `77b0f17027af114e6436eaf815d6a592f4dc850a` identifies an incumbent worker-level provenance failure: the exact committed NOAA download timestamp was corrected twice after re-downloads, including a timestamp later than the completed fetch. The baseline record is `diagnostician` `runs/baseline.md`, with primary execution `db15a4183e9631931ecc70d41c371e7a`; it is one successful observation, not a matched comparison. The candidate therefore remains the single allowed change, low to medium native reasoning effort, to be tested against matched starts and the proposed provenance/arithmetic/format checks.
+
+The exact worker settings as accepted by the target-world continuation are in `candidate/worker-show-rw_c5929bc39044.json`.
+
+## Matched evaluation outcome
+
+Diagnostician's matched-run update at commit `7630ab407d12b` reports no measured gain or regression for medium effort. Incumbent `rw_06c32490a8b3` and candidate `rw_87bae9dc4605` used matched starts and the same checks; both ended on the eight-execution budget with `release_status=unverified`. The candidate is not kept. The final delivery keeps `candidate/kept/worker.json` and `candidate/kept/config.json` as the worker used for the required target-world continuation round.
+
+## Delivery gate
+
+Referee rejected release PR #5 at head `aa63f02739e1` because the blind evaluation has not yet delivered `evaluation/putback.json`, `evaluation/runs.json`, the unblinded label mapping, complete trial records, or a release identifying the kept worker. The kept-worker conclusion above is provisional until judge and trial-user publish those owned evaluation paths. The final target continuation request is open in diagnostician issue #4 for world `rw_e4150b519eb4`.
+
+## Candidate revision identity
+
+The trial handoff used provisional medium-v1 revision `1dbc46f3e96cacac3c5a92aceb9644ebc4229287`, whose `candidate/worker.json` blob was `7c814ae7325fd070951ac6d51c688e1acf51d924`. The finalized immutable candidate revision is `f1b4d007302df3237cac8e6bd7700a5e65dc24af`; it retains the same worker settings and adds the exact worker-show record and prerelease metadata. These revisions identify the same medium-effort worker. The kept worker is the separate low-effort configuration in `candidate/kept/worker.json`.
+
+## Verified target-world continuation
+
+Diagnostician commit `c2db074ca820c773234bd91efafe7b843e719d62` records the completed kept-incumbent put-back. Fresh continuation `rw_f0c559601c44` started from `rw_e584f68c0d9c` checkpoint `final-0e3e7fb9` with the kept low-effort Codex `gpt-6.1-sol` configuration (config SHA-256 `68cd6bdd36ed50bb42f69a752d682ff055488912c57b598a9ceda9151c723c81`). The first drive `cmd-5c30a3b2db` used 8 executions and 239.4077 model seconds; follow-up `cmd-79964db03d` used 4 executions and 54.7510 model seconds, for 12 executions and 294.1587 model seconds total. The terminal state is `world_complete=true`, `accepted=true`, `release_status=verified`, `delivery_complete=true`, `independent_review_complete=true`, `paper_bundle_complete=true`, and `system_release_accepted=true`. Final release is `result:final` commit `69235c735d9fee7b32567d01711e565ea110a831`; the role ledger is story-repo 2 turns/67.3s, paper-repo 4/86.8s, internal-review-repo 3/86.3s, external-review-repo 3/53.7s. Judge-owned evaluation files must cite this record as the put-back source.
+
+Judge reconciliation: judge commit `cdda0e476a1b` now marks `rw_f0c559601c44` measured in `evaluation/runs.json` and records the kept configuration in `evaluation/putback.json`, citing diagnostician’s admissible terminal evidence above. This tuner head refresh is solely to rerun `hutian/delivery` against that reconciled judge revision.

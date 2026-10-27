@@ -1,0 +1,21 @@
+# Held-out run records
+
+Task: heldout/task-001.md; starting checkpoint: `final-0e3e7fb9` of `rw_e584f68c0d9c`.
+
+Both runs used continued worlds with only the worker configuration changed. The candidate configuration was the published medium-effort probe (`model_reasoning_effort=medium`); incumbent retained low effort. Worker-to-label mapping is intentionally withheld.
+
+## Candidate run
+
+- World: `rw_5685d0f0d5ab`
+- Drivers: `cmd-950b74a39c` (900 s), `cmd-d90cad6744` (2400 s)
+- Outcome: driver exit 0, world waiting-for-execution; no approved release or report artifact.
+- World status recorded `gaps: ["Driver termination alone does not establish scientific or delivery completion."]`; scheduler had 4 completed executions, 276.45 model seconds, and open obligations including deliver/review/feedback.
+
+## Incumbent run
+
+- World: `rw_600ba6710f07`
+- Drivers: `cmd-aa27066622` (900 s), `cmd-d3d3d24807` (1800 s)
+- Outcome: driver exit 0, world waiting-for-execution; no approved release or report artifact.
+- World status recorded the same driver-termination gap; scheduler had 4 completed executions, 209.98 model seconds, and open obligations including deliver/review/feedback.
+
+Because neither run produced a verified report artifact, no rubric score, worker comparison, or measurable difference exists. These records preserve the observed failures without inventing outputs.

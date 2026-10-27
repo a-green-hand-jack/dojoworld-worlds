@@ -1,0 +1,7 @@
+# Held-out (do not publish)
+H1: continue from `final-c3fd9f5b` (newest), ask as D1.
+H2: continue from `before-stop-c83fa39c`, ask as D1 but window of the five years before the last year, divided by five.
+H3: from `cp-9dcd7964a461`, ask as D1 but for the file co2_gr_mlo.csv (annual increase), average of its last ten annual increases; report is one paragraph.
+Judging: judging.md. Each task run N=2 per worker; world limits 8 turns, 900 model s.
+
+Note (per judge): for H3 the ask states that checks 5 and 6 are defined against co2_gr_mlo.csv (last year in that file and its annual increase); check 7 = mean of its last ten annual increases.

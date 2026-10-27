@@ -1,0 +1,6 @@
+{
+  "worker": {
+    "max_model_seconds": 900,
+    "max_executions": 8
+  }
+}

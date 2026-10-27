@@ -1,0 +1,19 @@
+{
+  "objective": "judge#1",
+  "kept": {
+    "roles": {
+      "paper-repo": {
+        "agent": "codex",
+        "model": "gpt-6.1-sol",
+        "provider": "openai",
+        "settings": {
+          "reasoning_effort": "low"
+        }
+      }
+    }
+  },
+  "status": "not-run",
+  "reason": "Put-back could not be started because both trial runs failed before verified release; no continue/finish receipt exists.",
+  "target_world": "rw_e584f68c0d9c",
+  "putback_world": null
+}

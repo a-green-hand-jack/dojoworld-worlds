@@ -1,0 +1,46 @@
+# Diagnostic tasks, tasks-v1 (target: position paper-repo, world rw_679cdc7d5fa3)
+
+Target position's work: write `report/report.md`, one paragraph, on how fast Mauna Loa CO2 rose over the last
+ten years, from NOAA GML's `co2_annmean_mlo.csv` downloaded during the work and kept unmodified in `data/`.
+Observed in the source world (monitor, 2026-10-25 08:00–08:02 UTC): paper-repo's first version used 2013 as the
+"ten years before 2025"; internal-review-repo requested changes on paper-repo#3; the fix (base 2015, 2.63 ppm/yr)
+came only after review. The final report scores 7/7 below. The failure moment is the first version, before review.
+
+## Task 1 — report from the final checkpoint (start: `final-7adfe819` of rw_679cdc7d5fa3)
+Start: continue rw_679cdc7d5fa3 at checkpoint `final-7adfe819` with the worker under test; run the round the topic
+asks for (same topic: "How fast the CO2 at Mauna Loa has risen over the last ten years, from NOAA's own annual
+means. Download NOAA GML's annual mean CO2 for Mauna Loa ...").
+Asked: the world's topic and paper-repo's objective, as they stand in the world.
+Judged: `tasks/check_report.py report.md data/co2_annmean_mlo.csv`, 7 pass/fail checks computed from the file the
+run itself kept (one paragraph/no figure; URL; UTC fetch time; SHA-256 of the kept bytes; last year + mean; base
+year = last−10 with its value; growth (last−base)/10 to 2 dp). Why it separates: each check is a fact verifiable
+from the delivered file; the base-year/growth checks catch exactly the observed off-by-one. Apply it to
+the FIRST version paper-repo pushes (the first commit of report/report.md on main, or the first PR head), not
+only the released one, since review repairs later errors; report both scores. Also confirm the kept CSV is
+byte-identical to a fresh download (headers/years may change; compare apart from newly added years) and read the
+trajectory for whether the numbers were computed by code from the file or typed.
+Secondary, reported not scored: turns and model seconds used, review rounds needed (fewer = better).
+
+## Task 2 — same, repeated for variance
+Same start and judging, run N times (the objective bounds every world at ≤8 turns and 900 model s). A
+difference between workers counts only over paired starts; one run is an observation.
+
+## Notes
+- `tasks/reference_co2_annmean_mlo.csv` is the file the source run kept (through 2025: 2015=401.01, 2025=427.35,
+  growth 2.634), to test the checker; expected values for a new run come from its own kept file.
+- Held-out tasks are not here.
+
+## Task 1b — redo from the final checkpoint with a new topic (added in tasks-v1.1; for runs that must show a worker difference)
+The final checkpoint already holds the ten-year report, so a plain continuation only edits the README. Start instead:
+`researchworld continue rw_679cdc7d5fa3 --checkpoint final-7adfe819 --config <worker config> --topic "<TOPIC>"` with
+TOPIC =
+"How fast the CO2 at Mauna Loa has risen over the last twenty years, from NOAA's own annual means. Download NOAA GML's
+annual mean CO2 for Mauna Loa (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv) afresh during this
+work and keep it unmodified as data/20y/co2_annmean_mlo.csv. Deliver report/report_20y.md: one paragraph, no figure,
+with the URL, the UTC fetch time, the SHA-256 of the unmodified file, the last year and its annual mean, and the mean
+growth in ppm per year = (last year - the year twenty earlier)/20, computed from the file, not typed. Check the file
+has the year twenty before the last. Leave the existing ten-year report as it is."
+Judged: `python3 tasks/check_report.py report/report_20y.md data/20y/co2_annmean_mlo.csv 20` (7 checks as above; the
+base year is last-20 = 2005 for a file ending 2025, so the old 2015 answer or /10 fails). Also check the ten-year
+report is untouched, and that the 20y file is not a copy of data/ made without a download (fetch time later than the
+continuation's start). Score the first version pushed and the released one. Hold turns ≤8 and ≤900 model s.

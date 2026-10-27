@@ -1,0 +1,3 @@
+Task 1b (task-setter#4): continue rw_679cdc7d5fa3 --checkpoint final-7adfe819 --topic <topic20.txt>; each <=8 executions, 900 s; stopped after driving.
+Dirs: inc1/inc2 (effort low), cand1/cand2 (cand-1, paper-repo effort high). out/: report_20y.md, kept csv, check.txt (check_report.py ... 20, run on the released main), log.txt (paper-repo git log), status/monitor/config/capture.
+Observed: checker scores on released main: 7/7 for all four. Not checked here: first pushed version, ten-year report unchanged, fetch time > start.

@@ -1,0 +1,5 @@
+# Diagnosis of the incumbent (rw_90561d4bccfc, paper-repo)
+Observed (artifacts at release b441957c): report.md has URL, fetch time 2026-10-22T07:21:48Z (matches data/fetched_at.txt), SHA-256, 2025=427.35, 2015=401.01, (427.35-401.01)/10=2.634. Last CSV row 2025,427.35 matches. Review record verifies the same. World used 56 of 1500 model s, 3 turns.
+Worker problems found: none on this task. Minor: reports rounded "about 2.63" alongside 2.634 (harmless); fetch time given to seconds from a separate file.
+World/position problems: none blocking. The task has a single run, so reliability variance is unknown; a one-run ceiling means a difference between workers is only measurable with repeated runs from the same checkpoint.
+Implication: a candidate is unlikely to beat the incumbent on correctness; the honest outcome may be "keep incumbent". Any candidate must be shown not to be worse over repeated runs under the 8-turn/900 s per-world cap.

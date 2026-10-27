@@ -1,0 +1,3 @@
+# Run records
+Task T1, start: rw_679cdc7d5fa3 @ final-7adfe819, continued with config {"resources":[]} (candidate: plus paper-repo effort=medium). Each world driven with `researchworld execute --loop --max-executions 8 --deadline-sec 900`.
+World/run list: runs.txt. Outcome per label: incumbent R13ae6252 FAILED, R3a8dbc88 verified, Rbc6c67ec FAILED; candidate R686a1f6b FAILED, Re1ce3904 FAILED, Rf7808a98 verified. (Which world made which label: table.json.)

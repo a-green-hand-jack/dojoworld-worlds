@@ -1,0 +1,10 @@
+# Candidates
+## cand-1 (from incumbent: claude-code / claude-sonnet-5-5 / effort low)
+Change: paper-repo effort low -> high (CLAUDE_CODE_EFFORT_LEVEL). Nothing else; internal-review-repo stays incumbent.
+Why: task is a short numeric report from downloaded NOAA data; more effort should favour checking computed rates against the data. No diagnosis or runs yet; unverified.
+Proposed judging: report's ten-year rate (ppm/yr) matches an independent computation from NOAA annual means; states source and years; one paragraph.
+
+Note: config.json carries a resources entry (dojo-network) because continue fails on the inherited research-network otherwise (see sparring-partner#2). Runs: incumbent rw_f687b166fb66, cand-1 rw_60bf2faa0320 (pending).
+Runs: records in world/sparring-partner runs/INDEX.md (rw_60bf2faa0320 cand-1, rw_f687b166fb66 incumbent, from final-4540868c); comparison is the judge's.
+
+world-config.json = the kept incumbent (paper-repo effort low, as in rw_1f0b60e4e7ab); config.json = cand-1, not kept.

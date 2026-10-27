@@ -1,0 +1,5 @@
+# paper-repo diagnostic tasks
+
+This release supplies four diagnostic tasks for the `paper-repo` worker from target world `rw_e584f68c0d9c`. The target world retained only checkpoint `final-0e3e7fb9`; each task therefore records the historical monitor obligation and execution receipt as an evidence anchor and includes frozen contract inputs so the task can be run from the retained snapshot. The target export and monitor record are the sources for the quoted asks and expected values.
+
+`tasks-v1.json` defines the starts, asks, judging, and evidence. The common audit uses the delivered NOAA CSV bytes, not values typed into a report: SHA-256 `bdd956e8d7e05ebc3c61ac1f8f8c8cea4a505df56724fba5200b4eb1e0089b2b`, 2025 annual mean `427.35`, 2015 annual mean `401.01`, and `(427.35 - 401.01)/10 = 2.634` ppm/year. A task result is better when it satisfies all of its checks and supplies the cited files or workflow receipts; missing provenance, altered data, wrong arithmetic, or an unreviewed release fails the relevant check.

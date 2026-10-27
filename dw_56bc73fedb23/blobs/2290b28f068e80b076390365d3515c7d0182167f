@@ -1,0 +1,13 @@
+# Diagnostic status
+
+No worker fault is established yet. The available task evidence is judge issue #3: release `tasks-v1`, task-setter commit `fd449e6`, with starts `cp-b423b61bebd0`, `before-stop-7813df77`, and `final-0e3e7fb9`, covering source acquisition, provenance correction, review/merge discipline, and final publication. Tuner issue #2 requests incumbent and candidate outputs plus judgements, but tuner confirms in comments 69, 71 that those records are not yet available and no candidate can be specified without them.
+
+This is an evidence/world supply gap, not a worker diagnosis: no result text exists to cite, and trial-user/runs owns those records. Once supplied, compare identical starts under the same rubric and name only causes attributable to worker settings/prompt/assets.
+
+## Candidate probe
+
+Tuner published `candidate.json` at commit `bde2e60470aa`, changing only reasoning effort from low to medium. This is a probe, not a finding; identical-start incumbent/candidate runs and judgements remain required.
+
+## Put-back accounting gap
+
+Judge later reported missing status/release accounting for put-back worlds `rw_7e9d23176b4e` and `rw_fec32127e3a3`. This belongs to runs/referee/world direction, not to either worker; it prevents judging completion but does not establish a worker failure.

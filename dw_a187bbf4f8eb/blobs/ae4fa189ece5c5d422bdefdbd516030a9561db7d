@@ -1,0 +1,115 @@
+{
+ "runs": [
+  {
+   "paper": "paper_45",
+   "worker": "W1",
+   "world": "rw_23d33e9f471c",
+   "turns": 3,
+   "model_seconds": 134.7,
+   "end": "finished with verified release",
+   "world_status": "complete"
+  },
+  {
+   "paper": "paper_45",
+   "worker": "W2",
+   "world": "rw_49ceb1533496",
+   "turns": 5,
+   "model_seconds": 387.4,
+   "end": "finished with verified release",
+   "world_status": "complete"
+  },
+  {
+   "paper": "paper_32",
+   "worker": "W1",
+   "world": "rw_0972ff2f0212",
+   "turns": 3,
+   "model_seconds": 188.8,
+   "end": "finished with verified release",
+   "world_status": "complete"
+  },
+  {
+   "paper": "paper_32",
+   "worker": "W2",
+   "world": "rw_899a5bf00a39",
+   "turns": 5,
+   "model_seconds": 374.7,
+   "end": "finished with verified release",
+   "world_status": "complete"
+  },
+  {
+   "paper": "paper_17",
+   "worker": "W1",
+   "world": "rw_563dd286e9f6",
+   "turns": 6,
+   "model_seconds": 200.9,
+   "end": "finished with verified release",
+   "world_status": "complete"
+  },
+  {
+   "paper": "paper_17",
+   "worker": "W2",
+   "world": "rw_ea4754973e26",
+   "turns": 10,
+   "model_seconds": 458.8,
+   "end": "terminal: stalled, no manuscript.pdf (failed run)",
+   "world_status": "terminal"
+  }
+ ],
+ "item_readings": {
+  "item-4737ae": {
+   "paper": "paper_45",
+   "chosen": "W2",
+   "labels": [
+    "m-12b49a0f",
+    "m-bd881701"
+   ]
+  },
+  "item-429aab": {
+   "paper": "paper_45",
+   "chosen": "W2",
+   "labels": [
+    "m-19366f6b",
+    "m-7329d0db"
+   ]
+  },
+  "item-986765": {
+   "paper": "paper_32",
+   "chosen": "W2",
+   "labels": [
+    "m-32d9cefe",
+    "m-aac6ceaa"
+   ]
+  },
+  "item-17ea14": {
+   "paper": "paper_32",
+   "chosen": "W2",
+   "labels": [
+    "m-3866a8cb",
+    "m-bc18c46c"
+   ]
+  }
+ },
+ "pairs": {
+  "paper_45": {
+   "readings": [
+    "W2",
+    "W2"
+   ],
+   "outcome": "win W2",
+   "disagree": false
+  },
+  "paper_32": {
+   "readings": [
+    "W2",
+    "W2"
+   ],
+   "outcome": "win W2",
+   "disagree": false
+  },
+  "paper_17": {
+   "readings": null,
+   "outcome": "void (W2 run failed)"
+  }
+ },
+ "excluded_worlds": "Excluded (never driven to a run / image i396 broke /claim): rw_fb3d20864daf rw_772d7feaeb68 rw_10eadef98f39 rw_f239e042a15a rw_7d4010cab903 rw_dc11d36b53d7 (first six; 503 configuration unavailable at claim, created with --image researchworld:i396); rw_f0ae57386de5 (diagnostic probe, i396), rw_5aa2e53f1d55 (diagnostic probe, default image, one internal-review execution).\n"
+}

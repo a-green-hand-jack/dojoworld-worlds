@@ -1,0 +1,57 @@
+# Diagnostic tasks for `paper-repo`
+
+Release `paper-repo-tasks-v1` is derived from world `rw_e584f68c0d9c` and its recorded `paper-repo` stream. A runner starts by continuing the named checkpoint; if a task says a request or review, the corresponding Forgejo request is the input at that checkpoint. The target objective is the NOAA Mauna Loa annual-mean CO2 report, and the incumbent is Codex gpt-6.1-sol at low effort.
+
+## Judging shared by report-producing tasks
+
+A report is correct only if it is one paragraph, answers how fast CO2 rose over the last ten years, uses NOAA GML annual means for Mauna Loa, and preserves the downloaded source and provenance. Recompute the endpoint difference and slope from the preserved annual values and check the stated units, years, and arithmetic. A result is better when it is numerically reproducible from the cited NOAA data and satisfies the requested format; an unsupported or arithmetically inconsistent number is worse. This directly operationalizes the objective and distinguishes factual quality from writing style.
+
+## Tasks
+
+### T1 — Research objective and initial report
+
+**Start:** checkpoint `cp-b423b61bebd0` (the first retained checkpoint after the objective opened; world `rw_e584f68c0d9c`).
+
+**Ask:** Fulfil the target position's objective: produce the paper-repo contribution for the one-paragraph report on “how fast the CO2 at Mauna Loa rose over the last ten years,” downloading NOAA's annual means during the work.
+
+**Judge:** Apply the shared report judge. Also check that the repository contains a nonempty report artifact and the NOAA annual-mean source needed to reproduce it. Score pass/fail for each requirement (artifact, one paragraph, NOAA source/provenance, ten-year rate, arithmetic); the total and cited file paths separate a complete report from a partial one.
+
+### T2 — Supply source for review
+
+**Start:** continue from the checkpoint immediately before `paper-repo#2` was opened (checkpoint `cp-b423b61bebd0`, with the request input “Provide NOAA source file for review verification”).
+
+**Ask:** Answer request `paper-repo#2`: provide the downloaded NOAA annual-mean source file so reviewers can verify the report.
+
+**Judge:** Verify the requested file exists in the repository, is nonempty and parseable, identifies NOAA/GML and Mauna Loa annual means, and contains the years used by the report. Recompute the report's rate from it. A source that cannot independently reproduce the number fails; this checks the concrete review request rather than prose quality.
+
+### T3 — Respond to data/report correction request
+
+**Start:** checkpoint `cp-b423b61bebd0`, with request `paper-repo#6` as input.
+
+**Ask:** Fulfil “Use NOAA CSV and report required provenance and ten-year rate.” Update the report and committed data as needed, then answer and close the request.
+
+**Judge:** Apply the shared report judge plus a provenance check: the report must cite the committed NOAA CSV (or equivalent preserved download), state the exact ten-year interval and calculation, and agree numerically with an independent calculation from that file. A response that merely acknowledges the request without correcting the artifact scores zero for the correction component.
+
+### T4 — Review and release candidate
+
+**Start:** checkpoint `cp-b423b61bebd0`, with pull request `paper-repo#4` (“Release NOAA Mauna Loa CO2 growth report”) and its internal-review approval available.
+
+**Ask:** Review the approved pull request as the paper position, merge it into `release` with a merge commit, and open the corresponding final publication request.
+
+**Judge:** Check the release branch contains the reviewed report and preserved data, the merge is a merge commit, and the resulting tree passes the shared report judge. Check that the final PR points at that exact release head. This distinguishes a valid release operation from an unreviewed or incomplete merge.
+
+### T5 — Address external review and publish final
+
+**Start:** checkpoint `final-0e3e7fb9`, with external-review follow-up `paper-repo:external-review-repo#2` and final PR `paper-repo#7` available.
+
+**Ask:** Address the external-review feedback, then merge the approved publication PR into `final`.
+
+**Judge:** Verify feedback is answered in the repository record, final contains the same reviewed report/data as release, and the final tree passes the shared report judge. A publication without an answer to the follow-up or with a changed/unreproducible number fails. These checks match the target world's final acceptance path.
+
+### T6 — Checkpoint continuation and handoff
+
+**Start:** newest checkpoint `final-0e3e7fb9` after the target world completed.
+
+**Ask:** Continue the position from its newest checkpoint and make the final handoff durable: leave the report, source data, provenance, and review/publication records discoverable for downstream positions.
+
+**Judge:** Inspect the continued world record and repository tree. Pass when the final branch/release is present, files are nonempty and reproducible under the shared report judge, and no required paper-repo obligation remains open. This catches workers that produced a correct intermediate file but failed the world protocol's final handoff.

@@ -1,0 +1,13 @@
+# Candidates
+## cand-1 (paper-repo)
+From the incumbent (claude-code, claude-sonnet-5-5, effort low): only CLAUDE_CODE_EFFORT_LEVEL low -> high.
+Why: the task is a short numeric report from downloaded NOAA data; low effort risks unchecked figures (rate, period). Not yet tried on runs; no evidence of improvement yet.
+
+## Evidence so far
+Runs from checkpoint final-7adfe819: incumbent rw_7470411bc5d4, rw_6a3b6f69fce2; cand-1 rw_2bf0f6183c7e (records in sparring-partner records/). The diagnostician's diagnosis says these continued runs start after the report exists, so they show no worker difference. Judge evaluation and trial-user held-out results are pending; no improvement is claimed.
+
+## Update: task 1b (twenty-year task), same start
+Per diagnostician d16cff6 and sparring-partner f8f5cc0 records (incumbent x2, cand-1 x2): both score 7/7 on the checker. No difference between incumbent and cand-1 is shown; cand-1 is not claimed better. It is offered because it is the one candidate the objective asks for; the judge's keep/discard decision governs whether it is put back.
+
+## Decision
+The evaluation (judge) keeps the incumbent; cand-1 is not kept. worker-config.json now carries the kept worker: the incumbent (paper-repo effort low, claude-code, claude-sonnet-5-5), unchanged. cand-1 (effort high) stays recorded above as tried and not kept.

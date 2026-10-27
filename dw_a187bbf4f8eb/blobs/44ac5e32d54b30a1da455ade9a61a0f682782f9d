@@ -1,0 +1,66 @@
+{
+ "m-12b49a0f": {
+  "item": "item-4737ae",
+  "paper": "paper_45",
+  "pdf_sha256": "8aa76952480dc420eba35d3c4841aa701ffadf44c18da71fed94a55da67f86c8",
+  "tex_sha256": "3e1c45cc9a28b1ad685d0f0be5a316746034450b665982824ce4635b9a037e31",
+  "worker": "W2",
+  "world": "rw_49ceb1533496"
+ },
+ "m-19366f6b": {
+  "item": "item-429aab",
+  "paper": "paper_45",
+  "pdf_sha256": "1110c595c549349669f62c2c4ea4375a8a11ce8acc542c1abcf242661b37b533",
+  "tex_sha256": "7004aa213bc5707860c9d465d5eb99dd4df9e6f041adc91a996ab66e22e4ee82",
+  "worker": "W1",
+  "world": "rw_23d33e9f471c"
+ },
+ "m-32d9cefe": {
+  "item": "item-986765",
+  "paper": "paper_32",
+  "pdf_sha256": "29f52bd1f46697e17f3c96c04034133bfb10921d2d610c122917261c459d8e33",
+  "tex_sha256": "213f9d52c4531027287e6923d3e26f48880717632a7658e4c87243c7cd65e4a2",
+  "worker": "W2",
+  "world": "rw_899a5bf00a39"
+ },
+ "m-3866a8cb": {
+  "item": "item-17ea14",
+  "paper": "paper_32",
+  "pdf_sha256": "62bc65cdba9dd4ea7756bddd6cb3121eab047d3737e31ae9c248b6a622f4abfd",
+  "tex_sha256": "5c733b91121b2e10519a817b9c0561d70c26a68ec6a8849b97f3ad2dda96a56b",
+  "worker": "W1",
+  "world": "rw_0972ff2f0212"
+ },
+ "m-7329d0db": {
+  "item": "item-429aab",
+  "paper": "paper_45",
+  "pdf_sha256": "8aa76952480dc420eba35d3c4841aa701ffadf44c18da71fed94a55da67f86c8",
+  "tex_sha256": "3e1c45cc9a28b1ad685d0f0be5a316746034450b665982824ce4635b9a037e31",
+  "worker": "W2",
+  "world": "rw_49ceb1533496"
+ },
+ "m-aac6ceaa": {
+  "item": "item-986765",
+  "paper": "paper_32",
+  "pdf_sha256": "62bc65cdba9dd4ea7756bddd6cb3121eab047d3737e31ae9c248b6a622f4abfd",
+  "tex_sha256": "5c733b91121b2e10519a817b9c0561d70c26a68ec6a8849b97f3ad2dda96a56b",
+  "worker": "W1",
+  "world": "rw_0972ff2f0212"
+ },
+ "m-bc18c46c": {
+  "item": "item-17ea14",
+  "paper": "paper_32",
+  "pdf_sha256": "29f52bd1f46697e17f3c96c04034133bfb10921d2d610c122917261c459d8e33",
+  "tex_sha256": "213f9d52c4531027287e6923d3e26f48880717632a7658e4c87243c7cd65e4a2",
+  "worker": "W2",
+  "world": "rw_899a5bf00a39"
+ },
+ "m-bd881701": {
+  "item": "item-4737ae",
+  "paper": "paper_45",
+  "pdf_sha256": "1110c595c549349669f62c2c4ea4375a8a11ce8acc542c1abcf242661b37b533",
+  "tex_sha256": "7004aa213bc5707860c9d465d5eb99dd4df9e6f041adc91a996ab66e22e4ee82",
+  "worker": "W1",
+  "world": "rw_23d33e9f471c"
+ }
+}

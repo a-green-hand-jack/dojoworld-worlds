@@ -1,0 +1,15 @@
+# Runs (D1, tasks-v1) — continue rw_90561d4bccfc at cp-555bdfb1c0d5, `execute --loop --max-executions 8 --deadline-sec 900`
+Configs: inc.json (paper-repo effort low), cand1.json (medium); both set a world-wide claude-code/sonnet-5-5 default so internal-review-repo has a worker (effort low).
+- rw_6c0f56678b93 incumbent: 2 turns, paper-repo 34 s, review 23 s; flagged !no-durable-effect; no artifacts.
+- rw_ae89b7c8b3e9 cand-1: see monitor.txt; no artifacts.
+Each dir: status.json, monitor.txt, artifacts.txt. Earlier failed worlds (no worker for review role): rw_385f7bee36d4, rw_f96590d9f7f3.
+Observation: from this checkpoint the continued world's objective was "handled" with no durable effect, so no report/data was produced; the run does not discriminate low vs medium.
+
+## Round 2: D1 with tasks-v2 topic (runs/d1-topic.txt), cp-555bdfb1c0d5, 8 executions / 900 s
+- rw_a4d61139aea7 incumbent (low): paper-repo 20.8 model s (1 turn), commit c6fbbc8. 
+- rw_001d173db8e9 cand-1 (medium): paper-repo 36.0 model s (1 turn), commit 0140a14.
+Each dir: status.json, monitor.txt, ledger.json (export), out/ (report, data, fetched_at from the paper-repo main). `artifacts` is empty (nothing exported as release); outputs read from `researchworld export` after stop.
+Observation: both reports are textually identical except the fetch time (07:41:50 vs 07:41:55): same URL, SHA-256 bdd956e8…89b2b, 2025 = 427.35, 2020 = 414.21, 2.628 ppm/yr. One run each; not judged here.
+
+## Put-back round (kept worker = incumbent, effort low both roles; runs/putback.json)
+rw_782043c03c3a: continues rw_90561d4bccfc at its newest checkpoint final-632004e0, D1 topic (tasks-v2) so work is owed; 8 executions/900 s. paper-repo turn 56 s wall (3 executes), review 26 s. Report in out/report/report.md: same SHA bdd956e8…, 2025=427.35, 2020=414.21, 2.628 ppm/yr. Files: status.json, monitor.txt, ledger.json, out/.

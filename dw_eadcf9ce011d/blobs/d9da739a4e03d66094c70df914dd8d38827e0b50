@@ -1,0 +1,15 @@
+# Brief
+
+## Objective (quoted)
+"Improve the worker of the position paper-repo of the research world rw_6da85025e0fe ... Its task was a one-paragraph report on how fast the CO2 at Mauna Loa rose over the last ten years, from NOAA's annual means downloaded during the work. The incumbent worker of every position there is Claude Code with claude-sonnet-5-5 at low effort. Candidates may use only Claude Code with claude-sonnet-5-5 ... what may change is its native settings, such as its effort or its environment. Take the tasks from the target world; no judging is given, so propose it. Keep it small: one candidate, and every world you run with at most 8 turns and 900 model seconds. Put the kept worker back by continuing rw_6da85025e0fe from its newest checkpoint with it and running that round. Nothing is published outside this world."
+
+## Target world (observed)
+rw_6da85025e0fe: positions paper-repo -> internal-review-repo; final checkpoint final-c3fd9f5b; finished, accepted (4 turns, 41 model s).
+Output: report/report.md, one paragraph: fetched NOAA co2_annmean_mlo.csv, SHA-256, last year 2025 = 427.35 ppm, 2015 = 401.01, growth (427.35-401.01)/10 = 2.634 ppm/yr. Reviewer record: figures verified, approved.
+Data check: 2025 427.35, 2015 401.01 are correct in the CSV.
+
+## Focus this round
+The incumbent output is correct and terse. Little to improve in correctness; plausible gaps: no stated window ("2015-2025"), no uncertainty/caveat (e.g. 2024 jump, year-to-year variability, ten-year endpoint sensitivity), no cross-check. Candidate: single change to native settings (effort higher, and/or environment/settings), not prompt-breaking. Judge: proposed criteria = numeric correctness vs CSV (hard gate), provenance stated (URL, date, hash), window stated explicitly, one paragraph, brief caveat; no fabricated claims.
+
+## Not established
+Only the final report was read, not full per-turn records of the worker; no failures seen. Held-out vs diagnostic tasks to be set by task-setter (variants: other station/series, different window, e.g. last 5 years, from NOAA data).

@@ -1,0 +1,10 @@
+# Evaluation record (this objective: paper-repo of rw_90561d4bccfc)
+Tasks: H1 (held-out; twenty-year window revision of the Mauna Loa report), start final-632004e0, <=8 turns/900 model s, judging = checks 1-8 in task-setter heldout/tasks.md.
+Workers: incumbent (paper-repo effort low) vs cand-1 (paper-repo effort medium); 3 runs each, same start, same judging, only worker config differing.
+Blind judgements: judgements/R312,R386,R457,R678,R790,R845.md, pushed (539639d) before the label table was revealed (task-setter efc8c4e; table sha256 017b0b4a...b220 verified).
+Reveal: incumbent = R312,R386,R790 (worlds rw_407adb0e5e83, rw_d77d8a486acd, rw_859c048404ad); cand-1 = R457,R678,R845 (rw_b1f7daa003ef, rw_edb84938599f, rw_8688d8d854f6).
+Result: every run 7/7 on assessable checks (check 7 not assessable from handed results); mean score difference 0, spread 0 on both sides. Cost: task-setter's partial figures (inc 22.8, 20.5; cand 28.0, 16.7 model s) are not a controlled comparison; tuner's round 2 saw 20.8 vs 36.0 s. No evidence cand-1 is better.
+Conclusion: no candidate does better than the incumbent; the incumbent (effort low) stays. The delivered worker must be the incumbent's, and the put-back round (continue rw_90561d4bccfc from its newest checkpoint with it) must run before approval.
+
+Put-back round (this objective): world rw_782043c03c3a continued rw_90561d4bccfc at final-632004e0 with tuner b522b63 config.json (incumbent, both roles low), D1 five-year topic, <=8 turns/900 s; relayed by task-setter#6 from sparring-partner 20a983a. Report correct (2020=414.21 -> 2025=427.35, 13.14/5=2.628 ppm/yr; SHA bdd956e8... equals the fresh download). I read it via task-setter's relay, not the repository itself.
+Approved: delivered worker = incumbent, the one this evaluation keeps.

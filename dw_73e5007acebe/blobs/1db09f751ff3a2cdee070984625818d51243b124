@@ -1,0 +1,3 @@
+Table (table.json) matches TABLE_SHA256.txt. inc = incumbent (paper-repo effort low); cand = cand-1 (paper-repo effort medium); review role low in all.
+Judge scored all six 7/7 on assessable checks; check 7 (trajectory) not assessable from handed results.
+Total model seconds (both roles) known for four worlds from export output: rw_859c048404ad inc 22.8; rw_d77d8a486acd inc 20.5; rw_8688d8d854f6 cand 28.0; rw_b1f7daa003ef cand 16.7 (paper-repo+review last-turn figures as printed by export; not a controlled cost comparison).

@@ -1,0 +1,6 @@
+# Evaluation plan (judge)
+Compare incumbent vs one candidate on held-out tasks from rw_6da85025e0fe checkpoints (Mauna Loa CO2 ten-year rise paragraph).
+Each result judged alone, in full, under a blind label; judgement + cited passage pushed to evidence/judgements/ before the label table is published.
+Scores per result (0-2 each): (1) rate/trend figure correct against NOAA annual means the run downloaded; (2) numbers traceable to the downloaded data, none fabricated; (3) one paragraph, answers the ask; (4) honest caveats (period, data source, uncertainty).
+Need >=3 runs per worker from identical starting points; report mean difference and spread (sd / range). No candidate better => incumbent delivered.
+Held-out tasks are never put in issues or comments.

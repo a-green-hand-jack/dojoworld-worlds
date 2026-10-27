@@ -1,0 +1,9 @@
+# Diagnosis of the paper-repo incumbent (sonnet-5-5, low effort), rw_679cdc7d5fa3
+Observed (monitor --summary, released artifacts 3330e36):
+- paper-repo turn: complete, reason=released; ~637k input tokens (96% cached), 3.3k output; whole world 126 model s of 2400, 14 of 30 turns.
+- report/report.md: URL, UTC fetch time, SHA-256, 2025=427.35, 2015=401.01, (26.34)/10=2.63 ppm/yr; hash re-verified by internal review (reviews/v1.md). Single paragraph, no figure.
+Findings:
+1. No worker defect shown by the records I read: numbers, hash, format meet BRIEF.md. I did not read per-step transcripts (not exposed by monitor --summary); this is an observation of outputs only.
+2. Thin points of the output (not errors): the "no gaps" check from BRIEF.md is not stated in the report; no context for the 2.63 figure (e.g. earlier decade); fetch time is 08:00:35 for a one-shot download.
+3. World/position issues, not worker: BRIEF.md says "check the file has the year ten before the last" but the report asks only for one paragraph, so omitting the gap check is not penalised by the position text; judging must name it.
+Lever: CLAUDE_CODE_EFFORT_LEVEL low -> medium is the one native setting plausibly affecting thoroughness (explicit gap check). Cost headroom is ample (126 s vs 900 s cap). Expect at most a small gain; a single pair of runs proves nothing.

@@ -1,0 +1,45 @@
+{
+  "objective": "judge#1",
+  "runs": [
+    {
+      "world": "rw_2108e3103d97",
+      "driver": "cmd-a2324aa24a",
+      "worker": "incumbent",
+      "ended_because": "max-executions",
+      "release_verified": false,
+      "status": "failed",
+      "counted": "excluded from score; failure recorded"
+    },
+    {
+      "world": "rw_b88f7b236ef4",
+      "driver": "cmd-8f21fa6e61",
+      "worker": "candidate-v1",
+      "ended_because": "max-executions",
+      "release_verified": false,
+      "status": "failed",
+      "counted": "excluded from score; failure recorded"
+    }
+  ],
+  "comparison": {
+    "difference": 0,
+    "spread": 0,
+    "failure_sensitivity": "With both runs failed, dropping either or assigning best/worst score cannot establish a candidate advantage; incumbent retained."
+  },
+  "worlds": {
+    "rw_2108e3103d97": {
+      "use": "failed",
+      "reason": "incumbent held-out drive max-executions; release unverified",
+      "ended_because": "max-executions"
+    },
+    "rw_b88f7b236ef4": {
+      "use": "failed",
+      "reason": "candidate held-out drive max-executions; release unverified",
+      "ended_because": "max-executions"
+    },
+    "rw_620bbabf8347": {
+      "use": "failed",
+      "reason": "put-back continuation incomplete; no release or verification",
+      "ended_because": "waiting-for-execution"
+    }
+  }
+}

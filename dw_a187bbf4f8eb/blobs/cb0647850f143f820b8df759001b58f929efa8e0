@@ -1,0 +1,14 @@
+# Brief: measure check before round N5 (rw_313df9cf84a4, positions paper-repo and internal-review-repo)
+
+Question (quoted): "Can the judging that round N5 will use tell apart two workers known to differ?" W1 and W2; their identity is held only by task-setter.
+No worker is changed, nothing released, no diagnosis, candidate, put-back or approval.
+
+Design: 3 papers (paper_45, paper_32, paper_17; not paper_29), 1 run per worker per paper (6 runs), all driven at once; 1800 s, <=12 turns.
+Failed run (no verified release) is reported, never judged from a draft; its pair is lost; both failed = tie.
+Judging: one pair per paper, judged twice in opposite orders, different labels, different turns; win only if both readings pick the same worker, else tie.
+Report: each pair's two readings and outcome, wins, ties, disagreement rate. Max 2 items per judging turn; each manuscript printed whole; push before next item.
+Label table sha256 published before first judgement; table published after the last.
+Judge line: Codex gpt-6.1-sol, high effort, no fallback.
+
+Focus: blindness and honest reporting. Coach asks for nothing beyond this.
+Not established: identities of W1/W2 (deliberately).

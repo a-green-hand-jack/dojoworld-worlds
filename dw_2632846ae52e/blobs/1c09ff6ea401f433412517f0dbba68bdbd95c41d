@@ -1,0 +1,1 @@
+{"worker":{"roles":{"paper-repo":{"agent":"claude-code","model":"claude-sonnet-5-5","claude_code":{"env":{"CLAUDE_CODE_EFFORT_LEVEL":"low"}}}}}}

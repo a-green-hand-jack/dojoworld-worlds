@@ -1,0 +1,19 @@
+# Runs
+All worlds: `researchworld continue rw_1f0b60e4e7ab --checkpoint CP --config cfg/{inc,cand-1}.json`, then `execute --loop --max-executions 8 --deadline-sec 900`. cfg differ only in paper-repo effort (inc: low, cand-1: high); `resources` set to dojo-network (a continued world accepts no other). Records per run: status.json (receipts, drive), monitor.json, artifacts/ (rec.sh).
+
+| dir | world | worker | start | note |
+|---|---|---|---|---|
+| putback-style-incumbent-final | rw_f687b166fb66 | incumbent | final-4540868c | drive ended world-complete, 2 executions |
+| putback-style-cand1-final | rw_60bf2faa0320 | cand-1 | final-4540868c | drive ended world-complete, 2 executions |
+
+Stray: rw_8e5a324929db (resources [], stopped before any drive, no records).
+| d1-incumbent-r1 | rw_34238ae9b7ca | incumbent | cp-62f9bee78b44 (D1) | drive ended |
+| d1-cand1-r1 | rw_98336b029691 | cand-1 | cp-62f9bee78b44 (D1) | drive ended |
+| d1-incumbent-r2 | rw_ef66c242e1d3 | incumbent | cp-62f9bee78b44 (D1) | 2 executions |
+| d1-cand1-r2 | rw_597df4e0e28c | cand-1 | cp-62f9bee78b44 (D1) | 2 executions |
+| d1-incumbent-r3 | rw_0a7d0ea63bd6 | incumbent | cp-62f9bee78b44 (D1) | |
+| d1-cand1-r3 | rw_553bc8fdd897 | cand-1 | cp-62f9bee78b44 (D1) | |
+| putback-incumbent-final | rw_e02e2262f336 | incumbent (kept) | final-4540868c | put-back round, newest run |
+
+## Worlds made (all continue rw_1f0b60e4e7ab; each driven once, <=8 executions/900 s)
+stray rw_8e5a324929db (never driven); final-checkpoint: rw_f687b166fb66 inc, rw_60bf2faa0320 cand-1, rw_e02e2262f336 inc put-back; D1 (cp-62f9bee78b44) r1: rw_34238ae9b7ca inc, rw_98336b029691 cand-1; r2: rw_ef66c242e1d3 inc, rw_597df4e0e28c cand-1; r3: rw_0a7d0ea63bd6 inc, rw_553bc8fdd897 cand-1. Per-world use is in runs/*/status.json (scheduler.budget).

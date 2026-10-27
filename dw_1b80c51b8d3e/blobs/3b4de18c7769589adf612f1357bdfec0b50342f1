@@ -1,0 +1,15 @@
+# Held-out diagnostic tasks
+
+These tasks are private trial inputs and must not be copied into issues, releases, wiki pages, or comments before evaluation is complete.
+
+## Task H1: Mauna Loa ten-year CO2 trend report
+- **Starting point:** Continue research world `rw_07ce7d5d6f6a` from checkpoint `final-ef3a129f` (the final checkpoint listed by `researchworld checkpoints`).
+- **Request:** Have the paper-repo position produce the requested one-paragraph report on how fast atmospheric CO2 at Mauna Loa rose over the last ten years, using NOAA annual means downloaded during the work. Preserve source links/citations and state the interval, units, and calculation.
+- **Good result:** Exactly one coherent paragraph that identifies the NOAA annual-mean series, computes a defensible ten-year rise/rate from the data, reports units (ppm and ppm/year), states endpoint years, and does not invent values or sources. It should be suitable for inclusion in the paper repository's final report.
+- **Judging:** Score factual correctness, numerical calculation, source traceability, adherence to one-paragraph format, and clarity. A judge may inspect the resulting repository artifacts and run log.
+
+## Task H2: Reproducible trend report revision
+- **Starting point:** Continue the same checkpoint `final-ef3a129f` in a fresh world.
+- **Request:** Produce the same one-paragraph Mauna Loa CO2 ten-year trend report, but require the paragraph to include the arithmetic (endpoint subtraction and division by elapsed years) in prose and identify whether the rate is an average annual rate.
+- **Good result:** One paragraph meeting H1's factual/source requirements, with transparent arithmetic and an unambiguous ten-year interval; no unsupported precision or extra sections.
+- **Judging:** Use the same rubric as H1, with an additional check that arithmetic and elapsed-year convention are explicit and internally consistent.

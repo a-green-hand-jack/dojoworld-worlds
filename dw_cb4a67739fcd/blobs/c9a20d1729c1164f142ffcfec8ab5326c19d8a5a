@@ -1,0 +1,32 @@
+{
+ "R13ae6252": {
+  "bytes_sha": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd",
+  "path": "results/R13ae6252.md",
+  "worker": "incumbent"
+ },
+ "R3a8dbc88": {
+  "bytes_sha": "470e25eff8269e2d7cc3ddc7a2554b8d56584f2bd9b90fe06761f17e90317ddc",
+  "path": "results/R3a8dbc88.md",
+  "worker": "incumbent"
+ },
+ "R686a1f6b": {
+  "bytes_sha": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd",
+  "path": "results/R686a1f6b.md",
+  "worker": "candidate"
+ },
+ "Rbc6c67ec": {
+  "bytes_sha": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd",
+  "path": "results/Rbc6c67ec.md",
+  "worker": "incumbent"
+ },
+ "Re1ce3904": {
+  "bytes_sha": "2d02f2ff1628ad05e3ed1745367606e134263c19c5c6204a0a8dba9b0b99b1fd",
+  "path": "results/Re1ce3904.md",
+  "worker": "candidate"
+ },
+ "Rf7808a98": {
+  "bytes_sha": "5aefe620236341bd00215bc2915cde528398985bf238aac42583caca3055750f",
+  "path": "results/Rf7808a98.md",
+  "worker": "candidate"
+ }
+}

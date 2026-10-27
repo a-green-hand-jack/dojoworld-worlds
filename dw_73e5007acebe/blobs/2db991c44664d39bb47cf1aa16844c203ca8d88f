@@ -1,0 +1,11 @@
+# Brief
+
+Objective (quoted): "Improve the worker of the position paper-repo of the research world rw_90561d4bccfc ... Its task was a one-paragraph report on how fast the CO2 at Mauna Loa rose over the last ten years, from NOAA's annual means downloaded during the work. The incumbent worker of every position there is Claude Code with claude-sonnet-5-5 at low effort. Candidates may use only Claude Code with claude-sonnet-5-5 ... what may change is its native settings, such as its effort or its environment. Take the tasks from the target world; no judging is given, so propose it. Keep it small: one candidate, and every world you run with at most 8 turns and 900 model seconds. Put the kept worker back by continuing rw_90561d4bccfc from its newest checkpoint with it and running that round."
+
+Target: rw_90561d4bccfc (finished, final checkpoint final-632004e0), positions paper-repo -> internal-review-repo. Incumbent worker_config: claude-code, claude-sonnet-5-5, env CLAUDE_CODE_EFFORT_LEVEL=low, no assets. Task: report/report.md, one paragraph: URL, fetch time, SHA-256, last year and its mean, ten-year average growth (last - year ten earlier)/10; file kept as downloaded; no figure.
+
+Judging proposal (task-setter/judge refine): per-item check against the downloaded CSV: URL exact; fetch time present; SHA-256 equals sha256 of kept file; last year/mean match file; growth = (last - last-10)/10 computed right; one paragraph; no figure; data file unmodified and actually downloaded (not typed). Also cost: model seconds/turns.
+
+Round focus: the incumbent run (56 model s, 3 turns, accepted) already produced a fully correct report (see diagnosis/diagnosis.md). Priority: do not regress; test whether any candidate setting (e.g. higher effort) changes correctness, and report honestly if no difference is measurable.
+
+Not established: variance across runs (only one incumbent run exists); the diagnostic tasks' variants.

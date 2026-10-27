@@ -1,0 +1,6 @@
+\.forgejo/CODEOWNERS @diagnostician
+^tasks/.* @diagnostician
+^candidate/.* @tuner
+^evaluation/.* @diagnostician
+^approval/.* @diagnostician
+^trial/.* @diagnostician

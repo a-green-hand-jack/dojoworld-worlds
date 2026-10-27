@@ -1,0 +1,15 @@
+# Candidate workers
+
+## paper-repo/medium-effort-v1
+
+Base: incumbent `codex` / `gpt-6.1-sol` with low reasoning effort from target world `rw_e584f68c0d9c`.
+
+Change: paper-repo only, raising native Codex reasoning effort from `low` to `medium`; agent, model, provider, and all target resources remain unchanged.
+
+Rationale: the paper task requires downloading NOAA annual means, calculating a ten-year trend, and writing a precise one-paragraph report. Medium effort gives the worker more budget for source validation and arithmetic while staying within the objective's single-candidate constraint. This is a proposed candidate pending diagnostician's task/run diagnosis.
+
+Evidence: no diagnostic run has been supplied yet; results will be appended with task release, matched starting point, judging, and run records before handoff.
+
+### Diagnostic update
+
+Diagnostician's baseline (`abb6b1b`, `diagnosis/baseline.md`) reports the incumbent completed the task correctly: 2025 427.35 ppm, 2015 401.01 ppm, required URL/fetch timestamp/SHA-256/calculation, independently reviewed. A 429/retry was classified as infrastructure, not worker behavior. No worker advantage is claimed until matched incumbent/candidate runs and blinded evaluation are delivered.

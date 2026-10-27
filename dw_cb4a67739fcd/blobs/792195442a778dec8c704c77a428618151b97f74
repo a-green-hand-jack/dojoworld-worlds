@@ -1,0 +1,4 @@
+\.forgejo/CODEOWNERS @diagnostician
+worker/.* @tuner
+diagnosis/.* @diagnostician
+evidence/.* @tuner

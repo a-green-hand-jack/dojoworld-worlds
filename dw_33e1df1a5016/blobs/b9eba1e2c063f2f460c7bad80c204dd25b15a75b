@@ -1,0 +1,11 @@
+# Kept worker: incumbent low-v1
+
+Evaluation keeps the incumbent. The matched diagnostic runs recorded by diagnostician found no worker quality difference: incumbent world `rw_06c32490a8b3` and medium candidate world `rw_87bae9dc4605` began from the same `final-0e3e7fb9` checkpoint and both preserved the report/CSV and parser checks, but both exhausted eight executions with unverified releases. The candidate's approval timing difference was scheduler timing, and the already-corrected checkpoint did not re-expose the baseline timestamp defect. The evaluation therefore retains the incumbent Codex `gpt-6.1-sol` worker at low reasoning effort.
+
+The kept configuration changes no worker setting from the target incumbent. `candidate/kept/config.json` is a minimal override so continuation inherits the target world's resources unchanged. It must be used to continue `rw_e584f68c0d9c` from its newest checkpoint for the final round.
+
+## Fresh put-back attempt
+
+The stopped first put-back world `rw_e4150b519eb4` could not be resumed. A fresh continuation `rw_f0c559601c44` was created from target `rw_e584f68c0d9c` at checkpoint `final-0e3e7fb9` with `tuner-final/candidate/kept/config.json`. Diagnostician started bounded driver job `cmd-5c30a3b2db` with `researchworld execute rw_f0c559601c44 --loop --max-executions 8 --deadline-sec 900` (issue evidence at diagnostician comment 146). This record preserves the start provenance; no terminal `world_complete` or verified release result has been published yet, so the put-back remains pending and is not claimed as complete.
+
+Judge's subsequent runs accounting at commit `e515cb7` lists `rw_f0c559601c44` as failed pending terminal evidence. The failed status replaces neither the required put-back nor the delivery check: until diagnostician publishes the driver's terminal status and a verified release/check, the evaluation must continue to report the put-back as incomplete.

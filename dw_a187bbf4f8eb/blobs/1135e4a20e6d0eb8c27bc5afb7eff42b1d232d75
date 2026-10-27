@@ -1,0 +1,271 @@
+% Build note: aaai25.sty, algorithm.sty and algorithmic.sty in this directory are
+% stand-ins (the official AAAI25 kit is not in the build container). See README.md.
+\documentclass[letterpaper]{article} 
+\usepackage{draftwatermark}
+\SetWatermarkText{AI-Generated}
+\SetWatermarkScale{0.5}
+\SetWatermarkColor[gray]{0.6}
+\usepackage{aaai25}  \usepackage{times}  \usepackage{helvet}  \usepackage{courier}  \usepackage[hyphens]{url}  \usepackage{graphicx} \urlstyle{rm} \def\UrlFont{\rm}  \usepackage{natbib}  \usepackage{caption} \frenchspacing  \setlength{\pdfpagewidth}{8.5in}  \setlength{\pdfpageheight}{11in}  \usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{newfloat}
+\usepackage{listings}
+\DeclareCaptionStyle{ruled}{labelfont=normalfont,labelsep=colon,strut=off} \lstset{basicstyle={\footnotesize\ttfamily},numbers=left,numberstyle=\footnotesize,xleftmargin=2em,aboveskip=0pt,belowskip=0pt,showstringspaces=false,tabsize=2,breaklines=true}
+\floatstyle{ruled}
+\newfloat{listing}{tb}{lst}{}
+\floatname{listing}{Listing}
+\pdfinfo{
+/TemplateVersion (2025.1)
+}
+
+
+
+\setcounter{secnumdepth}{1} 
+
+
+
+\usepackage{graphicx}
+\usepackage{lscape}                                         \usepackage{threeparttable}
+
+\usepackage{animate} 
+
+\usepackage{booktabs}                   \usepackage{multirow}
+
+\usepackage{makecell}
+
+\usepackage{paralist}
+\usepackage{enumitem}
+
+\usepackage{epsfig}                      \usepackage{graphicx}                  \usepackage{mathptmx}
+\usepackage{mathtools}
+
+
+\usepackage{url}  \usepackage[table]{xcolor}
+\usepackage{grfext}
+\PrependGraphicsExtensions*{.jpg,.png,.PNG}
+
+\usepackage{amssymb}\usepackage{pifont}\def\etal{et~al.\_}			  \def\Eg{\textit{E.g.},~}               \def\eg{\textit{e.g.},~}               \def\ie{\textit{i.e.},~}               \def\etc{\textit{etc}}                 \def\cf{\textit{cf.}~}                 \def\viz{\textit{viz.}~}               \def\vs{\textit{vs.}~}                 
+
+\def\naive{na{\"i}ve\xspace}
+\def\Naive{Na{\"i}ve\xspace}
+\def\Naively{Na{\"i}vely\xspace}
+
+\DeclareMathOperator*{\argmin}{\arg\!\min} 
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+
+
+
+\newcommand{\topic}[1]
+{
+\paramargin\noindent \textbf{#1}
+}
+
+
+
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}} 
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\appenref}[1]{Appendix \S ~\ref{appen:#1}}
+\newcommand{\eqnref}[1]{\eqref{eq:#1}}
+\newcommand{\thmref}[1]{Theorem~\ref{#1}}
+\newcommand{\prgref}[1]{Program~\ref{#1}}
+\newcommand{\algref}[1]{Algorithm~\ref{#1}}
+\newcommand{\clmref}[1]{Claim~\ref{#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{#1}}
+\newcommand{\ptyref}[1]{Property~\ref{#1}}
+
+\long\def\ignorethis#1{}
+\newcommand {\jw}[1]{{\color{cyan}\textbf{Jinwoo: }#1}\normalfont}
+\newcommand {\dongho}[1]{{\color{red}\textbf{Dongho: }#1}\normalfont}
+\newcommand {\jongseo}[1]{{\color{magenta}\textbf{Jongseo: }#1}\normalfont}
+
+
+\newcommand {\todo}{{\textbf{\color{red}[TO-DO]\_}}}
+\def\newtext#1{\textcolor{blue}{#1}}
+\def\modtext#1{\textcolor{red}{#1}}
+\newcommand{\note}[1]{{\it\color{blue} #1}}
+
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\mb}[1]{\mathbf{#1}}
+
+
+\newbox\jsavebox \newcommand{\jsubfig}[2]{\sbox\jsavebox{#1}\parbox[t]{\wd\jsavebox}{\centering\usebox\jsavebox\\#2}}
+
+
+\newcommand{\best}[1]{{\textbf{#1}}}
+\newcommand{\second}[1]{{\underline{#1}}}
+\newcommand{\appsection}[2]{
+  \hspace{2cm}$\bullet$\hspace{0.2cm}#1 $\rightarrow$ \S\ref{appen:#2}
+}
+
+\def\xi{\mathbf{x}_i}
+\def\yi{\mathbf{y}_i}
+
+\def\I{\mathbf{I}}
+\def\B{\mathbf{B}}
+\def\E{\mathbf{E}}
+\def\X{\mathbf{X}}
+\def\Y{\mathbf{Y}}
+\def\Z{\mathbf{Z}}
+\def\W{\mathbf{W}}
+\graphicspath{{figure}, {example}}
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{6} \DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{6}  
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\title{Building a Multi-modal Spatiotemporal Expert for Zero-shot Action Recognition with CLIP}
+\author{Anonymous Author}
+\affiliations{
+Northwestern Polytechnical University, Xi'an Shaanxi, 710129, China\\
+yatingyu@mail.nwpu.edu.cn, congqi.cao@nwpu.edu.cn, zhangyueran3@mail.nwpu.edu.cn, \{lvqinyi, minlingtong, ynzhang\}@nwpu.edu.cn
+}
+
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Zero-shot action recognition (ZSAR) requires transferring a visual-language model to action categories it was never trained on. CLIP aligns images and text well, but adapting it directly to video underperforms because its attention has no mechanism for temporal dynamics, and its class-level prompts carry little motion semantics. We present the Spatiotemporal Dynamic Duo (STDD), which turns CLIP into a spatiotemporal expert on both sides. On the vision side, Space-time Cross Attention (STCA) rewrites each ViT block's spatial attention as space--time cross attention through window shift masking, multi-scale channel mixing, spatial padding and residual shortcutting, adding no parameters and keeping the $O(TN^2)$ cost of spatial attention. On the text side, an Action Semantic Knowledge Graph (ASKG) built with an LLM separates each action into static (object) and dynamic (sub-action) concepts and generates spatial and temporal prompts. Training aligns frame features to prompts with a symmetric max-over-frames/prompts score, and distills from frozen CLIP. Trained on Kinetics-400, STDD reaches 93.4\% (EP1) and 88.6\% (EP2) on UCF101 with ViT-L/14, and 85.2\% on UCF101, 55.9\% on HMDB51 and 75.1\% on Kinetics-600 with ViT-B/16 under the EP3 protocol. The margins over the strongest prior methods are small, often within the reported standard deviations, and we discuss this in the experiments.
+\end{abstract}
+
+\section{Introduction}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{figures/1_teaser.png}
+  \caption{Motivation: some novel actions are hard to separate from static appearance alone, and need motion cues.}
+  \label{fig:teaser}
+\end{figure}
+
+Zero-shot action recognition asks a model to classify videos of actions that were absent from its training set, using only the semantics of the action names. Vision-language models such as CLIP \citep{radford2021learning} make this feasible for images, because a single embedding space links pictures to text. Video, however, is harder. Many novel actions cannot be told apart from a single frame, as with weightlifting variants that share a scene but differ in motion. A CLIP image encoder applied frame by frame does not model how appearance changes over time, and naive fine-tuning on video tends to underperform the frozen model on unseen classes.
+
+Existing adaptations fall into three groups. Some add temporal modules, which increases parameters or attention cost \citep{bertasius2021space,arnab2021vivit,yang2023aim}. Some keep the image encoder and rely on class-level prompts such as ``a video of \{class\}'' \citep{wang2021actionclip,ni2022expanding}. Others enrich the text side with LLM-generated descriptions but leave the video encoder without temporal modeling \citep{chen2024ost,huang2024froster,jia2024generating}.
+
+We take the view that CLIP should become a multi-modal spatiotemporal expert: the video stream should model cross-frame dynamics, and the text stream should describe both what the action looks like and how it unfolds. Our contributions are:
+\begin{itemize}[leftmargin=*,nosep]
+  \item A parameter-free Space-time Cross Attention that turns CLIP's spatial attention into space--time cross attention with the same asymptotic cost as spatial attention.
+  \item An Action Semantic Knowledge Graph that disentangles static and dynamic semantics and produces spatial and temporal prompts for each action.
+  \item A symmetric frame--prompt alignment objective, with distillation from frozen CLIP, that matches video frames to fine-grained prompts.
+  \item Zero-shot results on UCF101, HMDB51 and Kinetics-600 under the EP1, EP2 and EP3 protocols that are the highest reported means in our comparison tables, with margins discussed against the reported variance.
+\end{itemize}
+
+\section{Related Work}
+\paragraph{CLIP for video.} CLIP-based video recognition has been adapted through prompt learning, adapters and temporal modules. ActionCLIP \citep{wang2021actionclip} recasts action recognition as video-text matching. X-CLIP \citep{ni2022expanding} adds cross-frame communication and video-specific prompts. Open-VCLIP \citep{weng2023open} and Open-VCLIP++ \citep{wu2024building} extend CLIP to an open vocabulary through weight interpolation and better training. Text4Vis \citep{wu2023revisiting} and BIKE \citep{wu2023bike} study how to adapt the image encoder for video. Our method differs in that it changes the attention itself rather than adding a module on top of it.
+
+\paragraph{Temporal modeling without parameters.} Shift operations move channels between neighbouring frames at zero FLOP and parameter cost \citep{wu2018shift,lin2019tsm}. STDD builds on this idea inside the attention of a ViT block, combined with window shift masking.
+
+\paragraph{Semantic augmentation.} Textual descriptions for actions have been produced by hand, from word embeddings, or with LLMs \citep{gao2019know,chen2021elaborative,kim2021daszl}. OST \citep{chen2024ost} uses spatiotemporal descriptors and FROSTER \citep{huang2024froster} uses action descriptions. Our ASKG adds explicit relations between objects and sub-actions.
+
+\section{Method: Spatiotemporal Dynamic Duo}
+\subsection{Overview}
+STDD changes both encoders. The vision encoder is a CLIP ViT whose attention is replaced by STCA (Figure~\ref{fig:overview}). The text encoder is the frozen CLIP text encoder, applied to prompts generated from the ASKG (Figure~\ref{fig:pipeline}). Only the vision encoder is updated during training.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/2_overview.png}
+  \caption{Overview of the framework: STCA in the vision encoder, and ASKG-generated prompts in the text encoder.}
+  \label{fig:overview}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/3_pipeline.png}
+  \caption{Illustration of the method: window shift masking, multi-scale channel mixing, spatial padding and shortcutting, and frame--prompt alignment.}
+  \label{fig:pipeline}
+\end{figure*}
+
+\subsection{Space-time Cross Attention}
+Let a video have $T$ frames, each split into $N$ patches plus a per-frame [CLS] token. A standard ViT block computes $z'^{l}_t = \mathrm{MHSA}(\mathrm{LN}(z^{l-1}_t)) + z^{l-1}_t$ and $z^{l}_t = \mathrm{MLP}(\mathrm{LN}(z'^{l}_t)) + \hat z^{l}_t$, where $\hat z^{l}_t$ is produced by four steps.
+
+\paragraph{Window shift masking (WSM).} A spatial window of $w_1\times w_2$ (default $2\times 2$) is defined per frame, and a mask with ratio $r$ (default $0.5$) discards tokens. The mask shifts over time, so different positions survive in different frames. The masked tokens $\dot z^{l-1}_t$ contain $N' = rN$ tokens per frame and interleave spatial positions across time.
+
+\paragraph{Multi-scale channel mixing (MCM).} Temporal dynamics are injected by shifting channels from frames at temporal offset $\delta$. With $d_\delta = \gamma D$, the separate mixing for offset $\delta$ takes the first $d_\delta$ channels from frame $t-\delta$, the next $d_\delta$ from frame $t+\delta$, and the rest from frame $t$. The continual variant mixes denser context, taking $d_\delta/\delta$ channels from each of $t\pm 1,\dots,t\pm\delta$. MHSA is applied to the mixed tokens, and the outputs are averaged over scales $\delta\in\{\pm 1,\pm 2\}$ (default).
+
+\paragraph{Spatial padding and shortcutting.} Because WSM keeps $N'$ tokens, the result is padded back to $N$: masked positions take the standard-path output $z'^{l}_t$ and unmasked positions take the mixed output. The padded tensor $\hat z^{l}_t \in \mathbb{R}^{(N+1)\times D}$ restores the spatial layout, and the residual connection fuses the dynamic signal.
+
+\paragraph{Complexity.} STCA costs $O(TN^2 + S\,T\,(N')^2)$, which is $O(TN^2)$ because $N' = rN$ and $S$, $r$ are constants. Factorised space-time attention in AIM costs $O(TN^2 + T^2N)$ and full space--time attention $O(T^2N^2)$ \citep{yang2023aim}.
+
+\subsection{Spatiotemporal Text Augmentation}
+The ASKG is built by prompting an LLM (GPT-3.5 in our setup) for each action. Its nodes are the action, related objects and sub-actions, and its edges are predicates between entities, such as ``person--uses--rope'' or ``person--descends--vertical surface'' for abseiling. For each category we request between 5 and 10 objects or sub-actions and concise predicates between entity pairs. Spatial prompts $C^{s}$ are sentences built from object--relation triples and describe static appearance and context. Temporal prompts $C^{t}$ are sentences built from sub-action--relation triples and describe motion and progression. The prompt set is $C^{st} = C^{s} \cup C^{t}$, and each prompt is encoded by the frozen CLIP text encoder.
+
+\subsection{Training and Inference}
+Frame-level [CLS] features $z_{n,t}$ are compared with the prompt features $c^{st}_{k,j}$ through two scores. The frame-to-prompt score is $S^{v2t}_{n,k} = \frac{1}{T}\sum_{t} \max_{j} z_{n,t}^{\top} c^{st}_{k,j}$, and the prompt-to-frame score is $S^{t2v}_{n,k} = \frac{1}{N^{st}}\sum_{j} \max_{t} z_{n,t}^{\top} c^{st}_{k,j}$. The final score $S_{n,k} = (S^{v2t}_{n,k} + S^{t2v}_{n,k})/2$ is optimised with cross-entropy over the seen classes. A feature-level distillation term from the frozen CLIP video features preserves generalisation. At test time, each video is scored with 3 temporal and 1 spatial view, and predictions are averaged.
+
+\section{Experiments}
+\subsection{Setup}
+Models are trained on Kinetics-400 with CLIP ViT-B/16 and ViT-L/14 backbones, using 8-frame clips. STCA defaults are a $2\times2$ window, mask ratio $r=0.5$ and temporal scales $\{\pm1,\pm2\}$. We evaluate zero-shot on UCF101 and HMDB51 under EP1, EP2 and EP3, and on Kinetics-600 (K600). Baselines are those listed in the tables. All numbers are top-1 accuracy (\%); values with $\pm$ are mean and standard deviation over the reported runs. Numbers are taken from the supplied tables and are not re-run here.
+
+\subsection{Comparison under EP1 and EP2}
+Table~\ref{ep1&2} compares the two backbones with prior methods. With ViT-L/14, STDD reaches 93.4 and 88.6 on UCF101 (EP1, EP2) and 68.7 and 58.7 on HMDB51, the highest means in the table. Against Open-VCLIP with ViT-L/14, the gains are 0.3 and 0.7 on UCF101 and 0.2 and 0.4 on HMDB51. With ViT-B/16, STDD reaches 90.3 and 85.3 on UCF101 and 64.7 and 54.7 on HMDB51. The EP2 gains over the ViT-B/16 row for Text4Vis$^{*}$ (re-evaluated by its authors, 83.5 and 53.2) are 1.8 and 1.5 points. That row is the one the supplied table reports for ViT-B/16; no Open-VCLIP ViT-B/16 row is given, so we do not attribute these numbers to Open-VCLIP. The EP1 gains are within the reported standard deviations.
+
+\input{tables/table_wy.tex}
+
+\subsection{Comparison under EP3 and Kinetics-600}
+Table~\ref{tab:ep3} reports ViT-B/16 results for EP3 and K600. STDD has the highest means: UCF101 85.2 $\pm$ 1.2 against FROSTER (84.8 $\pm$ 1.1) and Open-VCLIP++ (83.9 $\pm$ 0.6), HMDB51 55.9 $\pm$ 0.2 against Open-VCLIP++ (55.6 $\pm$ 1.4), and K600 75.1 $\pm$ 0.7 against FROSTER (74.8 $\pm$ 0.9). Each margin lies within the standard deviation of the baseline it is compared with: 0.4 against FROSTER on UCF101 (std 1.1), 0.3 against Open-VCLIP++ on HMDB51 (std 1.4), and 0.3 against FROSTER on K600 (std 0.9). These results show the best mean rather than a significant improvement.
+
+\input{tables/table_bn.tex}
+
+\subsection{Semantic Augmentation}
+Table~\ref{tab:ep2} compares the text augmentation methods with the same vision backbone. Our spatiotemporal augmentation (ST Aug.) gives 85.2, 55.9 and 75.1 on UCF101, HMDB51 and K600, compared with category text prompts (CT, 83.8, 54.0, 73.5) and spatiotemporal descriptors (STD, 84.9, 55.1, 75.0). The gains over CT are 1.4, 1.9 and 1.6 points. The gain over STD on K600 is 0.1 points, which is within noise. The ST Aug. values match the EP3 row for STDD in Table~\ref{tab:ep3}; the source table does not state its protocol, so we report it as supplied.
+
+\input{tables/table_ao.tex}
+
+\subsection{Ablation of Space-time Cross Attention}
+Table~\ref{tab:ab1} isolates the two STCA operations. Frozen CLIP reaches 74.2 on UCF101 EP3. Prompt-based adaptation reaches up to 82.7 with WSM and continual mixing, and full fine-tuning with MCM alone reaches 84.6. Adding WSM to continual mixing gives the best result, 85.2, an 11.0-point gain over frozen CLIP. Adding WSM to continual mixing improves the result by 2.6 points in the prompt-based setting (80.1 to 82.7) and by 0.6 points in the fully tuned setting (84.6 to 85.2). Continual mixing is slightly better than separate mixing in every row. The table does not include WSM without MCM, so we cannot separate its own contribution.
+
+\input{tables/table_vi.tex}
+
+\subsection{Text Augmentation and Alignment}
+Figure~\ref{fig:ab3} crosses the text prompt types (class names [C], spatial [S], temporal [T], and combinations) with the alignment mechanisms, on UCF101 EP2. For CLIP, spatial prompts give most of the gain over class names, and temporal prompts add little, which is consistent with an object bias in CLIP. For STDD, frame--prompt alignment with [S]+[T] reaches 85.33, compared with 84.62 for [S] alone, a gain of 0.71 points. The video-class variant does not show the same pattern: [S]+[T] gives 85.14, below [S] alone at 85.25. On this panel, the ASKG-based temporal prompts help only in combination with frame-level alignment.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/4_ab3.png}
+  \caption{Top-1 accuracy (\%) of zero-shot evaluation on UCF101 EP2 for different combinations of text augmentation and alignment, for CLIP and for our method. Values are read from the source figure.}
+  \label{fig:ab3}
+\end{figure*}
+
+\subsection{Qualitative Analysis}
+Figure~\ref{fig:vis} shows attention maps and three frame--prompt alignment scores (0.68, 0.73 and 0.57) for the Archery class. The figure does not show a frame-level pattern. The overview states that STDD attends to action-relevant regions (hands, bow, target) and that time-sensitive prompts align with the frames carrying discriminative motion; these are the overview's claims and are not measured in the figure.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/5_visualization.png}
+  \caption{Attention maps and frame--prompt alignment scores for the Archery class.}
+  \label{fig:vis}
+\end{figure*}
+
+\section{Limitations}
+The ASKG is generated by an LLM, which can introduce noise or bias; automatic quality control or human refinement could reduce this. The hyperparameters, namely the mask ratio, window size, temporal scales and $\gamma$, may need tuning across datasets. The temporal scales are fixed, and adaptive or content-aware scale selection could improve robustness. The method is evaluated on short clips, and long-form videos or multi-person interactions may need hierarchical temporal modelling. Finally, several margins over the strongest baselines are within the reported standard deviations, so the improvements should be read as competitive, not as established gains in every setting. Training details beyond those given in the method, such as the distillation weight, optimiser and schedule, are not in the source material and are not reported here.
+
+\section{Conclusion}
+STDD adapts CLIP to zero-shot action recognition on both sides of the model. Space-time Cross Attention adds temporal interaction to the vision encoder without parameters or extra asymptotic cost, and the ASKG supplies static and dynamic prompts that the frame--prompt alignment uses. The method reaches the highest reported means in our comparisons on UCF101, HMDB51 and Kinetics-600, with gains that are modest and in several cases within the reported variance.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

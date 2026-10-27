@@ -1,0 +1,3 @@
+Revise the Mauna Loa CO2 report of the earlier work with a new window. Download NOAA GML's annual mean CO2 for Mauna Loa (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv) afresh during the work; do not type the numbers in. Keep the file as downloaded.
+
+Report: `report/report.md`, one paragraph: the URL, the time the file was fetched and its SHA-256, the last year in the file and its annual mean, and the average growth in ppm per year over the last FIVE years in the file (the difference between the last year and the year five years before it, divided by five). No figure.

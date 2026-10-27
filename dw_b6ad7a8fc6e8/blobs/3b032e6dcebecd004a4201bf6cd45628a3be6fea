@@ -1,0 +1,18 @@
+# Trial
+
+Configs: each world's own `config show` effective config, with only the requested changes (cand-g2 workers, images, resources [], total_seconds 900, max_executions 1, max_model_seconds 300).
+Command form: `researchworld continue <world> --checkpoint c0 --config <world>.json` (no --home).
+
+| source world | accepted | new world |
+|---|---|---|
+| rw_5c4743418b6b | yes | rw_e3bdf0492df2 |
+| rw_686e5b0bd6da | yes | rw_ae0e4f5ab82e |
+| rw_e263f2a52297 | yes | rw_3e690af88c73 |
+| rw_313df9cf84a4 | no, refused: `{"error": "world config definition digest is stale"}` (its config has definition_digest 20d4ec6e…; host default is 19f411fc…; I did not edit it) | none |
+
+## Driven: rw_ae0e4f5ab82e (from rw_686e5b0bd6da)
+`researchworld execute rw_ae0e4f5ab82e --loop` exited 0; driver ended `budget-exhausted` (limit: executions) after one turn.
+That one turn was internal-review-repo's (complete, 28 s; it recorded a commitment and discharged its objective). paper-repo's turn did NOT start, so there is no evidence of its environment or /workspace/input; paper-repo only owed missing manuscript.tex/pdf at the end.
+
+## Ending
+`stop <world> --release` run on rw_ae0e4f5ab82e, rw_e3bdf0492df2, rw_3e690af88c73 (rw_313df9cf84a4 made no world).

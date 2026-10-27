@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "trial_task_commit": "0a5739d6e907",
+  "checkpoint": "final-0e3e7fb9",
+  "pre_unblind_bundle_commit": "79602693635b",
+  "judgement_commit": "d63ee59",
+  "label_table": "labels-table.json",
+  "label_table_sha256": "labels-table.sha256",
+  "run_records": "run-records.json",
+  "sha256_verified": true
+}

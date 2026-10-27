@@ -1,0 +1,22 @@
+# tasks-v1 — diagnostic tasks for paper-repo (research world rw_679cdc7d5fa3)
+
+Target: the worker of position `paper-repo` (Claude Code, claude-sonnet-5-5, effort low).
+Source world's only checkpoint: `final-7adfe819` (archive a76d05a2…, `researchworld checkpoints rw_679cdc7d5fa3`).
+Reference data: `reference_co2_annmean_mlo.csv` (NOAA file as the incumbent downloaded 2026-10-25; SHA-256 bdd956e8…89b2b). Incumbent report: 2025 = 427.35, 2015 = 401.01, (427.35-401.01)/10 = 2.63 ppm/yr.
+
+## Task A — the round itself (from the world)
+Start: `continue rw_679cdc7d5fa3 --checkpoint final-7adfe819 --config <candidate>`; run the paper-repo round (objective: one-paragraph report on how fast Mauna Loa CO2 rose over the last ten years, from NOAA's annual means https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv downloaded during the work).
+Deliverable: report/report.md + the unmodified downloaded file in the repo, merged through the world's review.
+
+## Task B — made to the contract (single position, no reviewers needed)
+Start: fresh sandbox. Ask: "Download NOAA GML's annual mean CO2 for Mauna Loa (URL above), keep the file unmodified, and write a one-paragraph report on how fast CO2 rose over the last ten years, stating the years and values used, the method, and the file's retrieval date/hash."
+
+## Judging (proposed; fixed for a comparison once it starts; same for incumbent and candidate)
+Each criterion 0/1, total /6:
+1. Fetched: data file present, byte-identical to what the URL served (hash recorded in report matches file's hash).
+2. Correct endpoints: latest year in file (2025 if same data) and the base year stated explicitly; the value for each matches the file.
+3. Correct arithmetic: rate within ±0.05 ppm/yr of the rate implied by the stated endpoints (and ≈2.63 for 2015→2025; 2.5–2.8 accepted if method stated).
+4. One paragraph, states the rate with unit (ppm/yr) and the span of years (ten intervals vs ten values made clear).
+5. Provenance: URL, retrieval time, and the uncertainty/caveat (annual means, endpoint sensitivity) mentioned; no claims beyond the file.
+6. Process (read from trajectory): the worker actually computed from the file rather than recalling numbers; no unsupported claims; finished within the world cap (≤8 turns, ≤900 model s).
+Better = higher total; ties broken by lower model seconds. Why: criteria 1–3 separate fabricated/misremembered numbers from computed ones, 4–5 the report quality a reviewer would ask for, 6 low effort shortcuts. Diagnosis should cite the report lines and trajectory steps, not scores alone.

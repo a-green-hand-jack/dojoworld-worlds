@@ -1,0 +1,21 @@
+{
+  "objective": "judge#1",
+  "judgements": [],
+  "labels_index": {
+    "repo": "trial-user",
+    "path": "evidence/labels_index.json"
+  },
+  "label_table": {
+    "repo": "trial-user",
+    "path": "evidence/labels_table.json",
+    "published": {
+      "repo": "trial-user",
+      "path": "evidence/labels_table_prejudgment.sha256"
+    }
+  },
+  "comparison": {
+    "measurable": false,
+    "conclusion": "No result was produced, so no blind judgement was possible."
+  },
+  "note": "Trial release 859bcf937474 publishes an empty labels list because both runs failed before producing result artifacts; therefore no judgement entries can truthfully be made."
+}

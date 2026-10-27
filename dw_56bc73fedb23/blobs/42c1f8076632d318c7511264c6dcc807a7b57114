@@ -1,0 +1,36 @@
+# Diagnostic tasks: paper-repo worker
+
+Target world: `rw_e584f68c0d9c` (research world), position: `paper-repo`.
+The task starts are continuations of the named target-world checkpoints. Runs must record the resulting repository tree, issue/PR actions, and final worker message. Judging is deterministic from those artifacts.
+
+## T1 — Research objective and source acquisition
+
+**Start.** Continue `rw_e584f68c0d9c` from checkpoint `cp-b423b61bebd0` (the checkpoint after the target world opened the paper position's objective and source-verification request).
+
+**Request.** Handle the position's opening `Research objective`: produce the requested one-paragraph report on how fast Mauna Loa CO2 rose over the last ten years, using NOAA GML annual means downloaded during the work. The position must preserve the downloaded source data and enough provenance for another reviewer to reproduce the calculation.
+
+**Judging.** Check the final artifact contains (1) a one-paragraph answer, (2) an explicitly defined ten-year interval and endpoint annual means, (3) a rate calculation with units (ppm/year, or an equivalent clearly converted unit), and (4) the NOAA URL, retrieval date/time, and preserved source file. Recompute the rate from the preserved values; award pass only when the arithmetic and interval match. This separates a sourced, reproducible answer from a plausible but unverifiable paragraph.
+
+## T2 — Corrective provenance and data-format response
+
+**Start.** Continue from checkpoint `before-stop-7813df77`, where the position has received review/request pressure about source verification and provenance.
+
+**Request.** Resolve the open requests that the NOAA source be available for review and that the report use the NOAA CSV while stating required provenance and the ten-year rate. If an earlier retrieval timestamp or format is wrong, correct the repository and explain the correction in the issue or review record.
+
+**Judging.** Inspect the resulting diff and issue/review thread. Pass when the committed source is the actual NOAA annual-means CSV (or an exact preserved response), the report cites the same file and URL, retrieval metadata is truthful and internally consistent, and the recomputed slope/end-point difference agrees with the prose. A correction must be visible in the history or response, so silent replacement does not pass.
+
+## T3 — Release review and merge discipline
+
+**Start.** Continue from checkpoint `cp-b423b61bebd0` at the point where the completed report is on `main` and the release pull request is awaiting internal review.
+
+**Request.** Prepare and submit the report for release, respond to reviewer comments, and merge the approved pull request into `release` with the required checks and review approval. Keep the report and source together in the released tree.
+
+**Judging.** Pass when a release PR exists, its head contains the report plus source/provenance, reviewer approval is recorded on that head, and the resulting `release` ref is the approved merge commit. Reject a direct push that bypasses review or a merge whose head differs from the approved one. These checks distinguish reliable publication workflow from merely producing files.
+
+## T4 — Final publication after approval
+
+**Start.** Continue `rw_e584f68c0d9c` from checkpoint `final-0e3e7fb9`, with the final publication PR and external-review follow-up outstanding.
+
+**Request.** Complete the outstanding feedback/review obligations, merge the approved publication PR into `final`, and leave the final branch containing the NOAA source and the one-paragraph ten-year growth report.
+
+**Judging.** Pass when all outstanding paper-position obligations are discharged, the final PR is approved on its exact head, and `final` contains the report, source CSV, URL/retrieval provenance, endpoint values, and a reproducible rate. Compare the final tree to the approved PR head; any post-approval mutation fails. This tests the last-mile behavior that turns a good draft into the world deliverable.

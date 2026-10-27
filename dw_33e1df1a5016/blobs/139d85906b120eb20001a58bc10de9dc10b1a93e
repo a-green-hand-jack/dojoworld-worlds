@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "task_commit": "0a5739d6e907",
+  "checkpoint": "final-0e3e7fb9",
+  "runs": [
+    {
+      "label": "R-A9F9B744438EF424",
+      "worker_role": "paper-repo",
+      "worker": "incumbent",
+      "settings": {
+        "agent": "codex",
+        "model": "gpt-6.1-sol",
+        "codex": {
+          "features": {
+            "plugins": false
+          },
+          "model_reasoning_effort": "low"
+        }
+      },
+      "world_id": "rw_98eba57a0d65",
+      "driver_job": "cmd-3966916280",
+      "driver": {
+        "max_executions": 8,
+        "exit": 0
+      },
+      "status": "incomplete-idle",
+      "model_seconds": 158,
+      "captured_generation": "74615d3506d84379a1f544281257bf09.json",
+      "result_path": "evaluation/blinded/R-A9F9B744438EF424.json",
+      "failed": true,
+      "failure": "driver ended after four role executions; world remained incomplete-idle with no release or artifact export"
+    },
+    {
+      "label": "R-B5F676EA70B42DD3",
+      "worker_role": "paper-repo",
+      "worker": "medium-v1",
+      "worker_revision": "1dbc46f3e96cacac3c5a92aceb9644ebc4229287",
+      "worker_path": "candidate/worker.json",
+      "worker_blob": "7c814ae7325fd070951ac6d51c688e1acf51d924",
+      "settings": {
+        "agent": "codex",
+        "model": "gpt-6.1-sol",
+        "provider": {
+          "auth": "codex-oauth",
+          "base_url": "https://chatgpt.com/backend-api/codex",
+          "id": "openai-codex",
+          "protocol": "openai-responses"
+        },
+        "max_context_fraction": 0.6,
+        "codex": {
+          "features": {
+            "plugins": false
+          },
+          "model_reasoning_effort": "medium"
+        }
+      },
+      "world_id": "rw_e4560ee96191",
+      "driver_job": "cmd-f67ba9f7c5",
+      "driver": {
+        "max_executions": 8,
+        "exit": 0
+      },
+      "status": "incomplete-idle",
+      "model_seconds": 221,
+      "captured_generation": "41ecc342b6ce4ac5b80f2d2b00a6fbe5.json",
+      "result_path": "evaluation/blinded/R-B5F676EA70B42DD3.json",
+      "failed": true,
+      "failure": "driver ended after four role executions; world remained incomplete-idle with no release or artifact export",
+      "worker_revision_provisional": "1dbc46f3e96cacac3c5a92aceb9644ebc4229287",
+      "worker_revision_final": "f1b4d00",
+      "worker_path_final": "candidate/worker.json",
+      "worker_revision_note": "Final candidate revision superseded the provisional publication; settings used for this run are identical to the finalized worker settings supplied by judge."
+    }
+  ]
+}

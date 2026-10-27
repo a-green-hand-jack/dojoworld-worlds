@@ -1,0 +1,4 @@
+Held-out (repo only; never in release/issue). Same judging as tasks/README.md.
+H1: Mauna Loa last ten years from co2_annmean_mlo.csv, but report must state the first-of-window year and mean as well (start: final-4540868c, topic changed).
+H2: Same file, window of last fifteen years; growth = difference/15 (start: cp-62f9bee78b44, topic changed).
+H3: Mauna Loa annual growth rate file co2_gr_mlo.csv (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_gr_mlo.csv): report last year, its growth rate and mean of the last ten years' values (start: before-stop-77bd69e5, topic changed).

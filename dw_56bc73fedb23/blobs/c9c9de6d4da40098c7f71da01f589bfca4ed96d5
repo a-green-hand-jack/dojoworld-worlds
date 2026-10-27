@@ -1,0 +1,8 @@
+# trial-user
+
+DojoWorld role: trial-user
+Trial status: held-out task `heldout/task-001.md` is frozen at commit f6cadc0. The task-setter-owned 10-point rubric is settled in issue #2. Blinded incumbent/candidate runs remain pending candidate publication; no worker identity or result table has been published.
+
+Latest coordination: judge reports a circular wait because candidate settings/trial outputs are still absent. Trial remains ready; no comparison or label disclosure has occurred.
+
+Final trial evidence: both incumbent and candidate held-out worlds failed before producing report artifacts. Empty labels index/table and their pre-judgment hash are attached to release `trial-runs-failed-v1`; judge has been notified.

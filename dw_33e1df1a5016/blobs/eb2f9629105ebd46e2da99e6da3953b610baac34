@@ -1,0 +1,134 @@
+{
+  "world": "rw_f0c559601c44",
+  "parent_world": "rw_e584f68c0d9c",
+  "checkpoint": "final-0e3e7fb9",
+  "kept_worker": {
+    "source": "tuner candidate/kept/config.json",
+    "config_sha256": "68cd6bdd36ed50bb42f69a752d682ff055488912c57b598a9ceda9151c723c81",
+    "agent": "codex",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "max_context_fraction": 0.6,
+    "assets": [],
+    "configuration_digest": "e121d7ec78d67b488bb0e7e2ce9dff17b0e3f1818912aaeca3e440507d845f2a"
+  },
+  "drives": [
+    {
+      "job": "cmd-5c30a3b2db",
+      "max_executions": 8,
+      "deadline_sec": 900,
+      "executions": 8,
+      "model_seconds": 239.40767660667188,
+      "runtime_reason": "max-executions",
+      "release_status": "unverified",
+      "world_complete": false,
+      "artifacts_exported": false
+    },
+    {
+      "job": "cmd-79964db03d",
+      "max_executions": 8,
+      "deadline_sec": 900,
+      "executions": 4,
+      "execution_ids": [
+        "1d8be2d6a08848385830a30788fd9d5c",
+        "c13a5542cfaad2b88d6e65da3adc7606",
+        "c0d5025ea1aa7415c3fd9093f1b14a3f",
+        "f6598d6fb780b91b679b7e44af751f13"
+      ],
+      "model_seconds": 54.75102992611938,
+      "runtime_reason": "world-complete",
+      "release_status": "system-release-verified",
+      "world_complete": true,
+      "accepted": true,
+      "delivery_complete": true,
+      "independent_review_complete": true,
+      "paper_bundle_complete": true,
+      "system_release_accepted": true,
+      "release_commit": "69235c735d9fee7b32567d01711e565ea110a831",
+      "release_tag": "result:final",
+      "manifest_sha256": "d8b3922cb55d0a45ed102fa75e865246f109787caffc5a500a57a7f6e0bf340a",
+      "world_status": "finished",
+      "final_checkpoint": "final-eb37067d",
+      "finalization_source": "host-finish"
+    }
+  ],
+  "total": {
+    "executions": 12,
+    "model_seconds": 294.15870653279126,
+    "provider_requests": 99,
+    "runtime_errors": []
+  },
+  "role_ledger": {
+    "story-repo": {
+      "turns": 2,
+      "model_seconds": 67.3
+    },
+    "paper-repo": {
+      "turns": 4,
+      "model_seconds": 86.8
+    },
+    "internal-review-repo": {
+      "turns": 3,
+      "model_seconds": 86.3
+    },
+    "external-review-repo": {
+      "turns": 3,
+      "model_seconds": 53.7
+    }
+  },
+  "artifacts": [
+    "report/report.md",
+    "data/co2_annmean_mlo.csv",
+    ".forgejo/CODEOWNERS",
+    "internal-review-repo/review-d1afd88.md",
+    "internal-review-repo/review-69235c7.md"
+  ],
+  "evidence": {
+    "terminal_summary": "researchworld monitor rw_f0c559601c44 --summary --json",
+    "terminal_status": "researchworld status rw_f0c559601c44",
+    "terminal_monitor": "researchworld monitor rw_f0c559601c44 --all --tail 500",
+    "note": "status lifecycle.release_status retains the earlier unverified drive field; current monitor summary and artifact manifest report verified release and accepted completion"
+  },
+  "post_finish": {
+    "command": "researchworld finish --json rw_f0c559601c44",
+    "job": "cmd-2ab84e749e",
+    "world_status": "complete",
+    "container_status": "absent",
+    "lifecycle_world_status": "finished",
+    "release_status": "system-release-verified",
+    "delivery_complete": true,
+    "final_checkpoint": "final-eb37067d",
+    "finalization_source": "host-finish",
+    "release_commit": "69235c735d9fee7b32567d01711e565ea110a831",
+    "turns": 12,
+    "model_seconds": 294.2,
+    "role_ledger": {
+      "story-repo": {
+        "turns": 2,
+        "model_seconds": 67.3
+      },
+      "paper-repo": {
+        "turns": 4,
+        "model_seconds": 86.8
+      },
+      "internal-review-repo": {
+        "turns": 3,
+        "model_seconds": 86.3
+      },
+      "external-review-repo": {
+        "turns": 3,
+        "model_seconds": 53.7
+      }
+    }
+  },
+  "evaluation_handoff": {
+    "status": "resolved",
+    "source_record_commit": "3762c9fe08f246439b9cd862f247cd4a445543bd",
+    "verified_world": "rw_f0c559601c44",
+    "stale_world": "rw_e4150b519eb4",
+    "required_action": "judge must classify or remove stale rw_e4150b519eb4 in evaluation/runs.json and publish the revised evaluation record",
+    "diagnostician_action": "complete; no further target-world run indicated",
+    "resolution": "tuner confirms judge reconciliation and referee-approved PR #5 merged into release",
+    "tuner_release_commit": "686d4f5"
+  }
+}

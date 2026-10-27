@@ -1,0 +1,20 @@
+{
+ "R246996": {
+  "bytes_sha": "45bd9a28798aa0f97b5956b6ffca70fa411f2c6422c6720047b2a2ade872174f",
+  "path": "blind/R246996/report.md",
+  "worker": "incumbent",
+  "world": "rw_207046cd5d2d"
+ },
+ "R564081": {
+  "bytes_sha": "f65e5703ce29fc172783ddeccd392422299936659b047963d4919e1176cfe429",
+  "path": "blind/R564081/report.md",
+  "worker": "incumbent",
+  "world": "rw_498043a4e144"
+ },
+ "R896054": {
+  "bytes_sha": "f65e5703ce29fc172783ddeccd392422299936659b047963d4919e1176cfe429",
+  "path": "blind/R896054/report.md",
+  "worker": "cand-1",
+  "world": "rw_0c4cf3ac24e6"
+ }
+}

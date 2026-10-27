@@ -1,0 +1,45 @@
+{
+  "budget": {
+    "internal-review-repo": {
+      "charged_turns": 1,
+      "model_seconds": 16.3,
+      "turns": 1
+    },
+    "paper-repo": {
+      "charged_turns": 1,
+      "model_seconds": 20.8,
+      "turns": 1
+    }
+  },
+  "commitments": [
+    {
+      "commitment_schema": 1,
+      "delivers": [
+        {
+          "standard": "Raw NOAA CSV kept unmodified as downloaded; URL, fetch time, SHA-256 match the kept file; last year and mean match file; (last - value five years earlier)/5 recomputed correctly; one paragraph, no figure.",
+          "what": "Review of report/report.md"
+        }
+      ],
+      "execution_id": "f0694ee32e004438443a97173f7bcd49",
+      "recorded_at": 1792654918.0230548,
+      "revision": 2,
+      "role": "internal-review-repo"
+    },
+    {
+      "commitment_schema": 1,
+      "delivers": [
+        {
+          "standard": "numbers computed from the file; hash and fetch time recorded",
+          "what": "report/report.md one paragraph from downloaded NOAA file"
+        }
+      ],
+      "execution_id": "42a292f49347614f1afba5f4e8756066",
+      "imported_from": "rw_90561d4bccfc",
+      "recorded_at": 1792653716.2898912,
+      "revision": 1,
+      "role": "paper-repo"
+    }
+  ],
+  "holdings": [],
+  "open_obligations": {}
+}

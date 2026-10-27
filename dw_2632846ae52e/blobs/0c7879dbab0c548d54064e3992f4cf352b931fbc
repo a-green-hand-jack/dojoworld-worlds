@@ -1,0 +1,7 @@
+# Run records (all continue rw_679cdc7d5fa3 at checkpoint final-7adfe819; --loop --max-executions 8 --deadline-sec 900, max_model_seconds 900)
+Task: the target world's own topic (CO2 Mauna Loa); task-setter's tasks-v1 not used yet.
+- inc1-rw_7470411bc5d4: incumbent, paper-repo effort low
+- inc2-rw_6a3b6f69fce2: incumbent, effort low
+- cand1-rw_2bf0f6183c7e: cand-1 (config tuner worker-config.json; paper-repo effort high)
+Each dir: status.json, monitor.txt (time stream), artifacts.txt, config.json (config show), capture.txt (researchworld capture; repos/ledger kept on the host state root).
+Executions recorded: inc1 4, inc2 6, cand1 8 (cand1 ended by max-executions). Observed in monitor: research-network "could not be told from sandbox" for review roles. No judging of outcomes here.

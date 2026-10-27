@@ -1,0 +1,9 @@
+# Candidate record
+
+## candidate-medium-v1
+
+- **Base worker:** incumbent paper-repo worker in `rw_07ce7d5d6f6a`, Codex / `gpt-6.1-sol`, low reasoning effort.
+- **Change:** raise only `codex.model_reasoning_effort` from `low` to `medium`; retain the same agent, model, provider, features, and empty asset set.
+- **Rationale:** the task requires a multi-step download, preserving the downloaded NOAA CSV, hashing it, selecting the final and ten-years-prior rows, calculating the slope, and writing a constrained one-paragraph report. Additional reasoning budget is the smallest worker-only intervention likely to improve procedural completeness while preserving the target environment.
+- **Diagnosis basis:** pending diagnostician's run-based diagnosis; this record will be amended with task/run IDs and judged outcomes before handoff is considered complete.
+- **Validation:** candidate configuration must be checked by continuing `rw_07ce7d5d6f6a` from checkpoint `final-ef3a129f` and running within the objective's limit of at most 8 turns and 900 model seconds.

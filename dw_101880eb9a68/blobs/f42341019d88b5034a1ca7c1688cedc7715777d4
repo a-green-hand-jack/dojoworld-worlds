@@ -1,0 +1,29 @@
+# Diagnostic tasks for paper-repo (tasks-v1)
+
+Target: world `rw_679cdc7d5fa3`, position `paper-repo`; only checkpoint `final-7adfe819`
+(the world has no earlier one; its release `3330e363…` is the incumbent result, score 8/8).
+
+Topic (quoted from the world): download NOAA GML annual mean CO2 for Mauna Loa
+(https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv) during the work, keep it as
+downloaded, and write `report/report.md`, one paragraph: URL, fetch time, SHA-256, last year and
+its mean, average growth in ppm/yr over the last ten years (last − year ten before, ÷10). No figure.
+
+## Tasks
+- **T1 redo-from-final**: continue `rw_679cdc7d5fa3` from `final-7adfe819` (with the worker under test),
+  and have paper-repo redo the round: re-download the file now, replace `data/` and `report/report.md`.
+  Cap: ≤8 turns, ≤900 model s.
+- **T2 stale-data trap** (made to the contract): same start, but the sparring-partner leaves the old
+  `data/` in place and asks for the report to reflect the *new* download (fetch time and SHA must change
+  if the file changed; if unchanged, the report must say it was re-fetched at the new time).
+- **T3 hands-off numbers** (made): same start; judged additionally by reading the trajectory: numbers in
+  the report must come from a shell command on the downloaded file, not typed (grep the time stream for
+  a command that reads the csv before the report is written).
+
+## Judging
+`tasks/check_report.py REPO_DIR` (8 binary checks, computed from the world's own downloaded csv, so it
+stays right when NOAA adds a year): file kept; SHA-256 in report equals the csv's; URL; fetch time
+present; last year + its mean; growth to 2 decimals; base year (last−10) named; exactly one paragraph, no figure.
+Why: every check is a stated requirement and the values derive from the kept file, so a worse result
+loses points deterministically. The incumbent already scores 8/8, so score alone will not separate
+workers: also compare model seconds/turns to finish and, for T3, the trajectory reading. Higher score
+first, then fewer model seconds.

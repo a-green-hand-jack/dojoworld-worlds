@@ -1,0 +1,12 @@
+{
+  "worker": {
+    "roles": {
+      "paper-repo": {
+        "agent": "codex",
+        "model": "gpt-6.1-sol",
+        "provider": "openai",
+        "settings": {"reasoning_effort": "medium"}
+      }
+    }
+  }
+}

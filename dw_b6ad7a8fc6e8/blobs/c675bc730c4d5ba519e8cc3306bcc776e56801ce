@@ -1,0 +1,30 @@
+# Trial: worlds continued from c0 with cand-g2 workers
+
+Configuration for each: the world's own `config show` effective config with roles' workers = cand-g2 files,
+worker.image sha256:1c386c95…2abd, worker.environment_image per paper (README), resources [], budget.total_seconds 900,
+worker.max_executions 1, worker.max_model_seconds 300.
+
+| source world | command | accepted | world id |
+|---|---|---|---|
+| rw_5c4743418b6b (paper_45) | `researchworld continue rw_5c4743418b6b --checkpoint c0 --config rw_5c4743418b6b.cfg.json` | yes | rw_fbacb7850852 |
+| rw_686e5b0bd6da (paper_32) | `researchworld continue rw_686e5b0bd6da --checkpoint c0 --config rw_686e5b0bd6da.cfg.json` | yes | rw_92a803124405 |
+| rw_e263f2a52297 (paper_17) | `researchworld continue rw_e263f2a52297 --checkpoint c0 --config rw_e263f2a52297.cfg.json` | yes | rw_43d163a91da7 |
+| rw_313df9cf84a4 (paper_29) | `researchworld continue rw_313df9cf84a4 --checkpoint c0 --config rw_313df9cf84a4.cfg.json` | **no** | none |
+
+paper_29 refusal, word for word: `{"error": "world config definition digest is stale"}`.
+(The world's own config carries definition_digest 20d4ec6e…; the others carry 19f411fc….)
+Diagnostic retry, deviating from the instruction by setting definition_digest to 19f411fc…, was also refused, twice:
+`{"error": "image sha256:731fc3cf0ffdd477350c2b182fe3cb4027776229711458079fe03ddf68dae8fa is not on this host: a world made in a world runs the images the host has built"}`
+No world was made by either.
+
+## Driven world: rw_92a803124405 (paper_32)
+Command: `ht-resource run worlds-heldout -- researchworld execute rw_92a803124405 --loop` (cmd-6c11aaae77), exit 0.
+Outcome: one turn ran, and it was internal-review-repo's (execution 16ea8b59, claude-code/claude-sonnet-5-5, complete in 28s,
+recorded its commitment, objective discharged). The driver ended `budget-exhausted` (limit: executions).
+paper-repo's turn did NOT start (it still owed manuscript.tex/pdf), so I cannot say whether /workspace/input was present
+in paper-repo's environment. I did not inspect internal-review-repo's /workspace/input either; its turn reported
+"input confirmed" in the monitor line.
+
+## Ending
+`researchworld stop <world> --release` for rw_fbacb7850852, rw_92a803124405, rw_43d163a91da7: all ended. rw_313df9cf84a4 had no world.
+No judging, no release.

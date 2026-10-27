@@ -1,0 +1,58 @@
+{
+ "R22418": {
+  "world": "rw_03d2ea59f5f0",
+  "task": "T2",
+  "run": "a",
+  "worker": "cand",
+  "bytes_sha": "f7d2950d1b7a127e32303ab7054ace54780bc11eef3ceed4b7d0483f5edcf6d3"
+ },
+ "R46471": {
+  "world": "rw_a971d704ab27",
+  "task": "T2",
+  "run": "a",
+  "worker": "incumbent",
+  "bytes_sha": "b9866e4ab43a59658147cf7eb5856d9507b3796d2cbc11f3c46a56abb99b9146"
+ },
+ "R33015": {
+  "world": "rw_dfa74381f47f",
+  "task": "T1",
+  "run": "b",
+  "worker": "cand",
+  "bytes_sha": "38265558b26c8623a6e9cb65c8848d424cb1b14b101c6c7dd35a2e451a849ab9"
+ },
+ "R36966": {
+  "world": "rw_69cc2fd71e02",
+  "task": "T1",
+  "run": "a",
+  "worker": "incumbent",
+  "bytes_sha": "c2db933283363549761397d7f67c9f9f46e56846e771861ca9411d32a1c76d0c"
+ },
+ "R70222": {
+  "world": "rw_99e89e80f857",
+  "task": "T1",
+  "run": "a",
+  "worker": "cand",
+  "bytes_sha": "598921e864b44310e685389c8a59a9118d2172a5136d254b9eb5fd31356784e0"
+ },
+ "R65205": {
+  "world": "rw_a7e6584e0120",
+  "task": "T1",
+  "run": "b",
+  "worker": "incumbent",
+  "bytes_sha": "162c3de842323548463671ef24d960776478ba596235598512ff92e36078c393"
+ },
+ "R10793": {
+  "world": "rw_5522e1ebe794",
+  "task": "T2",
+  "run": "b",
+  "worker": "incumbent",
+  "bytes_sha": "d942b82a3c256add6a60401ea0a3b18943ad27315bb7697931a30c900c9eb9d6"
+ },
+ "R99518": {
+  "world": "rw_53de1dec5b2c",
+  "task": "T2",
+  "run": "b",
+  "worker": "cand",
+  "bytes_sha": "bbd44c7f5efd7d5e7d3850bab6c00580df0e9404172c475e0628fa77c8a9b4a3"
+ }
+}

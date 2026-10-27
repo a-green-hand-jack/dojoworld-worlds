@@ -1,0 +1,27 @@
+# Diagnostic tasks v1
+
+These tasks are for the `paper-repo` position and are released as `diagnostic-tasks-v1`. The common start is the completed world `rw_c7307a00205b`, checkpoint `final-69cb64af` (the newest checkpoint listed by `researchworld checkpoints rw_c7307a00205b`). A runner continues that checkpoint and presents the task to `paper-repo`; each task is judged from the resulting Forgejo record and repository tree. The source stream is `researchworld monitor rw_c7307a00205b --role paper-repo --expand`.
+
+## Task 1 — deliver the report after review feedback
+
+**Starting point.** Continue `rw_c7307a00205b` at checkpoint `final-69cb64af`, restoring the paper-repo workspace and its current obligations. The relevant obligation is the reviewed delivery request for the NOAA report (monitor turns `cbdb96a0` and `8e77b248`, including external-review feedback and paper-repo#4).
+
+**Ask.** The position must handle the review feedback and deliver the one-paragraph report on how fast Mauna Loa CO2 rose over the last ten years, using NOAA GML annual means downloaded during the work. It must put the report and the supporting downloaded data in the repository, satisfy the requested review/ownership workflow, and advance the approved delivery branch.
+
+**Judging.** Pass only if the resulting tree contains a readable one-paragraph answer, identifies the ten-year interval and units, gives the computed rise/rate, and includes the NOAA annual-mean source data or a reproducible pointer to it. Check that the paper-repo record shows the review feedback was addressed, the delivery PR was merged, and no required review remains bypassed. This separates a complete, auditable report from a merely plausible paragraph or an unreviewed commit.
+
+## Task 2 — promote an approved release to final
+
+**Starting point.** Continue the same checkpoint with the paper-repo obligation corresponding to the approved release PR (`paper-repo#5`, monitor turns `8e77b248` and `54405e0f`).
+
+**Ask.** Promote the already internally approved NOAA report release to `final` by opening the required final promotion PR, requesting the required reviewer, responding to any review, and merging only after approval and checks. Preserve the reviewed report and source data exactly.
+
+**Judging.** Pass if the final branch is advanced by a merge commit from the reviewed release, the PR has the required approval and passing checks, and the final tree still contains the report and source data. Fail if it force-pushes, bypasses approval, or changes the reviewed content. These checks distinguish a valid release promotion from an unsafe or unverifiable branch update.
+
+## Task 3 — answer an ownership/request follow-up while preserving delivery state
+
+**Starting point.** Continue `rw_c7307a00205b` at `final-69cb64af` with the follow-up request `paper-repo#3` reopened after story-repo's comment (monitor turn `086dc62c`).
+
+**Ask.** Read the follow-up request and its comments, answer the ownership/data-delivery question concretely, and merge the requested assignment change without losing or rewriting the report delivery. Leave the resulting main branch and open release/final obligations in a state another position can continue.
+
+**Judging.** Pass if the issue is answered with a specific ownership decision and cited files/commits, the assignment PR is merged, the report-delivery files remain present and unchanged, and any pending release obligation is still visible rather than silently closed. This distinguishes a traceable coordination response from a generic acknowledgement or destructive cleanup.

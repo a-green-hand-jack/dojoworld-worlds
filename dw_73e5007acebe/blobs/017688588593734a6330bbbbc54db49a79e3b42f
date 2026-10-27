@@ -1,0 +1,18 @@
+# Candidates
+
+## cand-1 (from incumbent: claude-code, claude-sonnet-5-5, effort low)
+- Change: paper-repo only, CLAUDE_CODE_EFFORT_LEVEL low -> medium. Nothing else (model, agent, resources, internal-review-repo unchanged). See `config.json`.
+- Why: diagnosis/brief show the single incumbent run (56 model s, 3 turns) was already fully correct; the task is exact arithmetic/hash/URL reporting, where the risk is a silent slip (growth, SHA, last year). Medium effort is the smallest step that could add checking. Expected: no measurable gain; goal is no regression.
+- Results: none yet. No runs; variance across runs is not established. Not claimed better.
+- Fix: config.json now also names internal-review-repo (incumbent low), since a paper-repo-only config left that position without a worker in the first two runs.
+
+## Results so far
+- Runs rw_6c0f56678b93 (incumbent low) and rw_ae89b7c8b3e9 (cand-1 medium) from cp-555bdfb1c0d5 (records: sparring-partner 7dd2536, runs/README.md): neither produced a report (no durable effect, objective already handled at that start). No difference observed; no claim about cand-1 either way. Needs a start where the report is owed.
+
+## Round 2 (D1, five-year topic, from cp-555bdfb1c0d5; records sparring-partner 02515fc, runs/README.md)
+- incumbent low rw_a4d61139aea7: 20.8 model s, 1 turn. cand-1 medium rw_001d173db8e9: 36.0 model s, 1 turn.
+- Reports identical in every number (SHA bdd956e8..., 2025=427.35, 2020=414.21, 2.628 ppm/yr); differ only in fetch time. One run each.
+- Reading: no correctness difference observed; cand-1 cost ~1.7x model time on one run each (not a measured difference). Evidence does not favour cand-1; keeping the incumbent is the supported outcome unless the held-out runs say otherwise.
+
+## Conclusion (judge EVALUATION.md, 6 blind H1 runs, all 7/7)
+cand-1 (medium) is not better; the incumbent is kept. config.json now delivers the incumbent: paper-repo effort low, internal-review-repo low.

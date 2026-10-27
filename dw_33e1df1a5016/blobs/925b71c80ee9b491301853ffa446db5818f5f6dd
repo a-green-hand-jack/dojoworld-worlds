@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "worlds": {
+    "rw_98eba57a0d65": {
+      "use": "failed",
+      "reason": "Held-out task 001 incumbent run from checkpoint final-0e3e7fb9 ended incomplete-idle after four role executions; no verified release or artifact export. Counted as score 0, not a measured completion."
+    },
+    "rw_e4560ee96191": {
+      "use": "failed",
+      "reason": "Held-out task 001 medium-v1 run from the same checkpoint ended incomplete-idle after four role executions; no verified release or artifact export. Counted as score 0, not a measured completion."
+    },
+    "rw_e4150b519eb4": {
+      "use": "measured",
+      "reason": "Host validation now reports this put-back world has a verified release, so the earlier failed classification is superseded. The available terminal evidence is diagnostician c188318: initial drive cmd-4c70f08ff7 (4 executions/197.4 model seconds) plus follow-up cmd-dad016c293 (8 additional executions/310.6 seconds), release v1 commit 7b2d425 and final PR approval. This world is retained as a measured put-back observation; the final kept-worker put-back evidence used for approval is rw_f0c559601c44 at c2db074/3762c9."
+    },
+    "rw_06c32490a8b3": {
+      "use": "excluded",
+      "reason": "Matched diagnostic incumbent-low run from final-0e3e7fb9; exhausted bounded executions with unverified release. Diagnostic evidence only, excluded from held-out comparison."
+    },
+    "rw_87bae9dc4605": {
+      "use": "excluded",
+      "reason": "Matched diagnostic candidate-medium run from the same checkpoint; exhausted bounded executions with unverified release. Diagnostic evidence only, excluded from held-out comparison."
+    },
+    "rw_1d973c11e6ba": {
+      "use": "excluded",
+      "reason": "Diagnostic setup/continuation world created for the target task and ended without a verified release; excluded from the held-out comparison."
+    },
+    "rw_c5929bc39044": {
+      "use": "excluded",
+      "reason": "Candidate configuration validation continuation world; ended as a zero-turn validation and was not a measured task run, so excluded."
+    },
+    "rw_f0c559601c44": {
+      "use": "measured",
+      "reason": "Terminal evidence is admissible from diagnostician c2db074: cmd-5c30a3b2db used 8 executions/239.4077 seconds and cmd-79964db03d used 4/54.7510, 12 total/294.1587; terminal monitor reports world_complete=true, accepted=true, release_status=verified, delivery_complete=true, independent_review_complete=true, paper_bundle_complete=true, system_release_accepted=true, no unresolved reviews/failures; result:final commit 69235c735d9fee7b32567d01711e565ea110a831; role ledger story-repo 2 turns/67.3s, paper-repo 4/86.8s, internal-review-repo 3/86.3s, external-review-repo 3/53.7s. Structured source runs/putback-rw_f0c559601c44.json at diagnostician c2db074. The host lifecycle field was stale, but the terminal monitor and artifact manifest provide verified completion."
+    },
+    "rw_c8b06a28603a": {
+      "use": "excluded",
+      "reason": "Auxiliary world created during the final delivery/approval workflow; it is not a held-out comparison or the verified put-back round, and no worker result from it is used in the evaluation."
+    }
+  },
+  "comparison": {
+    "task": "heldout-001",
+    "workers": [
+      "incumbent",
+      "medium-v1"
+    ],
+    "runs_per_worker": 1,
+    "failed_runs": {
+      "incumbent": [
+        "rw_98eba57a0d65"
+      ],
+      "medium-v1": [
+        "rw_e4560ee96191"
+      ]
+    },
+    "scoring": "A run without a verified release is failed and scores 0 for the fixed 0-10 completion rubric; it is not treated as a measured completion.",
+    "sensitivity": {
+      "drop_failed_pairs": "No observations remain; no candidate advantage can be established.",
+      "worst_or_best_failed_scores": "Both workers receive the same replacement score, so the paired difference remains 0."
+    },
+    "difference": {
+      "metric": "mean score (medium-v1 minus incumbent)",
+      "value": 0
+    },
+    "spread": {
+      "metric": "standard deviation of paired score differences",
+      "value": 0
+    },
+    "conclusion": "No candidate does better than the incumbent; keep the incumbent."
+  }
+}

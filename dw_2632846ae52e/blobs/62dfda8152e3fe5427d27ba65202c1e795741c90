@@ -1,0 +1,30 @@
+{
+ "R51201": {
+  "world": "rw_e4d307d7c798",
+  "task": "T1",
+  "run": "a",
+  "worker": "incumbent",
+  "bytes_sha": "182cec39ebe50bd98f4d647c9db7889c41bea32c8a24a94f85ae1429d1915649"
+ },
+ "R49157": {
+  "world": "rw_46c54a56bed5",
+  "task": "T1",
+  "run": "b",
+  "worker": "incumbent",
+  "bytes_sha": "43dc33372ac843cc37989795a10f9493d0638fde52ef6c7b98989042aa7da7fc"
+ },
+ "R71919": {
+  "world": "rw_b35fc798f418",
+  "task": "T2",
+  "run": "a",
+  "worker": "incumbent",
+  "bytes_sha": "44a41f0fa8e2605aa98a831fa658b90dd902c5233866211373fe908ac5a89807"
+ },
+ "R10249": {
+  "world": "rw_940d1a6fe375",
+  "task": "T2",
+  "run": "b",
+  "worker": "incumbent",
+  "bytes_sha": "3bb1375cb6d17c9ddd2a6939f88c0715a5ffb942ac39ce29eda58f296b2cf9e4"
+ }
+}

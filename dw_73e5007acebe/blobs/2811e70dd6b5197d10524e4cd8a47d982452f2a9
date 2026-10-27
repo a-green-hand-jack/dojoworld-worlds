@@ -1,0 +1,11 @@
+# Judgement of R312 (made blind, from this result alone)
+Read heldout/results/R312/report/report.md in full (one paragraph, single line, no figure) and data/.
+1 single paragraph, no figure: PASS (report.md is one paragraph, no image reference).
+2 URL: PASS (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv, as asked).
+3 SHA-256: PASS. Stated bdd956e8...089b2b equals sha256sum of R312/data/co2_annmean_mlo.csv, which also equals sha256 of my fresh download of the URL.
+4 fetch time: PASS. Report says 07:57:35 UTC on 2026-10-22; data/fetched_at.txt gives the same time.
+5 last year/mean: PASS. "2025, 427.35 ppm" equals the file's last row (2025,427.35,0.12).
+6 growth, window 20: PASS. Row 2005 is 379.98; (427.35-379.98)/20 = 2.3685, as stated; rows (2005, 2025) identifiable.
+7 trajectory: NOT ASSESSABLE from this result (only report and data were handed over); the kept file and consistent fetch time are compatible with code-fetched data but do not prove it. Scored 0 of 1 assessed, treated as unknown, same for all results.
+8 unsupported claims: PASS. Only the data's numbers and arithmetic; no causes or uncertainty claims.
+Score on assessable checks: 7/7 (checks 1-6, 8). Nothing in this result distinguishes it by quality.

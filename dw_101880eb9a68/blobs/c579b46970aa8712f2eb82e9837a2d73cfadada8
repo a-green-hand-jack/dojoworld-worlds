@@ -1,0 +1,4 @@
+\.forgejo/CODEOWNERS @diagnostician
+CANDIDATES\.md @tuner
+.*\.json @tuner
+.*\.ya?ml @tuner

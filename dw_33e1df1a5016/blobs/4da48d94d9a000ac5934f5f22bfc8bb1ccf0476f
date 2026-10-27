@@ -1,0 +1,3 @@
+# Evaluation record
+
+The matched held-out bundle is at trial-user commit `eedf5b2b871a445d703fc1ae49f3429fdef2876a`. Judging is paused until trial-user publishes exact UTF-8 text-source files for both opaque results, because the mandatory judgement checker requires quotations from `.md`, `.markdown`, `.txt`, `.rst`, or `.tex` and does not parse JSON. No labels have been read or compared.

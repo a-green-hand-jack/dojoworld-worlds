@@ -1,0 +1,11 @@
+# Baseline record
+
+- World: `rw_e584f68c0d9c`
+- Position: `paper-repo`
+- Worker: Codex / `gpt-6.1-sol` / low reasoning effort
+- Primary execution: `db15a4183e9631931ecc70d41c371e7a` (`paper-repo` turn `db15a418`), 4 turns for the position, 109.0 model seconds in the completed world record.
+- Starting state: target world opening objective and review requests; final checkpoint was `final-0e3e7fb9`.
+- Result: final release commit `069058f129111b33a410246f63c261c26b4c9273`; final reviews accepted the one-paragraph report and preserved CSV.
+- Evidence of correction: monitor events at 18:52:13 (`ffcbe4c`, “Correct NOAA fetch timestamp provenance”) and 18:53:11 (`28f3e7f`, “Use completed NOAA fetch time”) after the initial 18:49:13 download.
+
+This is one observation, not a matched worker comparison. Held-out runs are required for a difference claim.

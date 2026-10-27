@@ -1,0 +1,6 @@
+# tasks-v1 (diagnostic), target position paper-repo, world rw_6da85025e0fe
+Judging: see judging.md.
+## D1
+Start: continue rw_6da85025e0fe at checkpoint `cp-9dcd7964a461`. Ask: the world's own topic: "Download NOAA GML's annual mean CO2 for Mauna Loa (https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv) during the work; do not type the numbers in. Keep the file as downloaded. Report: `report/report.md`, one paragraph: the URL, the time fetched and its SHA-256, the last year and its annual mean, and the average growth in ppm per year over the last ten years in the file."
+## D2 (made to contract)
+Start: same checkpoint. Same ask but the ten-year window is the ten years ending 2015 (last year 2015, divided by ten) — tests following the stated rule rather than "last year in file".

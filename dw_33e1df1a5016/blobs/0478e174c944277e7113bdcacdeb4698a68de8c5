@@ -1,0 +1,5 @@
+# Delivery paths are reviewed by the position that produces them.
+\.forgejo/CODEOWNERS @diagnostician
+candidate/.* @tuner
+evaluation/.* @diagnostician
+approval/.* @diagnostician

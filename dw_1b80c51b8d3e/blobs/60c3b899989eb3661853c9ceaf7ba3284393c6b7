@@ -1,0 +1,46 @@
+# Diagnostic tasks v1
+
+These tasks exercise the `paper-repo` position worker used in the improvement
+objective. They are intentionally independent of held-out trial tasks.
+
+## Task P1 — Reproduce the NOAA Mauna Loa growth report
+
+**Starting point.** Continue research world `rw_07ce7d5d6f6a` from its newest
+checkpoint, `final-ef3a129` (the checkpoint listed by `researchworld
+checkpoints rw_07ce7d5d6f6a`). The continuation must use the incumbent or
+candidate `paper-repo` worker under test and the world’s ordinary settings.
+The target world’s topic and contract are the inputs; the worker may inspect
+the existing repositories and records from that checkpoint.
+
+**Request.** The position is asked to complete the paper-repo deliverable from
+the target-world request: download NOAA GML's annual mean CO2 data for Mauna
+Loa, determine how fast CO2 rose over the last ten years, and deliver a
+one-paragraph report in the paper repository. The report must identify the
+NOAA source and retrieval/data basis, state the ten-year endpoints and units,
+and explain the calculation (endpoint difference divided by elapsed years or
+an explicitly equivalent slope). It must leave the repository’s reviewable
+report artifact and any required source evidence so the downstream internal
+review can check it.
+
+**Judging.** Score the resulting paper-repo artifact and trajectory against
+this fixed rubric (0–5):
+
+* 1 point: a one-paragraph report is actually committed/published in the
+  expected paper-repo deliverable path;
+* 1 point: the report cites NOAA GML and includes a reproducible source or
+  downloaded annual-means evidence;
+* 1 point: both ten-year endpoint annual means are stated with units and the
+  interval is unambiguous;
+* 1 point: the reported rate is numerically the endpoint change divided by the
+  stated elapsed years (allow rounding to 0.01 ppm/year and equivalent
+  wording), with arithmetic traceable to the cited values;
+* 1 point: the prose is one paragraph, answers “how fast,” and is supported by
+  the repository evidence so an internal reviewer can verify it without
+  guessing.
+
+A result scoring 5 is complete and materially better than one omitting a
+source, endpoint, interval, or reproducible calculation; a result scoring
+below 5 identifies exactly which requirement failed. Also record whether the
+worker completed the downstream review/publication handoff. This rubric is
+used for every worker comparison from this task's same starting checkpoint;
+held-out task judging remains the trial-user/judge responsibility.

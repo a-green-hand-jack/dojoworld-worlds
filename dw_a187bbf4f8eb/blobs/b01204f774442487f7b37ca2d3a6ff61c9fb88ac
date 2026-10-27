@@ -1,0 +1,334 @@
+{
+  "protocol": "Blind paired readings: item-17ea14, item-429aab, item-4737ae, and finally item-986765 were each read in full; each item was pushed before the next was opened. The label table remained unpublished throughout these judgements.",
+  "labels_index": {
+    "repo": "task-setter",
+    "path": "labels-index.json"
+  },
+  "label_table": {
+    "repo": "task-setter",
+    "path": "label-table.json",
+    "published": {
+      "repo": "task-setter",
+      "path": "label-table.sha256"
+    }
+  },
+  "judgements": [
+    {
+      "label": "m-bc18c46c",
+      "item": "item-17ea14",
+      "decision": "better",
+      "reason": "This submission gives the more reliable account of the evidence: it reports the relevant margins with their uncertainty and explicitly states which ablation the supplied table cannot identify.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-bc18c46c/manuscript.tex",
+        "source": "manuscripts/m-bc18c46c/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-bc18c46c/manuscript.tex",
+          "sha256": "213f9d52c4531027287e6923d3e26f48880717632a7658e4c87243c7cd65e4a2"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "The margins over the strongest prior methods are small, often within the reported standard deviations, and we discuss this in the experiments.",
+          "material": "material/item-17ea14/tables/table_bn.tex",
+          "location": "caption and STDD/baseline rows",
+          "assessment": "The table gives the means and standard deviations used for this qualified claim."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "The table does not include WSM without MCM, so we cannot separate its own contribution.",
+          "material": "material/item-17ea14/tables/table_vi.tex",
+          "location": "ablation rows",
+          "assessment": "The supplied ablation has Frozen, Prompt-based and Fully-tuned rows but no WSM-only/MCM-only isolation matching this statement."
+        }
+      ],
+      "worker": "W2"
+    },
+    {
+      "label": "m-3866a8cb",
+      "item": "item-17ea14",
+      "decision": "worse",
+      "reason": "This submission is less well supported: it makes a universal claim about prior work and presents a qualitative visualization as confirmation of temporal exploitation without supplying measurements for that conclusion.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-3866a8cb/manuscript.tex",
+        "source": "manuscripts/m-3866a8cb/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-3866a8cb/manuscript.tex",
+          "sha256": "5c733b91121b2e10519a817b9c0561d70c26a68ec6a8849b97f3ad2dda96a56b"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "None of them achieves the collaborative multi-modal spatiotemporal understanding that ZSAR requires.",
+          "material": "material/item-17ea14/research_overview_long.md",
+          "location": "Key Insight and Contributions",
+          "assessment": "The material describes the proposed key idea but provides no evidence establishing this universal comparison against every cited method."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "For STDD, [S]+[T] outperforms [S] by 1.08\\%, confirming that the model better exploits temporal cues.",
+          "material": "material/item-17ea14/figure_summary.md",
+          "location": "Figure 4 summary",
+          "assessment": "The material identifies the figure but does not state the 1.08% value or provide a temporal-cue measurement; the confirmation is therefore stronger than the supplied support."
+        }
+      ],
+      "worker": "W1"
+    },
+    {
+      "label": "m-19366f6b",
+      "item": "item-429aab",
+      "decision": "worse",
+      "reason": "This version presents the benchmark as internally complete and treats the 16-shot ranking as robust without the explicit accounting and qualification supplied by the other version.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-19366f6b/manuscript.tex",
+        "source": "manuscripts/m-19366f6b/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-19366f6b/manuscript.tex",
+          "sha256": "7004aa213bc5707860c9d465d5eb99dd4df9e6f041adc91a996ab66e22e4ee82"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "MIEB comprises 130 tasks in 8 categories",
+          "material": "material/item-429aab/tables/table_qj.tex",
+          "location": "category overview table",
+          "assessment": "The listed category counts in the supplied material total 127, so this summary does not disclose the three-task accounting gap."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "Model rankings are robust across $k\\in\\{8,16,32,64,128,256\\}$ shots (\\autoref{fig:kshot}), which validates the 16-shot default.",
+          "material": "material/item-429aab/figure_summary.md",
+          "location": "linear-probing figure summary",
+          "assessment": "The material identifies the k-shot figure but does not provide the claimed robustness statistics or number of runs; the conclusion is stronger than the supplied support."
+        }
+      ],
+      "worker": "W1"
+    },
+    {
+      "label": "m-7329d0db",
+      "item": "item-429aab",
+      "decision": "better",
+      "reason": "This version is more trustworthy because it reconciles the benchmark totals with the supplied category table and limits the stability claim to what the figure supports.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-7329d0db/manuscript.tex",
+        "source": "manuscripts/m-7329d0db/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-7329d0db/manuscript.tex",
+          "sha256": "3e1c45cc9a28b1ad685d0f0be5a316746034450b665982824ce4635b9a037e31"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "The per-category counts in \\autoref{tab:MIEB big tasks} sum to 127 rather than 130; the source material does not assign the remaining three tasks to a category, and we report the counts as given.",
+          "material": "material/item-429aab/tables/table_qj.tex",
+          "location": "category overview table",
+          "assessment": "This explicitly reports the discrepancy visible in the supplied category counts instead of presenting an unreconciled total."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "We therefore only claim that the 16-shot default is not an outlier, not that the full ranking is invariant.",
+          "material": "material/item-429aab/figure_summary.md",
+          "location": "linear-probing figure summary",
+          "assessment": "The figure summary supports a k-shot comparison but not a universal ranking claim; this qualification is appropriately narrow."
+        }
+      ],
+      "worker": "W2"
+    },
+    {
+      "label": "m-12b49a0f",
+      "item": "item-4737ae",
+      "decision": "better",
+      "reason": "This manuscript gives a careful, reproducible benchmark account: it exposes the discrepancy in the supplied category counts and narrows the k-shot conclusion to the evidence available.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-12b49a0f/manuscript.tex",
+        "source": "manuscripts/m-12b49a0f/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-12b49a0f/manuscript.tex",
+          "sha256": "3e1c45cc9a28b1ad685d0f0be5a316746034450b665982824ce4635b9a037e31"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "The per-category counts in \\autoref{tab:MIEB big tasks} sum to 127 rather than 130; the source material does not assign the remaining three tasks to a category, and we report the counts as given.",
+          "material": "material/item-4737ae/tables/table_qj.tex",
+          "location": "category overview table",
+          "assessment": "The supplied table lists category counts totaling 127; this passage transparently records the unresolved three-task gap."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "We therefore only claim that the 16-shot default is not an outlier, not that the full ranking is invariant.",
+          "material": "material/item-4737ae/figure_summary.md",
+          "location": "linear-probing figure summary",
+          "assessment": "The material provides a k-shot figure summary but no full ranking statistic; this qualification matches that support."
+        }
+      ],
+      "worker": "W2"
+    },
+    {
+      "label": "m-bd881701",
+      "item": "item-4737ae",
+      "decision": "worse",
+      "reason": "This manuscript omits the visible category-count discrepancy and makes a broad ranking-stability claim where the supplied figure summary does not provide supporting statistics.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-bd881701/manuscript.tex",
+        "source": "manuscripts/m-bd881701/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-bd881701/manuscript.tex",
+          "sha256": "7004aa213bc5707860c9d465d5eb99dd4df9e6f041adc91a996ab66e22e4ee82"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "MIEB comprises 130 tasks in 8 categories",
+          "material": "material/item-4737ae/tables/table_qj.tex",
+          "location": "category overview table",
+          "assessment": "The listed category counts total 127, but this version does not disclose the mismatch or account for the remaining three tasks."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "Model rankings are robust across $k\\in\\{8,16,32,64,128,256\\}$ shots (\\autoref{fig:kshot}), which validates the 16-shot default.",
+          "material": "material/item-4737ae/figure_summary.md",
+          "location": "linear-probing figure summary",
+          "assessment": "The material names the k-shot plot but does not report robustness statistics or run counts, so the universal ranking claim is under-supported."
+        }
+      ],
+      "worker": "W1"
+    },
+    {
+      "label": "m-32d9cefe",
+      "item": "item-986765",
+      "decision": "better",
+      "reason": "This submission is the more reliable account of the evidence because it reports uncertainty and explicitly marks the missing ablation needed to isolate the claimed operation.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-32d9cefe/manuscript.tex",
+        "source": "manuscripts/m-32d9cefe/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-32d9cefe/manuscript.tex",
+          "sha256": "213f9d52c4531027287e6923d3e26f48880717632a7658e4c87243c7cd65e4a2"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "The margins over the strongest prior methods are small, often within the reported standard deviations, and we discuss this in the experiments.",
+          "material": "material/item-986765/tables/table_bn.tex",
+          "location": "comparison table and caption",
+          "assessment": "The supplied comparison table reports the means and standard deviations, supporting this qualified interpretation."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "The table does not include WSM without MCM, so we cannot separate its own contribution.",
+          "material": "material/item-986765/tables/table_vi.tex",
+          "location": "ablation rows",
+          "assessment": "The supplied ablation rows do not isolate WSM without MCM, so this limitation is directly supported."
+        }
+      ],
+      "worker": "W2"
+    },
+    {
+      "label": "m-aac6ceaa",
+      "item": "item-986765",
+      "decision": "worse",
+      "reason": "This submission makes broader causal and novelty claims than the supplied material establishes, especially for prior-work coverage and temporal-cue exploitation.",
+      "result": {
+        "repo": "task-setter",
+        "path": "manuscripts/m-aac6ceaa/manuscript.tex",
+        "source": "manuscripts/m-aac6ceaa/manuscript.tex",
+        "provenance": {
+          "repo": "task-setter",
+          "path": "manuscripts/m-aac6ceaa/manuscript.tex",
+          "sha256": "5c733b91121b2e10519a817b9c0561d70c26a68ec6a8849b97f3ad2dda96a56b"
+        }
+      },
+      "items": [
+        {
+          "item": "evidence-1",
+          "quote": "None of them achieves the collaborative multi-modal spatiotemporal understanding that ZSAR requires.",
+          "material": "material/item-986765/research_overview_long.md",
+          "location": "Motivation and Key Insight",
+          "assessment": "The material describes the proposed idea and says prior approaches struggle, but does not establish this universal claim about all cited methods."
+        },
+        {
+          "item": "evidence-2",
+          "quote": "For STDD, [S]+[T] outperforms [S] by 1.08\\%, confirming that the model better exploits temporal cues.",
+          "material": "material/item-986765/figure_summary.md",
+          "location": "Figure 4 summary",
+          "assessment": "The supplied summary identifies the figure but gives no 1.08% value or temporal-cue measurement, so the confirmation claim is under-supported."
+        }
+      ],
+      "worker": "W1"
+    }
+  ],
+  "comparison": {
+    "tasks": [
+      "paper_45",
+      "paper_32"
+    ],
+    "void_tasks": [
+      "paper_17"
+    ],
+    "pair_readings": {
+      "paper_45": [
+        "W2",
+        "W2"
+      ],
+      "paper_32": [
+        "W2",
+        "W2"
+      ],
+      "paper_17": null
+    },
+    "pair_outcomes": {
+      "paper_45": "win W2",
+      "paper_32": "win W2",
+      "paper_17": "void (W2 run failed)"
+    },
+    "wins": {
+      "W1": 0,
+      "W2": 2
+    },
+    "ties": 0,
+    "disagreement_rate": 0.0,
+    "difference": {
+      "metric": "paired win rate W2 minus W1 on nonvoid pairs",
+      "W1": 0.0,
+      "W2": 1.0,
+      "W2_minus_W1": 1.0,
+      "n_nonvoid_pairs": 2
+    },
+    "spread": {
+      "pair_level_differences_W2_minus_W1": [
+        1,
+        1
+      ],
+      "mean": 1.0,
+      "sample_sd": 0.0,
+      "standard_error": 0.0,
+      "note": "Both nonvoid pairs selected W2; spread is zero across the two observed pair differences."
+    },
+    "failed_pair_count": 1,
+    "failed_pair_policy": "The paper_17 pair is lost and excluded from the win/tie denominator because one run ended terminal: stalled with no manuscript.pdf. If treated as a tie for sensitivity, W2 win rate is 2/3, W1 win rate 0, difference 2/3; the prescribed dropped-pair result is difference 1.0.",
+    "conclusion": "The judging tells W1 and W2 apart in this check: W2 wins both nonvoid paired readings and W1 wins none; paper_17 is void because W2 failed.",
+    "kept_workers": null,
+    "release_scope": "Measure check only; no candidate, put-back, approval, or release is requested."
+  }
+}

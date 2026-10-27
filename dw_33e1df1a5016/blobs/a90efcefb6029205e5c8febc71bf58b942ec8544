@@ -1,0 +1,37 @@
+# Brief
+
+## Objective
+
+The improvement issue asks:
+
+> Improve the worker of the position paper-repo of the research world rw_e584f68c0d9c, given to you to read (it is finished; its checkpoints include its final one). Its task was a one-paragraph report on how fast the CO2 at Mauna Loa rose over the last ten years, from NOAA's annual means downloaded during the work. The incumbent worker of every position there is Codex with gpt-6.1-sol at low reasoning effort.
+>
+> Candidates may use only Codex with gpt-6.1-sol, the agent and model the target world runs; what may change is its native settings, such as its effort or its environment. Take the tasks from the target world; no judging is given, so propose it.
+>
+> Keep it small: one candidate, and every world you run with at most 8 turns and 900 model seconds. Put the kept worker back by continuing rw_e584f68c0d9c from its newest checkpoint with it and running that round. An evaluation that keeps the incumbent is a complete result too: then the version released is the kept worker and the round that put it back. Nothing is published outside this world.
+
+## Target world and worker
+
+Target `rw_e584f68c0d9c` is a completed `research` world, final checkpoint `final-0e3e7fb9`, final release commit `069058f129111b33a410246f63c261c26b4c9273`. Its positions are `story-repo`, `paper-repo`, `internal-review-repo`, and `external-review-repo`; the task position being improved is `paper-repo`. The incumbent is Codex with model `gpt-6.1-sol`, low reasoning effort, the target image/resources, and no assets. The target run used 13 turns and 417.3 model seconds in total; `paper-repo` used 4 turns and 109.0 model seconds.
+
+The target topic requires downloading NOAA GML's annual means from `https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv` during the work, preserving the downloaded file, and producing exactly one paragraph in `report/report.md` containing the URL, fetch time, file SHA-256, last year and annual mean, and `(last year - year ten years earlier) / 10` ppm per year. No figure is allowed. The final world release and reviews confirm these requirements were met.
+
+## Judging proposed for this round
+
+Each held-out run should be judged from its output, before worker identity is disclosed. Check the report's paragraph count and absence of a figure; verify URL, fetch timestamp, and SHA-256 against the preserved CSV and run receipt; parse the CSV to verify last year/value and the ten-year arithmetic; and check that the preserved CSV is the downloaded NOAA file. Compare incumbent and one candidate from the same checkpoint/start with the same checks. A run is an observation; an improvement claim requires matched starts and identical judging.
+
+## Focus and priority
+
+The first priority is provenance and final verification: the worker should capture the completed fetch time and hash from the exact file it commits, then re-check the report and arithmetic before opening review. The target incumbent's low-effort run succeeded but needed corrective edits, so the candidate is allowed to change only native reasoning effort while keeping the same agent, model, resources, and task.
+
+## What is not established
+
+The target world supplied no judging definition or repeated baseline. Its final artifacts are historical and the observer exposes the event stream and reviews, but not a directly readable artifact checkout in this world. Therefore the baseline is one completed observation, not a measured worker difference; held-out tasks and matched incumbent/candidate runs must establish any improvement.
+
+## Matched-run update
+
+The matched `paper-objective-report` runs were completed under the eight-execution/900-second limits. The incumbent-low world `rw_06c32490a8b3` and candidate-medium world `rw_87bae9dc4605` both preserved the required report and CSV and ran the source/hash/value check, but both ended `budget-exhausted` with `release_status=unverified`; neither produced an approved release. The incumbent reached final PR #10 and the candidate stopped after PR #9 was approved because the approval arrived after its worker turn. This scheduling difference is not evidence of a worker quality change. The baseline timestamp correction remains the only worker defect established, and medium effort has no measured gain on this matched task.
+
+## Put-back update
+
+The kept incumbent was put back in fresh continuation `rw_f0c559601c44` from `rw_e584f68c0d9c` checkpoint `final-0e3e7fb9`. Its second bounded drive completed the pending review and delivery handoffs and produced an accepted verified final release at commit `69235c735d9fee7b32567d01711e565ea110a831`; the terminal monitor reports all completion gates true and no failures. The full provenance and ledger are in `runs/putback-rw_f0c559601c44.json` and `runs/diagnostic-runs.md`.

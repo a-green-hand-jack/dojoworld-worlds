@@ -1,0 +1,8 @@
+# Candidates
+## cand-medium (from incumbent: claude-code, sonnet-5-5, effort low)
+Change: paper-repo CLAUDE_CODE_EFFORT_LEVEL low -> medium. Nothing else.
+Why: diagnosis (diagnostician Diagnosis.md) finds no defect, names effort as the one lever for an explicit gap check/context; cost headroom ample.
+Results: rw_9af09c7307c7 (continue of rw_679cdc7d5fa3 @ final-7adfe819, research-network only because local-compute was rejected): 6 turns, 75 model s, completed; paper-repo re-released the existing final, internal-review approved. Records: world/sparring-partner runs/rw_9af09c7307c7. One run, no incumbent comparison on the same start: shows the config runs, not that it is better.
+
+## Kept: incumbent (the DELIVERED worker is world-config.json at the root; nothing else here is applied)
+The evaluation (judge) found cand-medium a tie, not better, and keeps the incumbent. world-config.json (root) sets every position to claude-code, claude-sonnet-5-5, effort low. evidence/cand-medium-config.json stays as the record of the rejected candidate.

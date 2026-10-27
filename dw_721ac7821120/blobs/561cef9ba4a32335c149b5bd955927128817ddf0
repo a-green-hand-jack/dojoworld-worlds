@@ -1,0 +1,7 @@
+# Held-out trial task HT-1
+
+Starting point: continue research world `rw_e584f68c0d9c` from checkpoint `final-0e3e7fb9`.
+
+Task: As the paper-repo worker, produce the requested one-paragraph report describing how fast atmospheric CO2 at Mauna Loa rose over the most recent ten complete calendar years represented in NOAA's annual-mean dataset available during the run. Download or otherwise use the authoritative NOAA annual means, identify the endpoint years and values, calculate the absolute increase and average annual rate (ppm/year), and state the result in a concise, self-contained paragraph with a source reference.
+
+Good result: one paragraph in the paper repository; uses NOAA annual means; names the ten-year interval and both endpoint values; arithmetic is correct to sensible rounding; reports both total and per-year rise; includes a reproducible source citation or URL; no unsupported claims or fabricated data.

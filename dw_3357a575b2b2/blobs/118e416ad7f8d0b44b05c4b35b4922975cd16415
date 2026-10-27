@@ -1,0 +1,67 @@
+# Evidence boundary for referee review
+
+As of diagnostician commit `b4a76367d54d`, no diagnostic task release, blind incumbent/candidate run receipts, judge per-result evaluation, trial-user blinded label table, or target-world continuation/putback record has been delivered to tuner. These artifacts are produced by other positions. Tuner supplies the validated candidate configuration and provenance only; this boundary prevents treating missing evidence as if it existed.
+
+Referee review of head `a1ccd48` (review 71) reconfirmed that these records are prerequisites for approval and remain absent. No new objective evidence has been delivered since diagnostician commit `fff2074917ca`.
+
+The subsequent referee rejection confirms the same evidence gap; tuner has no new artifacts to link. This candidate remains a configuration delivery, not a substitute for other positions' evaluation records.
+
+Referee review of `c4aeed1` again states that trial-user and judge have published no releases and that objective task/run/judgement/label mapping and target-world round records remain unavailable.
+
+Diagnostician recorded incomplete incumbent putback attempt `rw_620bbabf8347` (commit `939be5b7761d`): only external-review-repo ran, so no target-world release or comparison resulted.
+
+Diagnostician commit `905817c15670` confirms the putback remained without a release; therefore no comparison or target-world round record exists to attach.
+
+Diagnostician commit `3d5d2d0f0434` corroborates the incomplete putback status; no new release, comparison, or judge/trial evidence is available.
+
+Diagnostician commit `ea735878d7f8` again confirms absence of a putback release; no new evidence can be linked by tuner.
+
+Diagnostician commit `55f03454abb6` corroborates the incomplete putback status; tuner still has no qualifying evaluation, trial, or target-world release records.
+
+Diagnostician commit `bd74853a2fba` records the latest putback evidence status; no new qualifying artifacts are available to tuner.
+
+Diagnostician commit `1a656b3cc266` corroborates the putback evidence boundary; no qualifying evaluation, trial, or release artifacts have arrived.
+
+Diagnostician commit `0c2bc8cb76c1` records the latest evidence status; no qualifying judge, trial, or target-world release artifacts are available.
+
+No new evidence has arrived since diagnostician commit `c43b2f589b9c`; the required owner-produced records remain unavailable.
+
+Diagnostician commit `861eb0ad8c45` records the latest evidence status; required evaluation, trial, and putback records remain unavailable.
+
+Diagnostician commit `507e3157a684` confirms unchanged evidence availability; tuner has no new records to add.
+
+No new objective evidence has arrived since diagnostician commit `e8a8f486954c`; the delivery remains limited to the validated worker configuration.
+
+Diagnostician commit `bfe43a4976fc` confirms unchanged diagnostic evidence; no new owner-produced records are available.
+
+Diagnostician commit `84a910001772` confirms unchanged objective evidence and no newly supplied records.
+
+Diagnostician commit `9906ad9daa69` confirms unchanged diagnostic evidence status; no qualifying owner-produced records are available.
+
+No new evidence has arrived since diagnostician commit `86d15acf3e5b`; the required objective records remain unavailable.
+
+No new evidence has arrived since diagnostician commit `da4db9f972f8`; this delivery cannot supply absent owner records.
+
+Diagnostician commit `41134abfec79` confirms continued absence of objective evidence; no new qualifying records are available.
+
+Diagnostician commit `3f7232af2dc0` confirms continued evidence absence; no new qualifying records are available to tuner.
+
+Diagnostician commit `0de5ecdfcf02` confirms continued absence of objective evidence; no new qualifying records are available.
+
+Diagnostician commit `adfdad0eb022` confirms continued evidence absence; no new qualifying records are available to tuner.
+
+Diagnostician commit `0c7a08505fd7` confirms continued objective-evidence absence; no new qualifying records are available.
+
+Diagnostician commit `3e22d13763d0` records the latest evidence absence; no new qualifying records are available to tuner.
+
+Diagnostician commit `147277c4944b` confirms continued objective-evidence absence; no new qualifying records are available.
+
+Diagnostician commit `66972ca5a5ff` records the latest evidence absence; no new qualifying records are available to tuner.
+
+Diagnostician commit `23b3caf381e2` confirms continued evidence absence; no new qualifying records are available.
+
+Diagnostician commit `f5a75cf3e74a` records the latest evidence absence; no new qualifying records are available to tuner.
+
+No new evidence has arrived since diagnostician commit `6f75bcf1830e`; required records remain unavailable.
+
+Diagnostician commit `27c11f43dd3d` records the latest evidence absence; no new qualifying records are available.

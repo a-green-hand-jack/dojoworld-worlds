@@ -1,0 +1,24 @@
+# Diagnosis (round 1) — what is observed, from world/sparring-partner records/ (commit on its main)
+
+Observed
+- inc1 rw_7470411bc5d4 (4 executions), inc2 rw_6a3b6f69fce2 (6), cand1 rw_2bf0f6183c7e (8, ended by max-executions): all three continue final-7adfe819, so `report/report.md` and `data/` from release 3330e36 already exist. In the cand1 and inc2 monitors paper-repo only opens a "Commitment: report and unmodified NOAA file" issue and a "Version 2" PR whose one commit is "README names the delivered report and the unmodified NOAA file" (cand1 monitor, 15:02:55-15:03:01). No run's artifacts.txt has a release ("no approved release") — none reached an approved version within the cap.
+- The monitors kept are time-stream tails; no run shows the paper-repo worker downloading, hashing or computing anything.
+
+Not a worker problem (layer: world/task)
+- The topic task is already done in the checkpoint; continuing a finished world makes the paper turn a README edit, so these runs cannot show whether effort changes the download/SHA/arithmetic. Needed: a start where report/ and data/ are absent (e.g. an earlier state, or a task-setter task made to the contract), judged by the criteria in Brief.md.
+- Run caps (8 executions) end the world before review/release; cand1 (8) vs inc (4, 6) differ in length because of the cap and review loops, not shown to be effort.
+
+Worker-level (unproven)
+- Only lever with any case: effort (low -> high). No record shows an effort-caused error in the incumbent; the original rw_679cdc7d5fa3 paper-repo turns (5 turns, 43 s) are not yet read against the CSV.
+
+Cannot claim cand1 better or worse: 1 run each, not from a start that exercises the task, no judging applied.
+
+# Update: task 1b (20-year topic), world/sparring-partner records/task1b (commit f8f5cc0)
+
+Observed (same start final-7adfe819, same topic20.txt, same checker_report.py, 1 world per row, 2 per arm):
+- inc1 rw_580e3fa0c1ef 7/7, inc2 rw_b45e274f5370 7/7 (low effort); cand1 rw_a101445dbefc 7/7, cand2 rw_7e0f982612a8 7/7 (high effort). Each out/check.txt; all give SHA bdd956e8..., 2025 = 427.35, 2005 = 379.98, growth 2.37 (expected 2.3685); fetched at 15:14:08-15:14:20.
+- Difference between arms on this task: none measurable (ceiling, 2 runs each). Incumbent already does the task correctly at low effort.
+
+The only incumbent flaw on record is in the original world: commit 4e2024b "Correct ten-year growth: base year is 2015, not 2013" in rw_679cdc7d5fa3's history — the first report used a wrong base year and the internal review path caught it (review approval at 4e2024b). Not re-observed in any of the 7 re-runs (3 ten-year-topic, 4 twenty-year). Not read: the original paper-repo turn itself, so I can't say whether effort caused it.
+
+What is left: nothing shown for a worker change. An effort rise is neither shown helpful nor harmful (cand cost: cand1 on the ten-year start hit max-executions 8 vs 4 and 6, unexplained, n=1). If kept, the claim must be "no difference found", not "better".

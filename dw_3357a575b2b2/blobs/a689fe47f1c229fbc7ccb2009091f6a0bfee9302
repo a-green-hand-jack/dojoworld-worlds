@@ -1,0 +1,1 @@
+{"sha256":"5b9250c4b0aa5dc748d3e8b2c8274fd2589b005ea23086f3c72f577664d6c0eb","A":{"worker":"incumbent-low","result_path":"blind/results/label-A.txt","world":"rw_2108e3103d97","drive":"cmd-a2324aa24a"},"B":{"worker":"candidate-medium","result_path":"blind/results/label-B.txt","world":"rw_b88f7b236ef4","drive":"cmd-8f21fa6e61"}}

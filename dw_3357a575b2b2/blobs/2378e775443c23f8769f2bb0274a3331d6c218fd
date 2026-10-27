@@ -1,0 +1,5 @@
+# Candidate v1
+
+Candidate for `paper-repo`, based on the incumbent Codex / gpt-6.1-sol / openai worker. The candidate raises native reasoning effort to medium through the agent settings while preserving the target model and provider. It is intended to improve arithmetic and source verification in the one-paragraph NOAA CO2 report.
+
+No held-out task content is included. Diagnostic and blind-trial run evidence will be appended by the tuner as it arrives.

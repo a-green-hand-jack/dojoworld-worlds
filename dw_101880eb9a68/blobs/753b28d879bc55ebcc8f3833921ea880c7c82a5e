@@ -1,0 +1,5 @@
+# Evaluation plan (status: waiting on candidate and blinded results)
+- Judging: figure correctness vs downloaded data, source support, one paragraph (agreed in trial-user#3).
+- Runs: 3 held-out tasks x 3 runs each, incumbent vs one candidate, same starts.
+- Each result judged alone, blind, with the passage it rests on; comparison only after label table published.
+- Failed runs counted as failed; comparison reported with them dropped, worst and best.

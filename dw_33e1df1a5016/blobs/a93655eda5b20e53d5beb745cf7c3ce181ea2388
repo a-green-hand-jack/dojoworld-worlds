@@ -1,0 +1,66 @@
+# Diagnostic runs
+
+Task definitions: task-setter release `tasks-v1` (commit `7a1e854bfd4f`), copied to `runs/tasks-v1.json`.
+
+## Matched task 1: `paper-objective-report`
+
+Both worlds continue `rw_e584f68c0d9c` at checkpoint `final-0e3e7fb9` with the same topic and no changed task inputs. Each is bounded to 8 executions and 900 model seconds.
+
+| worker label | run world | configuration | drive job |
+|---|---|---|---|
+| incumbent-low | `rw_06c32490a8b3` | `run-config/incumbent.json`; paper-repo low effort | `cmd-9dfd36d0f0` |
+| candidate-medium | `rw_87bae9dc4605` | `run-config/candidate.json`; paper-repo medium effort | `cmd-d136b887c0` |
+
+These jobs are tracked on the worlds resource; results and monitor receipts will be appended when they finish. No quality difference is claimed before identical contract-audit judging.
+
+## Task 1 baseline completion record
+
+Incumbent world `rw_06c32490a8b3` ended after four executions (`c5388bc7`, `19d83dde`, `25b7569b`, `f14e7c79`) using 170.8 model seconds. The `paper-repo` execution `f14e7c79` ran 354 seconds and merged paper-repo PR #5, pushed `57172b7`, and opened release PR #9. The driver stopped with `runtime_reason=insufficient-budget`, `release_status=unverified`, and the explicit gap “Driver termination alone does not establish scientific or delivery completion”; the world was not complete and no accepted release was produced. This is therefore an incomplete run observation, not a passing task result. The monitor shows the worker nevertheless performed the source hash/2015/2025 parser check at 21:54:49 and retained the report/source tree before opening PR #9.
+
+## Task 1 candidate completion record
+
+Candidate world `rw_87bae9dc4605` likewise stopped after four executions (`086faa74`, `9ed67b86`, `07121d89`, `62a52949`) using 175.6 model seconds, with `runtime_reason=insufficient-budget`, `release_status=unverified`, and the same driver-termination gap. Its medium-effort `paper-repo` execution `62a52949` took 434 seconds, merged PR #5 to `551b16a`, opened release PR #9, and discharged its objective before the driver became idle. This is also incomplete and cannot be scored as a pass or compared as a quality difference. Both worlds were resumed under jobs `cmd-714002b682` (incumbent) and `cmd-efbc73a064` (candidate), still within their configured eight-execution/900-second limits.
+
+### Candidate resume result
+
+Candidate `rw_87bae9dc4605` consumed all 8 executions and 247.7 model seconds after the resume. It reached paper-repo PR #9 and the internal reviewer approved that PR at monitor event 22:06:53, but the paper worker had already ended and the world stopped with `runtime_reason=budget-exhausted`, `release_status=unverified`, and no merge/final release. Its paper execution `62a52949` used medium effort and performed the exact SHA/value parser check at 22:01:50; the later approval is workflow evidence, not a completed world result. This remains an incomplete task observation.
+
+## Task 1 matched-run termination and comparison
+
+The resumed incumbent world `rw_06c32490a8b3` used all 8 executions and 246.8 model seconds. Its driver ended `runtime_reason=budget-exhausted`, `release_status=unverified`, and retained the explicit gap “Driver termination alone does not establish scientific or delivery completion” (`researchworld status rw_06c32490a8b3`). The low-effort paper worker's second turn `c1c1da6b` handled internal approval of PR #9, merged it, opened final PR #10, and ended with PR #10 still awaiting review (monitor events 22:06:51–22:07:16). The paper tree at commit `57172b7` had the report and preserved CSV; the worker's parser/hash check is recorded at monitor event 21:54:49 in `f14e7c79`.
+
+The resumed candidate world `rw_87bae9dc4605` used all 8 executions and 247.7 model seconds. It ended with the same `runtime_reason=budget-exhausted`, `release_status=unverified`, and explicit driver gap (`researchworld status rw_87bae9dc4605`). Its medium-effort paper turn `62a52949` merged PR #5, opened PR #9, and ran the exact SHA/value parser check at monitor event 22:01:50; internal review approved PR #9 at 22:06:53 after the paper worker had ended. The candidate tree at commit `551b16a` retained the report and CSV. No final release was produced.
+
+Both matched runs therefore provide complete artifact observations but no accepted release and no quality difference: the same task, checkpoint, contract and judging inputs were used, both source/hash/value checks were recorded, and both stopped on the shared eight-execution driver limit. The incumbent reached the next approval-gated final PR only because its reviewer event arrived before its last paper turn; the candidate's approval arrived after its last turn. That ordering is a world scheduling outcome, not evidence that low effort is better than medium effort. Provider overload retries were also recorded in both paper turns (4 in `f14e7c79`, 3 in `62a52949`) and belong to the shared runtime layer.
+
+## Final kept-incumbent target round
+
+Tuner's kept configuration is authoritative at tuner main `aa63f02739e1` (the same low-effort worker recorded in `candidate/kept/config.json` and `candidate/kept/worker.json`): agent `codex`, model `gpt-6.1-sol`, `codex.model_reasoning_effort=low`, `max_context_fraction=0.6`, no assets, and the target resources/provider unchanged.
+
+Continuation from `rw_e584f68c0d9c` checkpoint `final-0e3e7fb9` created world `rw_e4150b519eb4`. The first bounded drive `cmd-4c70f08ff7` used 4 executions / 197.4 model seconds and ended `runtime_reason=insufficient-budget`, `release_status=unverified`, with the explicit gap “Driver termination alone does not establish scientific or delivery completion.” Paper turn `982f03bd` merged ownership PR #5 to commit `e01a7a1` and opened release PR #8; review obligations remained.
+
+A second bounded drive `cmd-dad016c293` processed those obligations using 8 additional executions. Final world status `rw_e4150b519eb4` recorded 12 total executions and 310.6 model seconds (paper role 3 turns / 85.7 seconds), `runtime_reason=max-executions`, `release_status=unverified`, `world_complete=false`, and no final release. Internal review approved release PR #8 at monitor event 22:27:50; the system published release v1 at commit `7b2d425` at 22:28:04, and paper opened final PR #9. Internal review approved PR #9 at 22:29:02, but the drive ended at 22:29:11 before paper could merge it; the status still had open `deliver`, two `feedback`, and one `reviewed` obligations. The attempted third drive `cmd-c20a61eea7` was torn down before execution (3.3 seconds) to avoid further turns after the bounded run.
+
+Thus the kept-worker round produced an approved release branch/result v1 containing the report and preserved source, but no final publication and no accepted world completion. The evidence is a bounded runtime observation, not a claim that the target round fully completed; the driver gap and the need for a second loop are world/position-layer limitations. The cumulative 12 turns arose from the two driver invocations (4 + 8), while each invocation was passed `--max-executions 8 --deadline-sec 900`.
+
+## Verified kept-incumbent put-back (`rw_f0c559601c44`)
+
+Following tuner and judge requests, a fresh continuation was created from target `rw_e584f68c0d9c` at checkpoint `final-0e3e7fb9`, using the kept incumbent file `candidate/kept/config.json` (Codex `gpt-6.1-sol`, low reasoning effort, `max_context_fraction=0.6`, unchanged agent, image, resources, provider, and no assets). The continuation was `rw_f0c559601c44`; its recorded configuration digest is `e121d7ec78d67b488bb0e7e2ce9dff17b0e3f1818912aaeca3e440507d845f2a` and the kept config SHA-256 is `68cd6bdd36ed50bb42f69a752d682ff055488912c57b598a9ceda9151c723c81`.
+
+The first bounded drive, `cmd-5c30a3b2db`, used 8 executions and 239.4077 model seconds, then stopped at `max-executions` with all roles complete but two handoffs open. It was therefore an incomplete observation (`release_status=unverified`, no artifact export). A second bounded drive on the same world, `cmd-79964db03d`, used 4 executions and 54.7510 model seconds (12 executions and 294.1587 model seconds total) and ended `runtime_reason=world-complete`. Its execution IDs were `1d8be2d6`, `c13a5542`, `c0d5025e`, and `f6598d6f`.
+
+The final monitor summary is the terminal judging record: `world_complete=true`, `accepted=true`, `release_status=verified`, `delivery_complete=true`, `independent_review_complete=true`, `paper_bundle_complete=true`, `system_release_accepted=true`, no unresolved reviews, and no failures. The final release was published at 22:45:46 UTC as `result:final` commit `69235c735d9fee7b32567d01711e565ea110a831`; the driver ended `world-complete` at 22:45:48. The exported artifacts include `report/report.md`, `data/co2_annmean_mlo.csv`, the report/source ownership files, and internal/external review records; manifest SHA-256 is `d8b3922cb55d0a45ed102fa75e865246f109787caffc5a500a57a7f6e0bf340a`.
+
+Role accounting for the completed continuation is: story-repo 2 turns / 67.3 model seconds; paper-repo 4 / 86.8; internal-review-repo 3 / 86.3; external-review-repo 3 / 53.7. The summary reports 12 complete executions, 294.1587 model seconds, 99 provider requests, and no runtime errors. The raw `researchworld status` lifecycle block retains the earlier `release_status=unverified` field from the drive record; the current `monitor --summary --json`, artifact manifest, final publication event, and accepted gates report the verified terminal state. This stale field is recorded as world instrumentation evidence and is not attributed to the worker.
+
+### Host-finish verification
+
+After judge reported the pre-finish host checker value `world_status=None`, the required `researchworld finish --json rw_f0c559601c44` was run as worlds job `cmd-2ab84e749e`. The post-finish status now reports `world_status=complete`, `lifecycle.world_status=finished`, `finalization_source=host-finish`, `final_checkpoint=final-eb37067d`, `release_status=system-release-verified`, `delivery_complete=true`, `container_status=absent`, and the same final release commit `69235c735d9fee7b32567d01711e565ea110a831`. The post-finish usage ledger is 12 turns / 294.2 model seconds with role totals unchanged. This is the host-checked terminal record required by putback-check.
+
+### Evaluation handoff status
+
+The host-finished put-back evidence is complete. The remaining delivery dependency is judge-owned reconciliation: `evaluation/runs.json` still contains stale failed entry `rw_e4150b519eb4`, while the verified host-finished record for `rw_f0c559601c44` is complete and supersedes it. Diagnostician has no further target-world run to perform; judge must classify or remove the stale entry and publish the revised evaluation record for tuner’s delivery check.
+
+### Delivery resolution
+
+Tuner confirmed that judge reconciliation completed and the referee-approved tuner PR #5 merged into `release` at commit `686d4f5`. The diagnostician handoff is therefore resolved; no further target-world or evaluation action remains here.

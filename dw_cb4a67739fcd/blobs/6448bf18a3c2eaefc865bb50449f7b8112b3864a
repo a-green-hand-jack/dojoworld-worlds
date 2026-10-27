@@ -1,0 +1,8 @@
+{
+ "target_world": "rw_679cdc7d5fa3",
+ "putback_world": "rw_4202e44fb3b7",
+ "kept": "world-config.json",
+ "kept_workers": "incumbent: every position claude-code, claude-sonnet-5-5, low effort; paper-repo unchanged",
+ "reason": "candidate cand-medium did not beat the incumbent (tie, comparison in judgements.json)",
+ "command": "researchworld"
+}

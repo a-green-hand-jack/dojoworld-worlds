@@ -1,0 +1,3 @@
+# Worker delivery
+
+The authoritative target-world configuration is `config.json`. It keeps the incumbent `paper-repo` worker (Codex `gpt-6.1-sol`, low reasoning effort) and sets no target resources, so continuation inherits `rw_e584f68c0d9c` resources unchanged. The candidate and retained-worker records are under `candidate/`; `candidate/kept/config.json` is the same configuration used for the final continuation request.

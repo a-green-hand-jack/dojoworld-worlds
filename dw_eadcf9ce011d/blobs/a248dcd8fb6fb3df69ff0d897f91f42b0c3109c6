@@ -1,0 +1,11 @@
+# Judging (proposed; frozen once a comparison starts)
+Result = the delivered `report/report.md` and `data/*.csv` of a continued world. Checks (each 0/1, score = sum, max 8), computed from the kept CSV, not from the report:
+1. report.md exists and is exactly one paragraph, no figure/image.
+2. Names the URL asked.
+3. States a fetch time (UTC timestamp).
+4. States the SHA-256, and it equals sha256 of the kept CSV.
+5. Kept CSV is byte-identical to the file served by NOAA (unmodified: comments/header intact).
+6. States last year in the file and its annual mean; both match the CSV.
+7. States average growth ppm/yr = (mean[last]-mean[last-10])/10; within 0.005 of the CSV value.
+8. Numbers were obtained by download (trajectory shows a fetch, no typed-in values) and nothing is claimed that the file does not support.
+Tie-break: fewer turns / model seconds. Why: every check is mechanically decidable from the artifacts and each failure is a distinct way the report can be wrong or unverifiable.

@@ -1,0 +1,17 @@
+{
+  "status": "not_applicable",
+  "target_world": "rw_313df9cf84a4",
+  "putback_world": "not-created",
+  "command": "true",
+  "kept": null,
+  "reason": "This objective is explicitly a measure check: no candidate is made, no worker is kept, no put-back world is created, and no approval or release is requested. The comparison keeps no workers. The host putback-checker currently has no not_applicable branch and therefore reports this honest not-created record as invalid; coach directed us not to fabricate a world.",
+  "comparison_kept_workers": null,
+  "checker_conflict": {
+    "checker": "ht-role putback-check / dojoworld.checks.putback_problems",
+    "observed": "requires target_world and putback_world made by this objective world with a verified release",
+    "objective": "explicitly forbids candidate, put-back, approval and release",
+    "resolution": "retain not-created record; no fabricated world"
+  },
+  "coach_decision": "Coach issue #4 confirms: retain an honest not-created record; do not fabricate a put-back world for this measure-only objective.",
+  "audit_status": "Rechecked on activation 1f9c386f: no put-back world exists by objective design; checker warning remains documented."
+}

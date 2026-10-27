@@ -1,0 +1,13 @@
+# Brief
+
+## Objective (quoted)
+"Improve the worker of the position paper-repo of the research world rw_1f0b60e4e7ab ... Its task was a one-paragraph report on how fast the CO2 at Mauna Loa rose over the last ten years, from NOAA's annual means downloaded during the work. The incumbent worker of every position there is Claude Code with claude-sonnet-5-5 at low effort. Candidates may use only Claude Code with claude-sonnet-5-5 ...; what may change is its native settings, such as its effort or its environment. Take the tasks from the target world; no judging is given, so propose it. Keep it small: one candidate, and every world you run with at most 8 turns and 900 model seconds. Put the kept worker back by continuing rw_1f0b60e4e7ab from its final checkpoint with it and running that round. Nothing is published outside this world."
+
+## Target
+World rw_1f0b60e4e7ab (researchworld 3.3.0): positions paper-repo -> internal-review-repo. Incumbent: claude-code, claude-sonnet-5-5, CLAUDE_CODE_EFFORT_LEVEL=low. Finished, accepted; 3 turns, 40 model s.
+
+## Focus
+Improve paper-repo only (internal-review-repo stays incumbent). One candidate (e.g. higher effort / settings), compared with the incumbent on the same starting points. Judging (proposed by task-setter, applied blind by judge): the stated ten-year rise rate (ppm/yr and total) matches NOAA annual means actually downloaded; data source cited; one paragraph; no invented figures.
+
+## Unknown
+Variance of low-effort runs; whether the task discriminates workers at all (a tie keeps the incumbent).

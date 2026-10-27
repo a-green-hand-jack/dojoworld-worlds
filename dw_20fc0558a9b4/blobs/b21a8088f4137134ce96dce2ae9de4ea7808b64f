@@ -1,0 +1,13 @@
+| dir | world | executions | model s |
+|---|---|---|---|
+| d1-cand1-r1 | rw_98336b029691 | 2 | 25.9 |
+| d1-cand1-r2 | rw_597df4e0e28c | 2 | 22.5 |
+| d1-cand1-r3 | rw_553bc8fdd897 | 2 | 22.9 |
+| d1-incumbent-r1 | rw_34238ae9b7ca | 2 | 19.3 |
+| d1-incumbent-r2 | rw_ef66c242e1d3 | 2 | 17.8 |
+| d1-incumbent-r3 | rw_0a7d0ea63bd6 | 2 | 16.1 |
+| putback-incumbent-final | rw_e02e2262f336 | 2 | 24.7 |
+| putback-style-cand1-final | rw_60bf2faa0320 | 2 | 18.6 |
+| putback-style-incumbent-final | rw_f687b166fb66 | 2 | 19.0 |
+
+rw_8e5a324929db: never driven, 0 s. rw_e02e2262f336 finished with `researchworld finish` (final-3294bbf8). Others stopped with --release after recording.

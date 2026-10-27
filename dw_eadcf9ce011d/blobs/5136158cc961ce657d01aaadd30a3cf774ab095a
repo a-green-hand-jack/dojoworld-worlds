@@ -1,0 +1,1 @@
+{"error": "command refused (HTTP 422): worlds holds its limit of 4 worlds that have not ended (rw_199de6c339c5, rw_3da12c5e60cf, rw_7a2613158527, rw_a59797152600): finish or end one first (stop --release)"}

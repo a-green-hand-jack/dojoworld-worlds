@@ -1,0 +1,20 @@
+{
+  "worker": {
+    "roles": {
+      "paper-repo": {
+        "agent": "codex",
+        "model": "gpt-6.1-sol",
+        "provider": {
+          "auth": "codex-oauth",
+          "base_url": "https://chatgpt.com/backend-api/codex",
+          "id": "openai-codex",
+          "protocol": "openai-responses"
+        },
+        "codex": {
+          "features": {"plugins": false},
+          "model_reasoning_effort": "medium"
+        }
+      }
+    }
+  }
+}

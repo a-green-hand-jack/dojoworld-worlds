@@ -1,0 +1,6 @@
+{
+  "target_world": "rw_e584f68c0d9c",
+  "putback_world": "rw_f0c559601c44",
+  "command": "researchworld",
+  "kept": "candidate/kept/world-config.json"
+}

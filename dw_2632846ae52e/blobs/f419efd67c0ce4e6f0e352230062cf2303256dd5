@@ -1,0 +1,8 @@
+c77f138 Twenty-year Mauna Loa CO2 growth from a fresh NOAA download
+faeca1e Own the twenty-year report and its raw NOAA file
+3330e36 Merge pull request 'Final: report and unmodified NOAA file' (#4) from main into final
+c2a6d45 Merge pull request 'Version 1: report and unmodified NOAA file' (#3) from main into release
+4e2024b Correct ten-year growth: base year is 2015, not 2013
+537b5e8 Merge pull request 'Split: paper-repo delivers the report and the unmodified NOAA file' (#2) from story-repo/split into main
+1d3d12f Split: paper-repo delivers the report and the unmodified NOAA file
+c9d6c17 Mauna Loa annual CO2 growth over the last ten years, from the NOAA file as downloaded

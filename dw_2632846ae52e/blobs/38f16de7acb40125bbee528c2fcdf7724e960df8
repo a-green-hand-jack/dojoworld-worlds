@@ -1,0 +1,11 @@
+#!/bin/bash
+# usage: run.sh TASK RUN [config]
+cd /hutian/repo
+T=$1; R=$2; CFG=$3
+TOPIC=$(python3 -c "import json;print(json.load(open('tasks/tasks.json'))['$T']['topic'])")
+CP=final-7adfe819
+OUT=$(researchworld continue rw_679cdc7d5fa3 --checkpoint $CP --topic "$TOPIC" --config /hutian/repo/cfg_net.json 2>&1)
+echo "$OUT" > /hutian/runs/$T-$R.create.log
+W=$(echo "$OUT" | python3 -c "import sys,json;print(json.loads(sys.stdin.read().strip().splitlines()[-1])[\"world_id\"])")
+echo "$T $R $W" >> /hutian/runs/index.txt
+researchworld execute $W --loop --max-executions 8 --deadline-sec 900

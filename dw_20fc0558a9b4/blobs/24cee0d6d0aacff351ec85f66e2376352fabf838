@@ -1,0 +1,38 @@
+{
+ "resources": [
+  {
+   "capabilities": [
+    "code:github",
+    "data:huggingface",
+    "package:conda-forge",
+    "package:npm",
+    "package:pypi"
+   ],
+   "description": "The internet, through the world's proxy (any public host over HTTPS and plain HTTP), for reading and measuring how workers do their tasks: PyPI, conda-forge and npm packages, GitHub code and releases, and data from Hugging Face.",
+   "hosts": [
+    "*"
+   ],
+   "id": "dojo-network",
+   "instructions": "Install what the work needs into your private workspace through the injected proxy, with TLS verification on: Python packages with pip, command-line tools and libraries with micromamba from conda-forge (it installs under /hutian/.mamba, already on your PATH), Node.js packages with npm, code and releases from GitHub. A missing tool or package is something to install, not a reason to skip work: install it and check that it runs before calling it unavailable. Any public host is reachable on ports 443 and 80; this host, local networks and cloud metadata are not, nor is a host the world denies, and a refusal says why. Every connection is recorded. Do not print proxy settings. Record what you installed.",
+   "kind": "https",
+   "ports": [
+    80,
+    443
+   ],
+   "check": "pypi.org"
+  }
+ ],
+ "worker": {
+  "roles": {
+   "paper-repo": {
+    "agent": "claude-code",
+    "model": "claude-sonnet-5-5",
+    "claude_code": {
+     "env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+     }
+    }
+   }
+  }
+ }
+}
